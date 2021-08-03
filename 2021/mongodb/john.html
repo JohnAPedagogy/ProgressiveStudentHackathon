@@ -1,0 +1,47 @@
+<html>
+<head>
+		<script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.9.0/stitch.js"></script>
+</head>
+	<body>
+		<div id="test">
+		</div>
+		<div id="test2">
+		</div>
+</body>
+<script>
+const client = stitch.Stitch.initializeDefaultAppClient('sdb-0-fvshj');
+const db = client.getServiceClient(stitch.RemoteMongoClient.factory,'mongodb-atlas').db('progressive');
+
+function run_query(q) {
+  return client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+     document.getElementById('test2').innerHTML = 
+       `Logged in ${user.id}`;
+      console.dir(user);
+			return db.collection('student').find(q).asArray()
+			 .then(docs => {
+			 	console.dir(docs);
+			 	 const html = docs.map(c => "<div>" + c.firstname + "</div>").join("");
+			 	 document.getelementbyid("test").innerhtml = html;
+			 }).catch(err => {
+			 	console.error(err);
+			 })
+	});
+}
+// const app = new Realm.App({ id: "<Your App ID>" });
+// window.onload = initializeAndLogin;
+
+function samplequery() {
+	const q = { } //[{$sort:{order_date:-1}},{$skip:hchcs.pageSkip*pageSize},{$limit:pageSize}];
+		run_query(q).then(docs=>{ 
+			console.log("found "+docs.length+" student!");
+		}).catch(err=> {
+				//dbg("Ooops! Something went wrong!", response.errors[0].message);
+				console.error(err);
+		});
+}
+
+			samplequery();
+
+
+</script>
+</html>
