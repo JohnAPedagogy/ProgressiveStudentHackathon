@@ -12,12 +12,12 @@
 const client = stitch.Stitch.initializeDefaultAppClient('progressive-student-ljdmz');
 const db = client.getServiceClient(stitch.RemoteMongoClient.factory,'mongodb-atlas').db('progressive');
 
-function run_query(q) {
+function run_query(q,t) {
   return client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
-     document.getElementById('test2').innerHTML = 
-       `Logged in ${user.id}`;
-      console.dir(user);
-			return db.collection('student').find(q).asArray()
+    //  document.getElementById('test2').innerHTML = 
+    //    `Logged in ${user.id}`;
+    //   console.dir(user);
+			return db.collection(t).find(q).asArray()
 			 .then(docs => {
 				console.dir(docs);
 			 	const html = docs.map(c => "<div>" + c.LastName + "</div>").join("");
@@ -32,9 +32,10 @@ function run_query(q) {
 // window.onload = initializeAndLogin;
 
 function samplequery() {
+	const table = "student"
 	const q = { } //[{$sort:{order_date:-1}},{$skip:hchcs.pageSkip*pageSize},{$limit:pageSize}];
-		run_query(q).then(docs=>{ 
-			console.log("found "+docs.length+" student!");
+		run_query(q,table).then(docs=>{ 
+			console.log("found "+docs.length+" document(s)!");
 		}).catch(err=> {
 				//dbg("Ooops! Something went wrong!", response.errors[0].message);
 				console.error(err);
