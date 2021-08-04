@@ -1,4 +1,4 @@
-const client = stitch.Stitch.initializeDefaultAppClient('progressive-student-ljdmz');
+const client = stitch.Stitch.initializeDefaultAppClient('sdb-0-fvshj');
 const db = client.getServiceClient(stitch.RemoteMongoClient.factory,'mongodb-atlas').db('progressive');
 
 function run_query(q) {
