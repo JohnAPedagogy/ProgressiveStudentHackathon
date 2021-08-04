@@ -19,9 +19,10 @@ function run_query(q) {
       console.dir(user);
 			return db.collection('student').find(q).asArray()
 			 .then(docs => {
-			 	console.dir(docs);
-			 	 const html = docs.map(c => "<div>" + c.firstname + "</div>").join("");
-			 	 document.getelementbyid("test").innerhtml = html;
+				console.dir(docs);
+			 	const html = docs.map(c => "<div>" + c.LastName + "</div>").join("");
+			 	document.getElementById("test").innerHTML = html;
+				return docs;
 			 }).catch(err => {
 			 	console.error(err);
 			 })
