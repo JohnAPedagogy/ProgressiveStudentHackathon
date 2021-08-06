@@ -33,5 +33,6 @@ We shall be using Java Spring boot for the back end end business-objects layer o
 
 #### Java - Spring boot - Object Relational Mapping
 We will be using the data component of Spring boot to encapsulate our data using the Repository design pattern.  The repository pattern abstracts the database responsibility of managing SQL into in-memory database objects that feels native to Java objects and collections.  Below is a tutorial on spring boot
+
 [![ORM Example](https://img.youtube.com/vi/f5bdUjEIbrg/0.jpg)](https://www.youtube.com/watch?v=f5bdUjEIbrg).
 
