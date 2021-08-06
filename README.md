@@ -59,3 +59,9 @@ Java Spring boot will be used to implement the back end business-logic layer of 
 The data component of Spring boot is used to encapsulate the database using the Repository design pattern.  The repository pattern abstracts the database responsibility of managing SQL statements into an in-memory database comprising of plain old java objects (POJOs) that are native Java objects and collections.  Below is a tutorial on how to setup the sprint boot ORM.  The github repository for the tutorial can be cloned from this [link](https://github.com/kriscfoster/Spring-Data-JPA-Relationships).
 
 [![ORM Example](https://img.youtube.com/vi/f5bdUjEIbrg/0.jpg)](https://www.youtube.com/watch?v=f5bdUjEIbrg).
+
+## Database Design
+
+The hackathon will utilize MongoDB and H2 databases.  At some point the H2 database will migrate to SQL.  The Entity relationship diagram for the model is as follows:
+![erd hackathon](2021/mongodb/ERDhackathon.png)
+
