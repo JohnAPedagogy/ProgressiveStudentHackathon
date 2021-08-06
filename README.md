@@ -38,4 +38,3 @@ Java Spring boot will be used to implement the back end business-logic layer of 
 The data component of Spring boot is used to encapsulate the database using the Repository design pattern.  The repository pattern abstracts the database responsibility of managing SQL statements into an in-memory database comprising of plain old java objects (POJOs) that are native Java objects and collections.  Below is a tutorial on how to setup the sprint boot ORM.  The github repository for the tutorial can be cloned from this [link](https://github.com/kriscfoster/Spring-Data-JPA-Relationships).
 
 [![ORM Example](https://img.youtube.com/vi/f5bdUjEIbrg/0.jpg)](https://www.youtube.com/watch?v=f5bdUjEIbrg).
-<iframe width="560" height="315" src="https://www.youtube.com/embed/f5bdUjEIbrg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
