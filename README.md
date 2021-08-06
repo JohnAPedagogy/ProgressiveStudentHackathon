@@ -12,7 +12,10 @@ This are organised into the following sections
 - Angular
 
 ## Git
-### Useful git links
+
+## Markdown
+It is the aim of this hackathon to add a `Readme.md` file in every folder of this project.  This readme will have a brief description of the purpose and contents of this folder.  The `Readme.md` file is written using markdown which adds formatting capabilities to ordinary text files such as the one you are reading right now.  Please follow the markdown guide in the link below when doing your own readme.md to document the folders you create.
+### Useful Markdown links
 - [Markdown guide](https://guides.github.com/features/mastering-markdown/)
 
 # PSM Phase 2 - Hackathon
