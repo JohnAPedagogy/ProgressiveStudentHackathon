@@ -41,8 +41,8 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 
 # PSM Phase 2 - Hackathon
 The phase 2 of the Progressive Student Manager (PSM) will consist of 2 sprints
-- Sprint 1 will be the re-implementation of phase 1 with addition of an authentication system
-- Sprint 2 will be development of a Student Dashboard
+- Sprint 1 is the re-implementation of phase 1 with addition of an authentication system
+- Sprint 2 is the development of a Student Dashboard
 
 ## Phase 2 - Technology Stack
 - Team A
