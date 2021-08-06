@@ -32,10 +32,10 @@ The phase 2 of the Progressive Student Manager (PSM) will consist of 2 sprints
   - Angular
 
 ### Java - Spring boot
-We shall be using Java Spring boot for the back end end business-objects layer of our system.  Spring boot is designed with a Microservices architecture in mind.  This means that you will be able to add the components you need to your application as you need them.  Ideally, you would have separate projects for each component and treat them as individual applications to achieve a true microservice architecture.  However, in this hackathon, all components would be in a single monolithic application.
+Java Spring boot will be used to implement the back end business-logic layer of the PSM target system.  Spring boot is designed with a Microservices architecture in mind.  This means that you will be able to add the components you need to your application as you need them.  Ideally, you would have separate projects for each component and treat them as individual applications to achieve a true microservice architecture.  However, in this hackathon, all components would be in a single monolithic application.
 
-#### Java - Spring boot - Object Relational Mapping
-We will be using the data component of Spring boot to encapsulate our data using the Repository design pattern.  The repository pattern abstracts the database responsibility of managing SQL into in-memory database objects that feels native to Java objects and collections.  Below is a tutorial on spring boot.  The github repository for the tutorial can be downloaded [here](https://github.com/kriscfoster/Spring-Data-JPA-Relationships)
+#### Java - Spring boot - Object Relational Mapping (ORM)
+The data component of Spring boot is used to encapsulate the database using the Repository design pattern.  The repository pattern abstracts the database responsibility of managing SQL statements into an in-memory database comprising of plain old java objects (POJOs) that are native Java objects and collections.  Below is a tutorial on how to setup the sprint boot ORM.  The github repository for the tutorial can be cloned from this [link](https://github.com/kriscfoster/Spring-Data-JPA-Relationships).
 
 [![ORM Example](https://img.youtube.com/vi/f5bdUjEIbrg/0.jpg)](https://www.youtube.com/watch?v=f5bdUjEIbrg).
 
