@@ -30,9 +30,16 @@ function run_query(q,t) {
 }
 // const app = new Realm.App({ id: "<Your App ID>" });
 // window.onload = initializeAndLogin;
+function insert_data(table,id,data){
+	db.collection(table).updateOne({ID:id},{$set:data}, {upsert:true})
+		.then(()=>{
+			samplequery(table);
+	}).catch(err => {
+			 	console.error(err);
+	})
+}
 
-function samplequery() {
-	const table = "student"
+function samplequery(table) {
 	const q = { } //[{$sort:{order_date:-1}},{$skip:hchcs.pageSkip*pageSize},{$limit:pageSize}];
 		run_query(q,table).then(docs=>{ 
 			console.log("found "+docs.length+" document(s)!");
@@ -42,8 +49,14 @@ function samplequery() {
 		});
 }
 
-			samplequery();
-
-
+const data =   {
+    "GroupID": 1,
+    "LastName":"Julia",
+    "OtherNames":"Aliyah",
+    "SGCode" : "",
+    "UniCode":"u12345u7",
+    "StartDate":"2021-01-01"
+  }
+insert_data('person',1,data);
 </script>
 </html>
