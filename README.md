@@ -63,5 +63,5 @@ The data component of Spring boot is used to encapsulate the database using the 
 ## Database Design
 
 The hackathon will utilize MongoDB and H2 databases.  At some point the H2 database will migrate to SQL.  The Entity relationship diagram for the model is as follows:
-![erd hackathon](2021/mongodb/ERDhackathon.png)
+![erd hackathon](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/mongodb/ERDHackatlon.png)
 
