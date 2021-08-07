@@ -1,7 +1,10 @@
 # Welcome to the 2021 Summer Progressive Student Manager Hackathon
+The Progressive Student Manager (PSM) enables tutors, administrators and all student caretakers manage students in at the Foundation or Year 1 College level.  The phase one is a single user system design for a single tutor with the capability of handling multiple modules and the students taking those modules.
 
-## PSM Phase 1 - Introduction
-The Progressive Student Manager (PSM) enables tutors, administrators and all student caretakers manage students in at a Foundation or Year 1 College level.  The phase one is a single user system design for a single tutor with the capability of handling multiple modules and the students taking those modules.
+## PSM Phase 1 - Features
+The roadmap for the features of the PSM Phase 1 is given in the figure below.
+![image](https://user-images.githubusercontent.com/54987004/128603430-ae659c54-a51b-486a-9369-42aa4e809066.png)
+
 
 # Hackathon Tutorials
 This are organised into the following sections
