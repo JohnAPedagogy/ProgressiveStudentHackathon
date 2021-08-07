@@ -1,4 +1,4 @@
-package com.kriscfoster.school.student;
+package main.java.summer2021Hackathon.StudentProgressionManager.ROM.person;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +13,7 @@ public class StudentController {
     PersonRepository personRepository;
 
     @GetMapping
-    List<Student> getStudents() {
+    List<Person> getPersons() {
         return personRepository.findAll();
     }
 
