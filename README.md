@@ -42,7 +42,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 # PSM Phase 2 - Hackathon
 The phase 2 of the Progressive Student Manager (PSM) will consist of 2 sprints
 - Sprint 1 is the re-implementation of phase 1 with addition of an authentication system
-- Sprint 2 is the development of a Student Dashboard
+- Sprint 2 is the development of the Progressive Student Manager (PSM) Progress information Dashboard
 
 ## Phase 2 - Technology Stack
 - Team A
@@ -59,3 +59,9 @@ Java Spring boot will be used to implement the back end business-logic layer of 
 The data component of Spring boot is used to encapsulate the database using the Repository design pattern.  The repository pattern abstracts the database responsibility of managing SQL statements into an in-memory database comprising of plain old java objects (POJOs) that are native Java objects and collections.  Below is a tutorial on how to setup the sprint boot ORM.  The github repository for the tutorial can be cloned from this [link](https://github.com/kriscfoster/Spring-Data-JPA-Relationships).
 
 [![ORM Example](https://img.youtube.com/vi/f5bdUjEIbrg/0.jpg)](https://www.youtube.com/watch?v=f5bdUjEIbrg).
+
+## Database Design
+
+The hackathon will utilize MongoDB and H2 databases.  At some point the H2 database will migrated to MySQL.  The Entity relationship diagram for the model is as follows:
+![erd hackathon](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/mongodb/ERDHackatlon.png)
+
