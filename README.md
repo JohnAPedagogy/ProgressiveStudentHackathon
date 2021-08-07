@@ -20,6 +20,9 @@ It is the aim of this hackathon to add a `Readme.md` file in every folder of thi
 
 ## Git
 
+[![ORM Example](https://img.youtube.com/vi/f5bdUjEIbrg/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos).
+
+
 ### Setup Git and Download this repository
 You will need to have a github account to participate in this hackathon.  Here are the steps required to have a local copy of this repository on your computer.
 #### Step 1: Register a github account at https://github.com.
