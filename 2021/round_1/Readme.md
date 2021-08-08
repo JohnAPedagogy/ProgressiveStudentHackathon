@@ -44,8 +44,8 @@ Try to complete the following tutorials and tasks at least before the next sessi
 ## Day 2 - Bootstrap
 ### Git
 [![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
-### HTML
-[![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
+### HTML & CSS
+[![HTML5 tutorial](https://img.youtube.com/vi/Wm6CUkswsNw/0.jpg)](https://www.youtube.com/watch?v=Wm6CUkswsNw)
 ### Day 1 - Tasks
 1. Follow along and build the site or copy the files into your website folder
 2. Ensure that the index.html file can display in your browser without errors.
@@ -55,11 +55,11 @@ Try to complete the following tutorials and tasks at least before the next sessi
 6. There should be header appropriately formatted saying "Student"
 7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
 
-## Day 3 - Typescript/Angular
+## Day 3 - Javascript/Typescript
 ### Git
-[![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
+[![Git tutorial](https://img.youtube.com/vi/NjN00cM18Z4/0.jpg)](https://www.youtube.com/watch?v=NjN00cM18Z4)
 ### HTML
-[![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
+[![Git tutorial](https://img.youtube.com/vi/NjN00cM18Z4/0.jpg)](https://www.youtube.com/watch?v=NjN00cM18Z4)
 ### Day 1 - Tasks
 1. Follow along and build the site or copy the files into your website folder
 2. Ensure that the index.html file can display in your browser without errors.
@@ -84,16 +84,6 @@ Try to complete the following tutorials and tasks at least before the next sessi
 7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
 
 ## Day 5 - Admin Console
-### Git
-[![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
-### HTML
-[![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
-### Day 1 - Tasks
-1. Follow along and build the site or copy the files into your website folder
-2. Ensure that the index.html file can display in your browser without errors.
-3. Adapt the website to reflect the Progressive Student Manager concept
-4. Add a navigation menu called Admin
-5. The Admin menu should open up a page with a button at the top that says add new
-6. There should be header appropriately formatted saying "Student"
-7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
+### Day 5 - Tasks
+1. Tranform your to-do list angular application to a 
   
