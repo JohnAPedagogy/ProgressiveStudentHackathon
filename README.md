@@ -66,6 +66,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Flex box tutorial](https://www.youtube.com/watch?v=JJSoEo8JSnc)
 - [Angular forms](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
 - [Angular bootstrap](https://ng-bootstrap.github.io/#/getting-started)
+- [Angular material](https://material.angular.io)
 - [Angular responsive dashboard](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
 - [Repository pattern](https://www.youtube.com/watch?v=rtXpYpZdOzM&t=8s)
 - [Spring JPA](https://spring.io/guides/gs/accessing-data-rest/)
