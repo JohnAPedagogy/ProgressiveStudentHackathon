@@ -44,7 +44,7 @@ For the next 5 days, try to complete the following tutorials and tasks at least 
 
 ## Day 2 - Bootstrap
 ### Git
-[![Bootstrap tutorial](https://img.youtube.com/vi/4sosXZsdy/0.jpg)](https://www.youtube.com/watch?v=4sosXZsdy)
+[![Bootstrap tutorial](https://img.youtube.com/vi/4sosXZsdy-s/0.jpg)](https://www.youtube.com/watch?v=4sosXZsdy-s)
 ### Day 2 - Tasks
 1. Follow along and build the site or copy the files into your website folder
 2. Ensure that the index.html file can display in your browser without errors.
