@@ -1,7 +1,14 @@
 # Summer 2021 Digial Software Hackathon
-## Round 1 - Elimination Round
+Welcome to Round 1 of the Summer 2021 Digital Software Hackathon.  This is the elimination round of the hackathon.  This means that only when you have completed the tasks in this section will you be able to compete in the main round which is the Hackathon.  In the first round you will be building a admin console. You will complete a series of tutorial classes where you will learn the technology stack listed, and then apply the knowledge to complete the admin console.  The admin consile will have the ability to add, edit, list, view and delete different entities you will be assigned.  The technology stack is as follows:
+1. Git
+2. HTML
+3. CSS
+4. Javascript/Typescript
+5. Angular
 
-The first round of the Hackathon is the elimination round.  
+Not to worry about these, you will get all the support you need to learn them and even if you don't complete this within the first week.  Whenever you complete this task, you will then be allowed to join the main hackathon round.  So please put in the effort to learn these technologies and complete the tasks.  You will be given tutorial videos in advance of the sessions, so you can complete the tasks ahead of time.
+
+## Round 1 - Elimination Round
 
 In this round, you will need to complete the following tasks in order to continue to the main competition.
 1. Build your own website consisting of HTML and CSS and push the website to the repository.
@@ -12,5 +19,6 @@ In this round, you will need to complete the following tasks in order to continu
 
 ## What do I need to do now? 
 - Clone this repository by following the instructions in the repository [landing (home) page readme](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon).
-- Create a folder in your name that will have two subfolders:  a) website and b) todoapp.
+- Create a folder called <your name> inside the round_1 (this) directory of the hackathon repository.  
+- In this new folder create three subfolders:  a) website, b) bootstrap and c) admin.
 - Ensure you promtly attend al sessions in the first week.
