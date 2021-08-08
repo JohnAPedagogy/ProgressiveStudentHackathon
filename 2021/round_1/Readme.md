@@ -46,7 +46,7 @@ For the next 5 days, try to complete the following tutorials and tasks at least 
 ### Git
 [![Bootstrap tutorial](https://img.youtube.com/vi/4sosXZsdy-s/0.jpg)](https://www.youtube.com/watch?v=4sosXZsdy-s)
 ### Day 2 - Tasks
-1. Follow along and build the site or copy the files into your website folder
+1. Follow along and build the site or copy the files into your bootstrap folder
 2. Ensure that the index.html file can display in your browser without errors.
 3. Adapt the website to reflect the Progressive Student Manager concept
 4. Add a navigation menu called Admin
