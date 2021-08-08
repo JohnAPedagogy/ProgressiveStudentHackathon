@@ -24,8 +24,8 @@ In this round, you will need to complete the following tasks in order to continu
 - Ensure you promtly attend all sessions in the first week.
 - Ensure you complete the tutorial vidoes below for each day and complete the tasks for each video.
 
-# Round 1 Tutorial and tasks
-Try to complete the following tutorials and tasks at least before the next session.
+# Round 1 Tutorials and tasks
+For the next 5 days, try to complete the following tutorials and tasks at least before the next session.
 
 ## Day 1 - Git and HTML
 ### Git
@@ -40,6 +40,7 @@ Try to complete the following tutorials and tasks at least before the next sessi
 5. The Admin menu should open up a page with a button at the top that says add new
 6. There should be header appropriately formatted saying "Student"
 7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
+8. Push all your work for day 1 back to the remote repostory using the following command `git add . && git commit -m "day x tasks" && git push`  
 
 ## Day 2 - Bootstrap
 ### Git
@@ -52,32 +53,30 @@ Try to complete the following tutorials and tasks at least before the next sessi
 5. The Admin menu should open up a page with a button at the top that says add new
 6. There should be header appropriately formatted saying "Student"
 7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
+8. Push all your work for day 1 back to the remote repostory using the following command `git add . && git commit -m "day x tasks" && git push`  
 
 ## Day 3 - Javascript/Typescript
 ### Typescript
 [![Git tutorial](https://img.youtube.com/vi/NjN00cM18Z4/0.jpg)](https://www.youtube.com/watch?v=NjN00cM18Z4)
 ### Day 3 - Tasks
 1. Follow along and build the site or copy the files into your website folder
-2. Ensure that the index.html file can display in your browser without errors.
-3. Adapt the website to reflect the Progressive Student Manager concept
-4. Add a navigation menu called Admin
-5. The Admin menu should open up a page with a button at the top that says add new
-6. There should be header appropriately formatted saying "Student"
-7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
+2. You will need to complete the task using the custom entity assigned to you.
+3. Push all your work for day 1 back to the remote repostory using the following command `git add . && git commit -m "day x tasks" && git push`  
+
 
 ## Day 4 - Angular
 ### Angular to-do app
 [![Git tutorial](https://img.youtube.com/vi/_TLhUCjY9iA/0.jpg)](https://www.youtube.com/watch?v=_TLhUCjY9iA)
 ### Day 4 - Tasks
-1. Follow along and build the site or copy the files into your website folder
-2. Ensure that the index.html file can display in your browser without errors.
-3. Adapt the website to reflect the Progressive Student Manager concept
-4. Add a navigation menu called Admin
-5. The Admin menu should open up a page with a button at the top that says add new
-6. There should be header appropriately formatted saying "Student"
-7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
+1. Follow along and build to-do app using angular and node
+2. Create a new angular app this time apply the PSM concept to create the PSM front end application using your assigned entity.
+3. Push all your work for day 1 back to the remote repostory using the following command `git add . && git commit -m "day x tasks" && git push`  
 
 ## Day 5 - Admin Console
 ### Day 5 - Tasks
-1. Tranform your to-do list angular application to a 
-  
+1. Custom form component will be presented. Follow along the presentation
+2. Adjust your PSM front end application to use the custom form
+3. Push all your work for day 1 back to the remote repostory using the following command `git add . && git commit -m "day x tasks" && git push`  
+
+## Congratulations
+If you completed all the tasks above then you have qualified for the main hackathon!  I'll see you in sprint 1
