@@ -76,6 +76,11 @@ The data component of Spring boot is used to encapsulate the database using the 
 
 [![ORM Example](https://img.youtube.com/vi/f5bdUjEIbrg/0.jpg)](https://www.youtube.com/watch?v=f5bdUjEIbrg).
 
+## Progressive Student Manager (PSM) Use Case Diagram 
+
+The use case diagram for the PSM describes the features that we are aiming to develop with this project. The use case diagram is as follows:
+![PSM Use Case Diagram](UseCaseHackathon.png)
+
 ## Database Design
 
 The hackathon will utilize MongoDB and H2 databases.  At some point the H2 database will migrated to MySQL.  The Entity relationship diagram for the model is as follows:
