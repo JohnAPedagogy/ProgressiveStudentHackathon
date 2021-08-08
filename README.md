@@ -55,8 +55,9 @@ Launch windows explorer and navigate to the folder you wish to clone this source
 ```
 If you completed the above three steps; Congratulations!  You are all setup and ready for this hackathon.
 
-## Additional tutorial resources
+## Additional hackathon resources and useful links
 - [Typescript cheatsheet](https://devhints.io/typescript)
+- [Object oriented programming with javascript](https://www.youtube.com/watch?v=PFmuCDHHpwk&list=WL&index=433)
 - [Restructured Text vs Markdown](https://www.youtube.com/watch?v=v4eoYpCON_c)
 - [Bootstrap tutorial](https://www.youtube.com/results?search_query=bootstrap+crash+course)
 - [Bootstrap in one video](https://www.youtube.com/watch?v=gqOEoUR5RHg)
@@ -64,7 +65,12 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Bootstrap cheatsheat](https://getbootstrap.com/docs/5.0/examples/cheatsheet/)
 - [Flex box tutorial](https://www.youtube.com/watch?v=JJSoEo8JSnc)
 - [Angular forms](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
+- [Angular bootstrap](https://ng-bootstrap.github.io/#/getting-started)
 - [Angular responsive dashboard](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
+- [Repository pattern](https://www.youtube.com/watch?v=rtXpYpZdOzM&t=8s)
+- [Spring JPA](https://spring.io/guides/gs/accessing-data-rest/)
+- [Spring boot tutorial](https://www.youtube.com/watch?v=vtPkZShrvXQ)
+- [Download visual studio code](https://code.visualstudio.com/Download)
 
 # PSM Phase 2 - Hackathon
 The phase 2 of the Progressive Student Manager (PSM) will consist of 2 sprints
