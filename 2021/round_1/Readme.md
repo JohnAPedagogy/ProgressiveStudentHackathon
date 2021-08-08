@@ -40,7 +40,7 @@ For the next 5 days, try to complete the following tutorials and tasks at least 
 5. The Admin menu should open up a page with a button at the top that says add new
 6. There should be header appropriately formatted saying "Student"
 7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
-8. Push all your work for day 1 back to the remote repostory using the following command `git pull && git add . && git commit -m "day x tasks" && git push`  
+8. Upload all your work for  the day up to the remote repostory using the following command `git pull && git add . && git commit -m "day x tasks" && git push`  
 
 ## Day 2 - Bootstrap
 ### Git
@@ -53,7 +53,7 @@ For the next 5 days, try to complete the following tutorials and tasks at least 
 5. The Admin menu should open up a page with a button at the top that says add new
 6. There should be header appropriately formatted saying "Student"
 7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
-8. Push all your work for day 1 back to the remote repostory using the following command `git pull && git add . && git commit -m "day x tasks" && git push`  
+8. Upload all your work for  the day up to the remote repostory using the following command `git pull && git add . && git commit -m "day x tasks" && git push`  
 
 ## Day 3 - Javascript/Typescript
 ### Typescript
@@ -61,7 +61,7 @@ For the next 5 days, try to complete the following tutorials and tasks at least 
 ### Day 3 - Tasks
 1. Follow along and build the site or copy the files into your website folder
 2. You will need to complete the task using the custom entity assigned to you.
-3. Push all your work for day 1 back to the remote repostory using the following command `git pull && git add . && git commit -m "day x tasks" && git push`  
+3. Upload all your work for  the day up to the remote repostory using the following command `git pull && git add . && git commit -m "day x tasks" && git push`  
 
 
 ## Day 4 - Angular
@@ -70,13 +70,13 @@ For the next 5 days, try to complete the following tutorials and tasks at least 
 ### Day 4 - Tasks
 1. Follow along and build to-do app using angular and node
 2. Create a new angular app this time apply the PSM concept to create the PSM front end application using your assigned entity.
-3. Push all your work for day 1 back to the remote repostory using the following command `git pull && git add . && git commit -m "day x tasks" && git push`  
+3. Upload all your work for  the day up to the remote repostory using the following command `git pull && git add . && git commit -m "day x tasks" && git push`  
 
 ## Day 5 - Admin Console
 ### Day 5 - Tasks
 1. Custom form component will be presented. Follow along the presentation
 2. Adjust your PSM front end application to use the custom form
-3. Push all your work for day 1 back to the remote repostory using the following command `git pull && git add . && git commit -m "day x tasks" && git push`  
+3. Upload all your work for  the day up to the remote repostory using the following command `git pull && git add . && git commit -m "day x tasks" && git push`  
 
 ## Congratulations
 If you completed all the tasks above then you have qualified for the main hackathon!  I'll see you in sprint 1
