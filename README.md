@@ -13,7 +13,6 @@ Screenshots of some of the main features of the Phase one are given in the image
 ### RPAG KPI
 ![image](https://user-images.githubusercontent.com/54987004/128603590-129a76ab-03f1-4613-a871-564ef102a205.png)
 
-
 # Hackathon Tutorials
 This are organised into the following sections
 - Markdown
