@@ -14,11 +14,18 @@ In this round, you will need to complete the following tasks in order to continu
 1. Build your own website consisting of HTML and CSS and push the website to the repository.
 1. Add any bootstrap effect to your repository.
 1. Use Typescript and a Person interface defined with Typescript to display students from a MongoDB database from within your website.
-1. Create an angular todo list application.
+1. Create an angular admin dashboard list application.
 1. Ensure all your changes are pushed to the remote repository.
 
 ## What do I need to do now? 
 - Clone this repository by following the instructions in the repository [landing (home) page readme](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon).
 - Create a folder called <your name> inside the round_1 (this) directory of the hackathon repository.  
 - In this new folder create three subfolders:  a) website, b) bootstrap and c) admin.
-- Ensure you promtly attend al sessions in the first week.
+- Ensure you promtly attend all sessions in the first week.
+- Ensure you complete the tutorial vidoes below for each day and complete the tasks for each video.
+
+  # Round 1 Tutorial and tasks
+  Try to complete the following tutorials and tasks at least before the next session.
+  
+  ## Day 1 - Git and HTML
+  
