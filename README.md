@@ -46,7 +46,7 @@ First launch power shell by clicking on the start button, type `powershell` and 
 ```
 > Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 > iwr -useb get.scoop.sh | iex
-> scoop install git node
+> scoop install git nodejs
 ```
 #### Step 3: Finally clone this repository using git
 Launch windows explorer and navigate to the folder you wish to clone this source code repository and then in the address bar of windows explorer type `cmd`.  This will open up a console window.  Once in the console window type the following command.
