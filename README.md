@@ -61,6 +61,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Bootstrap tutorial](https://www.youtube.com/results?search_query=bootstrap+crash+course)
 - [Bootstrap in one video](https://www.youtube.com/watch?v=gqOEoUR5RHg)
 - [Bootstrap in 5 minutes](https://www.youtube.com/watch?v=yalxT0PEx8c)
+- [Bootstrap cheatsheat](https://getbootstrap.com/docs/5.0/examples/cheatsheet/)
 - [Flex box tutorial](https://www.youtube.com/watch?v=JJSoEo8JSnc)
 - [Angular forms](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
 - [Angular responsive dashboard](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
