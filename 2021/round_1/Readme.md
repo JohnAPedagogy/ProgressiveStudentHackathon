@@ -28,4 +28,72 @@ In this round, you will need to complete the following tasks in order to continu
   Try to complete the following tutorials and tasks at least before the next session.
   
   ## Day 1 - Git and HTML
+  ### Git
+  [![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
+  ### HTML
+  [![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
+  ### Day 1 - Tasks
+  1. Follow along and build the site or copy the files into your website folder
+  2. Ensure that the index.html file can display in your browser without errors.
+  3. Adapt the website to reflect the Progressive Student Manager concept
+  4. Add a navigation menu called Admin
+  5. The Admin menu should open up a page with a button at the top that says add new
+  6. There should be header appropriately formatted saying "Student"
+  7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
+  
+  ## Day 2 - Bootstrap
+  ### Git
+  [![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
+  ### HTML
+  [![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
+  ### Day 1 - Tasks
+  1. Follow along and build the site or copy the files into your website folder
+  2. Ensure that the index.html file can display in your browser without errors.
+  3. Adapt the website to reflect the Progressive Student Manager concept
+  4. Add a navigation menu called Admin
+  5. The Admin menu should open up a page with a button at the top that says add new
+  6. There should be header appropriately formatted saying "Student"
+  7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
+  
+  ## Day 3 - Typescript/Angular
+  ### Git
+  [![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
+  ### HTML
+  [![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
+  ### Day 1 - Tasks
+  1. Follow along and build the site or copy the files into your website folder
+  2. Ensure that the index.html file can display in your browser without errors.
+  3. Adapt the website to reflect the Progressive Student Manager concept
+  4. Add a navigation menu called Admin
+  5. The Admin menu should open up a page with a button at the top that says add new
+  6. There should be header appropriately formatted saying "Student"
+  7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
+  
+  ## Day 4 - Angular
+  ### Git
+  [![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
+  ### HTML
+  [![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
+  ### Day 1 - Tasks
+  1. Follow along and build the site or copy the files into your website folder
+  2. Ensure that the index.html file can display in your browser without errors.
+  3. Adapt the website to reflect the Progressive Student Manager concept
+  4. Add a navigation menu called Admin
+  5. The Admin menu should open up a page with a button at the top that says add new
+  6. There should be header appropriately formatted saying "Student"
+  7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
+  
+  ## Day 5 - Admin Console
+  ### Git
+  [![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
+  ### HTML
+  [![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos)
+  ### Day 1 - Tasks
+  1. Follow along and build the site or copy the files into your website folder
+  2. Ensure that the index.html file can display in your browser without errors.
+  3. Adapt the website to reflect the Progressive Student Manager concept
+  4. Add a navigation menu called Admin
+  5. The Admin menu should open up a page with a button at the top that says add new
+  6. There should be header appropriately formatted saying "Student"
+  7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
   
