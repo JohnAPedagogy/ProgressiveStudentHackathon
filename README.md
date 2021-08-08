@@ -55,7 +55,8 @@ Launch windows explorer and navigate to the folder you wish to clone this source
 If you completed the above three steps; Congratulations!  You are all setup and ready for this hackathon.
 
 ## Additional hackathon resources and useful links
-- [HTML Layout](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/)
+- [HTML Layout](https://www.geeksforgeeks.org/html-layout/)
+- [Semantic html cheat sheet](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/)
 - [Semantic HTML cheatsheet](https://www.w3schools.com/html/html5_semantic_elements.asp)
 - [Typescript cheatsheet](https://devhints.io/typescript)
 - [Object oriented programming with javascript](https://www.youtube.com/watch?v=PFmuCDHHpwk&list=WL&index=433)
