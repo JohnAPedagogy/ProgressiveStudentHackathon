@@ -23,7 +23,12 @@ function run_query(q,t) {
 	return db.collection(t).find(q).asArray()
 		.then(docs => {
 		console.dir(docs);
-		const html = docs.map(c => "<div>" + c.LastName + "</div>").join("");
+		//const props=Object.keys(c)
+		const html = docs.map(c => {
+			y=Object.keys(c).map(v=>c[v]).join(" | ");
+
+			return "<div>" + y + "</div>"
+		}).join("");
 		document.getElementById("test").innerHTML = html;
 		return docs;
 	}).catch(err => {
@@ -53,13 +58,13 @@ function samplequery(table) {
 
 const data =   {
     "GroupID": 1,
-    "LastName":"Moses",
-    "OtherNames":"Aliyah",
+    "LastName":"Shazly",
+    "OtherNames":"Mohamed",
     "SGCode" : "",
-    "UniCode":"u12345u7",
-    "StartDate":"2021-01-01"
+    "UniCode":"u12349u7",
+    "StartDate":"2021-01-02"
   }
 	
-insert_data('Person',1,data);
+insert_data('Person',4,data);
 </script>
 </html>
