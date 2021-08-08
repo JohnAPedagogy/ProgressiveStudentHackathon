@@ -9,23 +9,25 @@
 		</div>
 </body>
 <script>
+const credential = new stitch.UserApiKeyCredential("KqbNcVLKlxtjzdVPx4GVlW49FvZsfmPGUjmiQWzvQoO5gXHTIi6LFObae9jXFTvw")
 const client = stitch.Stitch.initializeDefaultAppClient('progressive-student-ljdmz');
+client.auth.loginWithCredential(credential)
+.then(authedId => {
+	console.log(`successfully logged in with id: ${authedId}`);
+})
+.catch(err => console.error(`login failed with error: ${err}`));
+
 const db = client.getServiceClient(stitch.RemoteMongoClient.factory,'mongodb-atlas').db('progressive');
 
 function run_query(q,t) {
-  return client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
-    //  document.getElementById('test2').innerHTML = 
-    //    `Logged in ${user.id}`;
-    //   console.dir(user);
-			return db.collection(t).find(q).asArray()
-			 .then(docs => {
-				console.dir(docs);
-			 	const html = docs.map(c => "<div>" + c.LastName + "</div>").join("");
-			 	document.getElementById("test").innerHTML = html;
-				return docs;
-			 }).catch(err => {
-			 	console.error(err);
-			 })
+	return db.collection(t).find(q).asArray()
+		.then(docs => {
+		console.dir(docs);
+		const html = docs.map(c => "<div>" + c.LastName + "</div>").join("");
+		document.getElementById("test").innerHTML = html;
+		return docs;
+	}).catch(err => {
+		console.error(err);
 	});
 }
 // const app = new Realm.App({ id: "<Your App ID>" });
@@ -51,7 +53,7 @@ function samplequery(table) {
 
 const data =   {
     "GroupID": 1,
-    "LastName":"Julia",
+    "LastName":"Moses",
     "OtherNames":"Aliyah",
     "SGCode" : "",
     "UniCode":"u12345u7",
