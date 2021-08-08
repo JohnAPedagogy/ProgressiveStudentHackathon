@@ -107,5 +107,5 @@ The use case diagram for the PSM describes the features that we are aiming to de
 ## Database Design
 
 The hackathon will utilize MongoDB and H2 databases.  At some point the H2 database will migrated to MySQL.  The Entity relationship diagram for the model is as follows:
-![erd hackathon](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/mongodb/HackatlonERD.png)
+![erd hackathon](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/mongodb/HackathonERD.png)
 
