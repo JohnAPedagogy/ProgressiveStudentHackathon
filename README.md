@@ -45,7 +45,7 @@ If you don't have git setup on your computer you can set up git by following the
 First launch power shell by clicking on the start button, type `powershell` and hit enter.  This will bring up the power shell console.  In the powershell console type the following commands
 ```
 > Set-ExecutionPolicy RemoteSigned -scope CurrentUser
-> iwr -useb get.scoop.sh | iex
+> iwr -useb get.scoop.sh | iex[
 > scoop install git nodejs
 ```
 #### Step 3: Finally clone this repository using git
@@ -54,6 +54,16 @@ Launch windows explorer and navigate to the folder you wish to clone this source
 > git clone https://github.com/JohnAPedagogy/ProgressiveStudentHackathon.git
 ```
 If you completed the above three steps; Congratulations!  You are all setup and ready for this hackathon.
+
+## Additional tutorial resources
+- [Typescript cheatsheet](https://devhints.io/typescript)
+- [Restructured Text vs Markdown](https://www.youtube.com/watch?v=v4eoYpCON_c)
+- [Bootstrap tutorial](https://www.youtube.com/results?search_query=bootstrap+crash+course)
+- [Bootstrap in one video](https://www.youtube.com/watch?v=gqOEoUR5RHg)
+- [Bootstrap in 5 minutes](https://www.youtube.com/watch?v=yalxT0PEx8c)
+- [Flex box tutorial](https://www.youtube.com/watch?v=JJSoEo8JSnc)
+- [Angular forms](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
+- [Angular responsive dashboard](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
 
 # PSM Phase 2 - Hackathon
 The phase 2 of the Progressive Student Manager (PSM) will consist of 2 sprints
@@ -75,6 +85,9 @@ Java Spring boot will be used to implement the back end business-logic layer of 
 The data component of Spring boot is used to encapsulate the database using the Repository design pattern.  The repository pattern abstracts the database responsibility of managing SQL statements into an in-memory database comprising of plain old java objects (POJOs) that are native Java objects and collections.  Below is a tutorial on how to setup the sprint boot ORM.  The github repository for the tutorial can be cloned from this [link](https://github.com/kriscfoster/Spring-Data-JPA-Relationships).
 
 [![ORM Example](https://img.youtube.com/vi/f5bdUjEIbrg/0.jpg)](https://www.youtube.com/watch?v=f5bdUjEIbrg).
+
+# PSM Phase 2 - Design
+In this section, the design of the PSM phase 2 features are discussed.  The use-case UML diagam and the Entity Relationship models are presented in the sections below.
 
 ## Progressive Student Manager (PSM) Use Case Diagram 
 
