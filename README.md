@@ -33,7 +33,7 @@ It is the aim of this hackathon to add a `Readme.md` file in every folder of thi
 
 Follow the link below for a quick tutorial on git and github
 
-[![ORM Example](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos).
+[![Git tutorial](https://img.youtube.com/vi/HkdAHXoRtos/0.jpg)](https://www.youtube.com/watch?v=HkdAHXoRtos).
 
 
 ### Setup Git and Download this repository
