@@ -24,7 +24,7 @@ function run_query(q,t) {
 		.then(docs => {
 		console.dir(docs);
 		//const props=Object.keys(c)
-		const html = docs.map(c => {
+		const html = docs.length==0?"":Object.keys(docs[0]).join(" | ")+"<br/>"+docs.map(c => {
 			y=Object.keys(c).map(v=>c[v]).join(" | ");
 
 			return "<div>" + y + "</div>"
@@ -57,14 +57,13 @@ function samplequery(table) {
 }
 
 const data =   {
-    "GroupID": 1,
-    "LastName":"Shazly",
-    "OtherNames":"Mohamed",
-    "SGCode" : "",
-    "UniCode":"u12349u7",
-    "StartDate":"2021-01-02"
+    "TaskType": "unsure",
+    "RPAGType":"Attendance",
+	"TaskName": "Attendance",
+	"DueWeek": 1,
+	"DueLesson": 1
   }
 	
-insert_data('Person',4,data);
+insert_data('ModuleTask',1,data);
 </script>
 </html>
