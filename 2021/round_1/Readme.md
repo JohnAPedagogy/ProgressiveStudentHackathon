@@ -1,19 +1,19 @@
 # Summer 2021 Digial Software Hackathon
-Welcome to Round 1 of the Summer 2021 Digital Software Hackathon.  This is the elimination round of the hackathon.  This means that only when you have completed the tasks in this section will you be able to compete in the main round which is the Hackathon.  In the first round you will be building a admin console. You will complete a series of tutorial classes where you will learn the technology stack listed, and then apply the knowledge to complete the admin console.  The admin consile will have the ability to add, edit, list, view and delete different entities you will be assigned.  The technology stack is as follows:
+Welcome to Round 1 of the Summer 2021 Digital Software Hackathon.  This is the elimination round of the hackathon.  This means that only when you have completed the tasks in this section will you be able to compete in the main round which is the Hackathon.  In the first round you will be building an admin console. You will complete a series of tutorial videos where you will learn the technology stack listed, and then apply the knowledge to complete the admin console.  The admin console will have the ability to add, edit, list, view and delete different entities which you will be assigned.  The technology stack comprise the following software programming tools and frameworks:
 1. Git
 2. HTML
 3. CSS
 4. Javascript/Typescript
 5. Angular
 
-Not to worry about these, you will get all the support you need to learn them and even if you don't complete this within the first week.  Whenever you complete this task, you will then be allowed to join the main hackathon round.  So please put in the effort to learn these technologies and complete the tasks.  You will be given tutorial videos in advance of the sessions, so you can complete the tasks ahead of time.
+Not to worry if you haven't used these before, you will get all the support you need to learn them through the daily sessoins and even if you don't complete the tasks within the first week; whenever you complete the elimination round, you will then be upgraded to the main hackathon round.  So please put in the effort to learn these technologies and complete the tasks.  You will be given tutorial videos in advance of the sessions, so you can complete the tasks ahead of time.
 
 ## Round 1 - Elimination Round
 
 In this round, you will need to complete the following tasks in order to continue to the main competition.
 1. Build your own website consisting of HTML and CSS and push the website to the repository.
 1. Add any bootstrap effect to your repository.
-1. Use Typescript and a Person interface defined with Typescript to display students from a MongoDB database from within your website.
+1. Use Typescript and an Entity interface defined with Typescript to display entity from a MongoDB database from within your website.
 1. Create an angular admin dashboard list application.
 1. Ensure all your changes are pushed to the remote repository.
 
