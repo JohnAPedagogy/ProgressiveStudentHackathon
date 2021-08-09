@@ -20,7 +20,7 @@ In this round, you will need to complete the following tasks in order to continu
 
 ## What do I need to do now? 
 - Clone this repository by following the instructions in the repository [landing (home) page readme](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon#setup-git-and-download-this-repository).
-- Create a folder called <your name> inside the round_1 (this) directory of the hackathon repository.  
+- Create a folder called `<your name>` inside the round_1 (this) directory of the hackathon repository.  
 - In this new folder create three subfolders:  a) website, b) bootstrap and c) admin.
 - Ensure you promtly attend all sessions in the first week.
 - Ensure you complete the tutorial vidoes below for each day and complete the tasks for each video.
