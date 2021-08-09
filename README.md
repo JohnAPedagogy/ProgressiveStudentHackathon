@@ -1,5 +1,5 @@
 # Welcome to the 2021 Summer Progressive Student Manager Hackathon
-The Progressive Student Manager (PSM) enables tutors, administrators and all student caretakers manage students in at the Foundation or Year 1 College level.  The phase one is a single user system design for a single tutor with the capability of handling multiple modules and the students taking those modules.
+The Progressive Student Manager (PSM) enables tutors, administrators and all student caretakers manage students in at the Foundation or Year 1 College level.  The phase one is a single user system design for a single tutor with the capability of handling multiple modules and the students taking those modules.  While the Phase 1 of the PSM application has been completed, the hackathon will focused on the implementation of the Phase 2 features of the PSM solution.
 
 ## PSM Phase 1 - Features
 The roadmap for the features of the PSM Phase 1 is given in the figure below.
@@ -12,7 +12,6 @@ Screenshots of some of the main features of the Phase one are given in the image
 ![image](https://user-images.githubusercontent.com/54987004/128603576-f80e82ca-1800-4e33-8bfb-7f93104d75d3.png)
 ### RPAG KPI
 ![image](https://user-images.githubusercontent.com/54987004/128603590-129a76ab-03f1-4613-a871-564ef102a205.png)
-
 
 # Hackathon Tutorials
 This are organised into the following sections
@@ -43,17 +42,41 @@ You will need to have a github account to participate in this hackathon.  Here a
 If you don't have git setup on your computer you can set up git by following the following steps:
 
 First launch power shell by clicking on the start button, type `powershell` and hit enter.  This will bring up the power shell console.  In the powershell console type the following commands
-```
-> Set-ExecutionPolicy RemoteSigned -scope CurrentUser
-> iwr -useb get.scoop.sh | iex
-> scoop install git node
+```bash
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+iwr -useb get.scoop.sh | iex[
+scoop install git nodejs
 ```
 #### Step 3: Finally clone this repository using git
 Launch windows explorer and navigate to the folder you wish to clone this source code repository and then in the address bar of windows explorer type `cmd`.  This will open up a console window.  Once in the console window type the following command.
-```
-> git clone https://github.com/JohnAPedagogy/ProgressiveStudentHackathon.git
+```bash
+git clone https://github.com/JohnAPedagogy/ProgressiveStudentHackathon.git
 ```
 If you completed the above three steps; Congratulations!  You are all setup and ready for this hackathon.
+
+## Additional hackathon resources and useful links
+- [HTML Layout](https://www.geeksforgeeks.org/html-layout/)
+- [Semantic html cheat sheet](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/)
+- [Semantic HTML cheatsheet](https://www.w3schools.com/html/html5_semantic_elements.asp)
+- [HTML Crash course](https://www.youtube.com/watch?v=UB1O30fR-EE)
+- [CSS Crash course](https://www.youtube.com/watch?v=yfoY53QXEnI)
+- [Typescript cheatsheet](https://devhints.io/typescript)
+- [Object oriented programming with javascript](https://www.youtube.com/watch?v=PFmuCDHHpwk&list=WL&index=433)
+- [Restructured Text vs Markdown](https://www.youtube.com/watch?v=v4eoYpCON_c)
+- [Bootstrap tutorial](https://www.youtube.com/results?search_query=bootstrap+crash+course)
+- [Bootstrap in one video](https://www.youtube.com/watch?v=gqOEoUR5RHg)
+- [Bootstrap in 5 minutes](https://www.youtube.com/watch?v=yalxT0PEx8c)
+- [Bootstrap cheatsheat](https://getbootstrap.com/docs/5.0/examples/cheatsheet/)
+- [Flex box tutorial](https://www.youtube.com/watch?v=JJSoEo8JSnc)
+- [Angular forms](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
+- [Angular bootstrap](https://ng-bootstrap.github.io/#/getting-started)
+- [Angular material](https://material.angular.io)
+- [Angular responsive dashboard](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
+- [Repository pattern](https://www.youtube.com/watch?v=rtXpYpZdOzM&t=8s)
+- [Spring JPA](https://spring.io/guides/gs/accessing-data-rest/)
+- [Spring boot tutorial](https://www.youtube.com/watch?v=vtPkZShrvXQ)
+- [Download visual studio code](https://code.visualstudio.com/Download)
+- [Goto PSM Hackathon -> Round 1 ](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/round_1/Readme.md)
 
 # PSM Phase 2 - Hackathon
 The phase 2 of the Progressive Student Manager (PSM) will consist of 2 sprints
@@ -76,6 +99,9 @@ The data component of Spring boot is used to encapsulate the database using the 
 
 [![ORM Example](https://img.youtube.com/vi/f5bdUjEIbrg/0.jpg)](https://www.youtube.com/watch?v=f5bdUjEIbrg).
 
+# PSM Phase 2 - Design
+In this section, the design of the PSM phase 2 features are discussed.  The use-case UML diagam and the Entity Relationship models are presented in the sections below.
+
 ## Progressive Student Manager (PSM) Use Case Diagram 
 
 The use case diagram for the PSM describes the features that we are aiming to develop with this project. The use case diagram is as follows:
@@ -84,5 +110,5 @@ The use case diagram for the PSM describes the features that we are aiming to de
 ## Database Design
 
 The hackathon will utilize MongoDB and H2 databases.  At some point the H2 database will migrated to MySQL.  The Entity relationship diagram for the model is as follows:
-![erd hackathon](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/mongodb/ERDHackatlon.png)
+![erd hackathon](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/mongodb/HackathonERD.png)
 
