@@ -3,8 +3,9 @@ Welcome to Round 1 of the Summer 2021 Digital Software Hackathon.  This is the e
 1. Git
 2. HTML
 3. CSS
-4. Javascript/Typescript
-5. Angular
+4. Bootstrap
+5. Javascript/Typescript
+6. Angular
 
 Not to worry if you haven't used these before, you will get all the support you need to learn them through the daily sessoins and even if you don't complete the tasks within the first week; whenever you complete the elimination round, you will then be upgraded to the main hackathon round.  So please put in the effort to learn these technologies and complete the tasks.  You will be given tutorial videos in advance of the sessions, so you can complete the tasks ahead of time.
 
