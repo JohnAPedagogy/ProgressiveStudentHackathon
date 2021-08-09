@@ -1,4 +1,4 @@
-# Summer 2021 Digial Software Hackathon
+# Summer 2021 Digial Software Hackathon - Round One
 Welcome to Round 1 of the Summer 2021 Digital Software Hackathon.  This is the elimination round of the hackathon.  This means that only when you have completed the tasks in this section will you be able to compete in the main round which is the Hackathon.  In the first round you will be building an admin console. You will complete a series of tutorial videos where you will learn the technology stack listed, and then apply the knowledge to complete the admin console.  The admin console will have the ability to add, edit, list, view and delete different entities which you will be assigned.  The technology stack comprise the following software programming tools and frameworks:
 1. Git
 2. HTML
