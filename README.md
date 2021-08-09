@@ -58,6 +58,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [HTML Layout](https://www.geeksforgeeks.org/html-layout/)
 - [Semantic html cheat sheet](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/)
 - [Semantic HTML cheatsheet](https://www.w3schools.com/html/html5_semantic_elements.asp)
+- [HTML Crash course](https://www.youtube.com/watch?v=UB1O30fR-EE)
 - [Typescript cheatsheet](https://devhints.io/typescript)
 - [Object oriented programming with javascript](https://www.youtube.com/watch?v=PFmuCDHHpwk&list=WL&index=433)
 - [Restructured Text vs Markdown](https://www.youtube.com/watch?v=v4eoYpCON_c)
