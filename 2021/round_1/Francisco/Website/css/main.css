@@ -20,7 +20,7 @@ h1{
 }
 
 #Options{
-    background-color: rgb(255, 174, 174);
+    background-color: rgb(255, 233, 233);
     font: 10px/1.5 Arial, Helvetica,sans-serif;
     padding: 0;
     margin: 0;
@@ -77,9 +77,51 @@ hr {
 
 .student-table{
     display: grid;
-    grid-template-columns: repeat(6,200px); 
+    grid-template-columns: 10px 200px 200px 200px 200px 200px 200px;
     grid-template-rows: repeat(3,50px); 
 
+}
+
+#cont{
+    margin-left: 10px;
+    font: 20px/10px Arial, Helvetica
+
+}
+
+#cont a{
+    margin-left:10px;
+    color:blue
+}
+
+#cont h1{
+    color:black
+}
+
+#cont{
+    margin: 0;
+}
+
+#cont button{
+    color: rgb(0, 0, 0); 
+    background-color: rgb(255, 233, 233);
+    font-size: 20px; 
+    line-height: 30px; 
+    padding: 20px; 
+    border:0;
+    
+    font-family: Georgia, serif; 
+    font-weight: normal;  
+    margin: 0;
+}
+
+#cont{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: repeat(4,130px); 
+}
+
+#cont .current{
+    background-color: rgb(255, 44, 44);
 }
 
 
