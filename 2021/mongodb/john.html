@@ -10,7 +10,7 @@
 </body>
 <script>
 
-const credential = new UserApiKeyCredential("KqbNcVLKlxtjzdVPx4GVlW49FvZsfmPGUjmiQWzvQoO5gXHTIi6LFObae9jXFTvw")
+// const credential = new UserApiKeyCredential("KqbNcVLKlxtjzdVPx4GVlW49FvZsfmPGUjmiQWzvQoO5gXHTIi6LFObae9jXFTvw")
 // stitch.defaultAppClient.auth.loginWithCredential(credential)
 //   .then(authedId => {
 //      console.log(`successfully logged in with id: ${authedId}`);
@@ -21,8 +21,8 @@ const client = stitch.Stitch.initializeDefaultAppClient('progressive-student-ljd
 const db = client.getServiceClient(stitch.RemoteMongoClient.factory,'mongodb-atlas').db('progressive');
 
 function run_query(q,t) {
-  // return client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
-  return client.auth.loginWithCredential(credential).then(user => {
+  return client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+  // return client.auth.loginWithCredential(credential).then(user => {
     //  document.getElementById('test2').innerHTML = 
     //    `Logged in ${user.id}`;
     //   console.dir(user);

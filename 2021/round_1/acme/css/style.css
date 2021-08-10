@@ -120,24 +120,8 @@ header a:hover{
 }
 
 /* Boxes */
-#admin{
-  display:grid;
-  grid-template-columns: 100px auto;
-  column-gap: 10px;
-  row-gap: 15px;
-}
-
-#admin .box img{
-  width:90px;
-  margin-top: 15px;
-}
-
-/* Boxes */
 #boxes{
   margin-top:20px;
-}
-#boxes .box img{
-  width:90px;
 }
 
 #boxes .box{
