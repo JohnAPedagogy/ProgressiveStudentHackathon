@@ -1,10 +1,11 @@
-# Summer 2021 Digial Software Hackathon
+# Summer 2021 Digial Software Hackathon - Round One
 Welcome to Round 1 of the Summer 2021 Digital Software Hackathon.  This is the elimination round of the hackathon.  This means that only when you have completed the tasks in this section will you be able to compete in the main round which is the Hackathon.  In the first round you will be building an admin console. You will complete a series of tutorial videos where you will learn the technology stack listed, and then apply the knowledge to complete the admin console.  The admin console will have the ability to add, edit, list, view and delete different entities which you will be assigned.  The technology stack comprise the following software programming tools and frameworks:
 1. Git
 2. HTML
 3. CSS
-4. Javascript/Typescript
-5. Angular
+4. Bootstrap
+5. Javascript/Typescript
+6. Angular
 
 Not to worry if you haven't used these before, you will get all the support you need to learn them through the daily sessoins and even if you don't complete the tasks within the first week; whenever you complete the elimination round, you will then be upgraded to the main hackathon round.  So please put in the effort to learn these technologies and complete the tasks.  You will be given tutorial videos in advance of the sessions, so you can complete the tasks ahead of time.
 
@@ -19,7 +20,7 @@ In this round, you will need to complete the following tasks in order to continu
 
 ## What do I need to do now? 
 - Clone this repository by following the instructions in the repository [landing (home) page readme](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon#setup-git-and-download-this-repository).
-- Create a folder called <your name> inside the round_1 (this) directory of the hackathon repository.  
+- Create a folder called `<your name>` inside the round_1 (this) directory of the hackathon repository.  
 - In this new folder create three subfolders:  a) website, b) bootstrap and c) admin.
 - Ensure you promtly attend all sessions in the first week.
 - Ensure you complete the tutorial vidoes below for each day and complete the tasks for each video.
@@ -49,7 +50,7 @@ For the next 5 days, try to complete the following tutorials and tasks at least 
   ```  
 
 ## Day 2 - Bootstrap
-### Git
+### Bootstrap tutorial
 [![Bootstrap tutorial](https://img.youtube.com/vi/4sosXZsdy-s/0.jpg)](https://www.youtube.com/watch?v=4sosXZsdy-s)
 ### Day 2 - Tasks
 1. Follow along and build the site or copy the files into your bootstrap folder

@@ -60,6 +60,8 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Semantic HTML cheatsheet](https://www.w3schools.com/html/html5_semantic_elements.asp)
 - [HTML Crash course](https://www.youtube.com/watch?v=UB1O30fR-EE)
 - [CSS Crash course](https://www.youtube.com/watch?v=yfoY53QXEnI)
+- [CSS Pro tips](https://www.youtube.com/watch?v=Qhaz36TZG5Y)
+- [Javascript survival guide](https://www.youtube.com/watch?v=9emXNzqCKyg)
 - [Typescript cheatsheet](https://devhints.io/typescript)
 - [Object oriented programming with javascript](https://www.youtube.com/watch?v=PFmuCDHHpwk&list=WL&index=433)
 - [Restructured Text vs Markdown](https://www.youtube.com/watch?v=v4eoYpCON_c)
@@ -76,7 +78,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Spring JPA](https://spring.io/guides/gs/accessing-data-rest/)
 - [Spring boot tutorial](https://www.youtube.com/watch?v=vtPkZShrvXQ)
 - [Download visual studio code](https://code.visualstudio.com/Download)
-- [Goto PSM Hackathon -> Round 1 (https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/round_1/Readme.md)
+- [Goto PSM Hackathon -> Round 1 ](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/round_1/Readme.md)
 
 # PSM Phase 2 - Hackathon
 The phase 2 of the Progressive Student Manager (PSM) will consist of 2 sprints
