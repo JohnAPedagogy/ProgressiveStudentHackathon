@@ -62,6 +62,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [CSS Crash course](https://www.youtube.com/watch?v=yfoY53QXEnI)
 - [CSS Pro tips](https://www.youtube.com/watch?v=Qhaz36TZG5Y)
 - [CSS basics](https://www.cssbasics.com/)
+- [CSS grid guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Javascript survival guide](https://www.youtube.com/watch?v=9emXNzqCKyg)
 - [Typescript cheatsheet](https://devhints.io/typescript)
 - [Object oriented programming with javascript](https://www.youtube.com/watch?v=PFmuCDHHpwk&list=WL&index=433)
