@@ -44,7 +44,7 @@ If you don't have git setup on your computer you can set up git by following the
 First launch power shell by clicking on the start button, type `powershell` and hit enter.  This will bring up the power shell console.  In the powershell console type the following commands
 ```bash
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
-iwr -useb get.scoop.sh | iex[
+iwr -useb get.scoop.sh | iex
 scoop install git nodejs
 ```
 #### Step 3: Finally clone this repository using git
