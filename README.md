@@ -61,6 +61,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [HTML Crash course](https://www.youtube.com/watch?v=UB1O30fR-EE)
 - [CSS Crash course](https://www.youtube.com/watch?v=yfoY53QXEnI)
 - [CSS Pro tips](https://www.youtube.com/watch?v=Qhaz36TZG5Y)
+- [CSS basics](https://www.cssbasics.com/)
 - [Javascript survival guide](https://www.youtube.com/watch?v=9emXNzqCKyg)
 - [Typescript cheatsheet](https://devhints.io/typescript)
 - [Object oriented programming with javascript](https://www.youtube.com/watch?v=PFmuCDHHpwk&list=WL&index=433)
