@@ -106,7 +106,7 @@ The data component of Spring boot is used to encapsulate the database using the 
 # PSM Phase 2 - Design
 In this section, the design of the PSM phase 2 features are discussed.  The use-case UML diagam and the Entity Relationship models are presented in the sections below.
 
-## Progressive Student Manager (PSM) Use Case Diagram 
+## Progressive Student Manager (PSM) Use Case Model 
 
 The use case diagram for the PSM describes the features that we are aiming to develop with this project. The use case diagram is as follows:
 ![PSM Use Case Diagram](UseCaseHackathon.png)
