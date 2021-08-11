@@ -71,7 +71,7 @@ For the next 5 days, try to complete the following tutorials and tasks at least 
 ### Typescript
 [![Git tutorial](https://img.youtube.com/vi/NjN00cM18Z4/0.jpg)](https://www.youtube.com/watch?v=NjN00cM18Z4)
 ### Day 3 - Tasks
-1. Follow along and build the site or copy the files into your website folder
+1. Watch the tutorial
 2. You will need to complete the task using the custom entity assigned to you.
 3. Upload all your work for  the day up to the remote repostory using the following command  
   ```bash
