@@ -5,9 +5,9 @@ Feature: View Teaching Classes
 
 
   Scenario: Viewing members of a teaching class
-    Given Tutor logs into platform
-    And All teaching classes along with students are loaded
-    When A teaching class is selected
+    Given Sally Tutor logs into platform
+    And All teaching classes called "Group 6" along with students Josy, James and Andrew for Module AES are loaded
+    When A teaching class "Group 6" is selected
     Then Tutor should be able to view all students of the teaching class
-    And it should be in should be in the attendance tab
+    And it should have a header called "AES Attendance for group 6"
 
