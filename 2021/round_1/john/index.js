@@ -1,22 +1,28 @@
-// const readline = require('readline');
+function readln(msg){
 
-// const rl = readline.createInterface({
-//   input: process.stdin,
-//   output: process.stdout
-// });
+    const readline = require('readline');
 
-// rl.question('What do you think of Node.js? ', (answer) => {
-//   // TODO: Log the answer in a database
-//   console.log(`Thank you for your valuable feedback: ${answer}`);
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
 
-//   rl.close();
-// });
+    var response;
+    rl.question(msg, (answer) => {
+        // TODO: Log the answer in a database
+       response= answer;
+    });
+    rl.close();
+    return response;
+}
 
 console.log("Welcome to the guessing game!");
-// cout << "-----------------------------" << endl;
-// //    :input rounds;
-// cout << "How many times would you like to play: ";
-// int rounds;
+console.log("-----------------------------");
+ //    :input rounds;
+console.log("How many times would you like to play: ");
+var rounds;
+var ans=readln("What's your name: ");
+console.log("hello "+ans);
 // cin >> rounds;
 // srand(time(0));  //seed generator
 //   //cout << "You are playing " << rounds << " times" << endl;
