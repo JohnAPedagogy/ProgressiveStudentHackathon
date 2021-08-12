@@ -74,6 +74,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Flex box tutorial](https://www.youtube.com/watch?v=JJSoEo8JSnc)
 - [Angular forms](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
 - [Mongodb cheatsheet](https://gist.github.com/bradtraversy/f407d642bdc3b31681bc7e56d95485b6)
+- [Mongodb playground](https://mongoplayground.net/)
 - [Angular bootstrap](https://ng-bootstrap.github.io/#/getting-started)
 - [Angular material](https://material.angular.io)
 - [Angular responsive dashboard](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
