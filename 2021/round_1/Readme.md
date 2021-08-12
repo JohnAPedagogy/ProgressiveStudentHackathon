@@ -43,6 +43,8 @@ For the next 5 days, try to complete the following tutorials and tasks at least 
 7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
 8. Upload all your work for  the day up to the remote repostory using the following command 
   ```bash
+  git pull 
+  ...do some work
   git add . 
   git commit -m "day x tasks" 
   git pull 
@@ -62,6 +64,8 @@ For the next 5 days, try to complete the following tutorials and tasks at least 
 7. There should be a left navbar having other entities such as Student, Tutor, Moddules etc.
 8. Upload all your work for  the day up to the remote repostory using the following command 
   ```bash
+  git pull 
+  ...do some work
   git add . 
   git commit -m "day x tasks" 
   git pull 
@@ -75,6 +79,8 @@ For the next 5 days, try to complete the following tutorials and tasks at least 
 2. You will need to complete the task using the custom entity assigned to you.
 3. Upload all your work for  the day up to the remote repostory using the following command  
   ```bash
+  git pull 
+  ...do some work
   git add . 
   git commit -m "day x tasks" 
   git pull 
@@ -89,6 +95,8 @@ For the next 5 days, try to complete the following tutorials and tasks at least 
 2. Create a new angular app this time apply the PSM concept to create the PSM front end application using your assigned entity.
 3. Upload all your work for  the day up to the remote repostory using the following command:  
   ```bash
+  git pull 
+  ...do some work
   git add . 
   git commit -m "day x tasks" 
   git pull 
@@ -102,6 +110,8 @@ For the next 5 days, try to complete the following tutorials and tasks at least 
 3. Upload all your work for  the day up to the remote repostory using the following command: 
   ```bash
   git add . 
+  git pull 
+  ...do some work
   git commit -m "day x tasks" 
   git pull 
   git push
