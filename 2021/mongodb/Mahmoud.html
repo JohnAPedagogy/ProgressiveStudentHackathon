@@ -35,6 +35,7 @@ function run_query(q,t) {
 		console.error(err);
 	});
 }
+
 // const app = new Realm.App({ id: "<Your App ID>" });
 // window.onload = initializeAndLogin;
 function insert_data(table,id,data){
@@ -42,18 +43,18 @@ function insert_data(table,id,data){
 		.then(()=>{
 			samplequery(table);
 	}).catch(err => {
-			 	console.error(err);
+		console.error(err);
 	})
 }
 
 function samplequery(table) {
 	const q = { } //[{$sort:{order_date:-1}},{$skip:hchcs.pageSkip*pageSize},{$limit:pageSize}];
-		run_query(q,table).then(docs=>{ 
-			console.log("found "+docs.length+" document(s)!");
-		}).catch(err=> {
-				//dbg("Ooops! Something went wrong!", response.errors[0].message);
-				console.error(err);
-		});
+	run_query(q,table).then(docs=>{
+		console.log("found "+docs.length+" document(s)!");
+	}).catch(err=> {
+		//dbg("Ooops! Something went wrong!", response.errors[0].message);
+		console.error(err);
+	});
 }
 
 const data =   {
