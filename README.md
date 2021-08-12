@@ -64,6 +64,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [CSS basics](https://www.cssbasics.com/)
 - [CSS grid guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Javascript survival guide](https://www.youtube.com/watch?v=9emXNzqCKyg)
+- [Javascript Practice Excercises](https://www.w3schools.com/js/js_exercises.asp)
 - [Typescript cheatsheet](https://devhints.io/typescript)
 - [Object oriented programming with javascript](https://www.youtube.com/watch?v=PFmuCDHHpwk&list=WL&index=433)
 - [Restructured Text vs Markdown](https://www.youtube.com/watch?v=v4eoYpCON_c)
