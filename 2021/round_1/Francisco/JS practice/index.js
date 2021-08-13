@@ -1,15 +1,16 @@
+console.log("Welcome to the guessing game!");
+console.log("------------------------------------------------");
+
+let numberRounds = 0;
+
 const readline = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-console.log("Welcome to the guessing game!");
-console.log("------------------------------------------------");
-
-let numberRounds = 0;
-readline.question('How many times would you like to play:', rounds => {
+readline.question('How many times would you like to play: ', rounds => {
     numberRounds = rounds;
-    console.log(`Playing ${rounds}!`);
+    console.log(`You will play ${rounds} rounds!`);
     readline.close();
   });
 console.log(numberRounds);

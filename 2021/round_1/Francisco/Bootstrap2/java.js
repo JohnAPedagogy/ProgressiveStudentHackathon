@@ -19,7 +19,6 @@ function run_query(q,t) {
 
             return "<div>" + y + "</div>"
         }).join("");
-        document.getElementById("test").innerHTML = html;
         return docs;
     }).catch(err => {
         console.error(err);
@@ -29,6 +28,16 @@ function run_query(q,t) {
 // window.onload = initializeAndLogin;
 function insert_data(table,id,data){
     db.collection(table).updateOne({ID:id},{$set:data}, {upsert:true})
+        .then(()=>{
+            samplequery(table);
+    }).catch(err => {
+                console.error(err);
+    })
+}
+
+function delete_data(table,id){
+    //db.posts.remove({ title: 'Post Four' })
+    db.collection(table).remove({ID:id})
         .then(()=>{
             samplequery(table);
     }).catch(err => {
@@ -53,6 +62,32 @@ const data =   {
     "DueWeek": 2,
     "DueLesson": 1
 }
+
+const Student1 = {
+    "fName": "Francisco",
+    "lname":"Hernandez",
+    "uNumber": "u1975966",
+    "SGCode": "12222",
+    "Pathway": "Comp. System Eng.",
+    "GroupNumber": 1
+}
+
+
+samplequery('ModuleTask')
+
+delete_data('ModuleTask', 1);
+
+
+//insert_data('ModuleTask', 2, data);
+
+
+
+
+
+
+
+
+
 
 mapboxgl.accessToken =
 'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'

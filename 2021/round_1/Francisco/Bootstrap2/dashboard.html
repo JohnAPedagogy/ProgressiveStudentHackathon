@@ -20,6 +20,8 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Bootcamp</title>
+    <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4.9.0/stitch.js"></script>
+    <script src="java.js"></script>
   </head>
 
 
@@ -28,7 +30,7 @@
        <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-primary navbar-dark py-3 px-3 fixed-top">
       <div class="container">
-        <a href="#" class="navbar-brand fs-2">Progressive Student Dashboard </a>
+        <a href="#" class="navbar-brand fs-3">Progressive Student Dashboard </a>
 
         <button
           class="navbar-toggler "
@@ -55,45 +57,52 @@
       </div>
     </nav>
 
-
-      <div class="student-table">
-        <div></div>
-        <h2>Unicode</h2> 
-        <h2>SGCode</h2> 
-        <h2>Last Name</h2> 
-        <h2>Other Names</h2> 
-        <h2>Start Date</h2> 
-        <h2>Group</h2> 
-
-        
-
-        <div></div>
-        <h2>u18181212</h2> 
-        <h2>111</h2> 
-        <h2>Hernandez</h2> 
-        <h2>Francisco</h2> 
-        <h2>12/11/2020</h2> 
-        <h2>1</h2> 
-
-        <div></div>
-        <h2>u18181213</h2> 
-        <h2></h2> 
-        <h2>Hernandez</h2> 
-        <h2>Alejandro</h2> 
-        <h2>12/1/2019</h2> 
-        <h2>2</h2>
-
-
-        <div></div>
-        <h2>u20165222</h2> 
-        <h2>50</h2> 
-        <h2>Maguhn</h2> 
-        <h2>Maria</h2> 
-        <h2>10/08/2018</h2> 
-        <h2>9</h2>
-      </div>
-      
-
+    <section
+    class="bg-light text-dark pt-5 text-center text-sm-start table-responsive-xl "
+    >
+      <table class="table ">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">University ID</th>
+            <th scope="col">SG Code</th>
+            <th scope="col">Pathway</th>
+            <th scope="col">Group</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th id="id" scope="row">1</th>
+            <td id="fName">Francisco</td>
+            <td id="lName">Hernandez</td>
+            <td id="uNumber">u197595</td>
+            <td id="SGCode">445241</td>
+            <td id="Pathway">Comp. Systems Eng.</td>
+            <td id="GroupNumber">3</td>
+          </tr>
+          <tr>
+            <th id="id" scope="row">2</th>
+            <td id="fName">Alejandro</td>
+            <td id="lName">Hernandez</td>
+            <td id="uNumber">u194861</td>
+            <td id="SGCode">441421</td>
+            <td id="Pathway">Software Eng.</td>
+            <td id="GroupNumber">2</td>
+          </tr>
+          <tr>
+            <th id="id" scope="row">3</th>
+            <td id="fName">Maria</td>
+            <td id="lName">Maguhn</td>
+            <td id="uNumber">u210595</td>
+            <td id="SGCode">575244</td>
+            <td id="Pathway">Comp. Systems Eng.</td>
+            <td id="GroupNumber">1</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
   </body>
 </html>
