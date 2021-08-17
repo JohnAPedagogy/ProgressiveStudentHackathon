@@ -7,4 +7,4 @@ Ataisi will be responsibile for the attendance epic while John will wirte the sc
 ## Contents
 
 1. [Attendance](attendance/attendance.md
- 1.1 [View teaching attendance](ViewTeachingAttendance.md)
+ 1.1 [View teaching attendance](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/specs/attendance/ViewTeachingAttendance.md)
