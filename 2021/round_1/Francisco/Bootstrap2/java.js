@@ -15,7 +15,7 @@ function run_query(q,t) {
         console.dir(docs);
         //const props=Object.keys(c)
         const html = docs.length==0?"":Object.keys(docs[0]).join(" | ")+"<br/>"+docs.map(c => {
-            y=Object.keys(c).map(v=>c[v]).join(" | ");
+            y = Object.keys(c).map(v=>c[v]).join(" | ");
 
             return "<div>" + y + "</div>"
         }).join("");
@@ -24,6 +24,31 @@ function run_query(q,t) {
         console.error(err);
     });
 }
+
+function createTable(q,t) {
+    return db.collection(t).find(q).asArray()
+        .then(docs => {
+        console.dir(docs);
+        //const props=Object.keys(c)
+        const stringTest = "<th scope='col'>"
+    
+        const html = "<thead> <tr> " + Object.keys(docs[0]).map(c=>stringTest+c+"</th>").join("")+"</tr> </thead><tbody>"
+        + docs.map(c => {
+            y = (Object.keys(c).map(v=> "<td>" + c[v] + "</td>")).join("");
+            return "<tr>" + y + "</tr>"
+
+        }).join("") + "</tbody>";
+        document.getElementById("table1").innerHTML = html;
+        console.log(html);
+        return docs;
+    }).catch(err => {
+        console.error(err);
+    });
+}
+
+
+
+
 // const app = new Realm.App({ id: "<Your App ID>" });
 // window.onload = initializeAndLogin;
 function insert_data(table,id,data){
@@ -73,9 +98,11 @@ const Student1 = {
 }
 
 
-samplequery('ModuleTask')
 
-delete_data('ModuleTask', 1);
+//Person
+// samplequery('Person');
+createTable({},'Person');
+// delete_data('ModuleTask', 1);
 
 
 //insert_data('ModuleTask', 2, data);
@@ -84,16 +111,3 @@ delete_data('ModuleTask', 1);
 
 
 
-
-
-
-
-
-mapboxgl.accessToken =
-'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
-var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/mapbox/streets-v11',
-center: [-71.060982, 42.35725],
-zoom: 18,
-})
