@@ -80,6 +80,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Angular bootstrap](https://ng-bootstrap.github.io/#/getting-started)
 - [Angular material](https://material.angular.io)
 - [Angular responsive dashboard](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
+- [Angular Authorization](https://www.tutorialspoint.com/angular8/angular8_authentication_and_authorization.htm)
 - [Repository pattern](https://www.youtube.com/watch?v=rtXpYpZdOzM&t=8s)
 - [Spring JPA](https://spring.io/guides/gs/accessing-data-rest/)
 - [Spring boot tutorial](https://www.youtube.com/watch?v=vtPkZShrvXQ)
