@@ -84,6 +84,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Spring JPA](https://spring.io/guides/gs/accessing-data-rest/)
 - [Spring boot tutorial](https://www.youtube.com/watch?v=vtPkZShrvXQ)
 - [Download visual studio code](https://code.visualstudio.com/Download)
+- [Karate Video](https://www.youtube.com/watch?v=yu3uupBZyxc)
 - [Goto PSM Hackathon -> Round 1 ](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/round_1/Readme.md)
 
 # PSM Phase 2 - Hackathon
