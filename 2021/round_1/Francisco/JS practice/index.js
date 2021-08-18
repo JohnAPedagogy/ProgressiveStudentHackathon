@@ -12,12 +12,8 @@ readline.question('How many times would you like to play: ', rounds => {
     numberRounds = rounds;
     console.log(`You will play ${rounds} rounds!`);
     readline.close();
-});
-
-
-
-
-
+  });
+console.log(numberRounds);
 // srand(time(0));  //seed generator
 //   //cout << "You are playing " << rounds << " times" << endl;
 //   //:create array to store number of guesses for each round 

@@ -62,7 +62,7 @@ function insert_data(table,id,data){
 
 function delete_data(table,id){
     //db.posts.remove({ title: 'Post Four' })
-    db.collection(table).remove({ID:id})
+    db.collection(table).deleteOne({ID:id})
         .then(()=>{
             samplequery(table);
     }).catch(err => {

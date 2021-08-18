@@ -1,28 +1,24 @@
-function readln(msg){
+const readline = require('readline');
 
-    const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-    const rl = readline.createInterface({
-        input: process.stdin,
-        output: process.stdout
-    });
-
-    var response;
-    rl.question(msg, (answer) => {
-        // TODO: Log the answer in a database
-       response= answer;
-    });
-    rl.close();
-    return response;
-}
 
 console.log("Welcome to the guessing game!");
 console.log("-----------------------------");
  //    :input rounds;
 console.log("How many times would you like to play: ");
-var rounds;
-var ans=readln("What's your name: ");
-console.log("hello "+ans);
+let rounds;
+rl.question("How many rounds: ", (answer) => {  //cin
+    rounds = answer;
+    console.log(`You are playing ${rounds}`);
+    rl.close(); 
+    for (let i = 0; i < rounds; i++) {
+        console.log(`round ${i + 1} of ${rounds}`);
+    }
+});
 // cin >> rounds;
 // srand(time(0));  //seed generator
 //   //cout << "You are playing " << rounds << " times" << endl;
@@ -74,3 +70,4 @@ console.log("hello "+ans);
 // //end while is no
 // //    : cout << " average number of guesses =" << sum / rounds << endl;
 // }//Stop
+
