@@ -79,6 +79,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Mongodb realm api](https://docs.mongodb.com/realm/mongodb/actions/collection.find/)
 - [Angular bootstrap](https://ng-bootstrap.github.io/#/getting-started)
 - [Angular tutorial](https://www.youtube.com/watch?v=5wtnKulcquA&t=13s)
+- [Angular 11 Tutorial](https://www.youtube.com/watch?v=3dHNOWTI7H8&t=95s)
 - [Angular material](https://material.angular.io)
 - [Angular forms](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
 - [Angular Bootstrap tutorial](https://www.youtube.com/watch?v=nZbZ5AHZJnc)
