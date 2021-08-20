@@ -12,4 +12,10 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  sideBarOpened = true;
+
+  openSidebar(value: boolean) {
+    value ? this.sideBarOpened = true : this.sideBarOpened = false;
+  }
+
 }

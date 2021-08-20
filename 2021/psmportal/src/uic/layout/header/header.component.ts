@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,5 +12,17 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  @Output() sideBarOpened = new EventEmitter<boolean>();
+  opened = false;
+
+  open(value: boolean) {
+    this.sideBarOpened.emit(value);
+    this.opened =! this.opened;
+    this.icon === "close" ? this.icon = "menu" : this.icon = "close";
+  }
+
+  icon : string = "close" 
+
 
 }

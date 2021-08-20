@@ -8,6 +8,10 @@ import { HeaderComponent } from 'src/uic/layout/header/header.component';
 import { SidebarComponent } from 'src/uic/layout/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+
+import { FormsModule } from '@angular/forms'; 
 
 
 
@@ -22,6 +26,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
+    FormsModule,
+    MatToolbarModule,
+    MatIconModule,
     MatSidenavModule
   ],
   providers: [],

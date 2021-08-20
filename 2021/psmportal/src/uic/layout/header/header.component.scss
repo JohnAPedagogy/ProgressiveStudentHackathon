@@ -1,0 +1,25 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+button{
+    margin-right: 1rem;
+    background-color: #3F51B5;
+    color: white;
+    padding: 10;
+    border-width: 0;
+    font-size: 40px;
+}
+
+.mat-icon {
+    padding-right: 3rem;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+}
+.mat-toolbar {
+    height: 80px;
+}
+span{
+    font-size: 30px;
+    padding:1rem;
+}
