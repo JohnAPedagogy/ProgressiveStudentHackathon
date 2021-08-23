@@ -19,10 +19,11 @@ export class HeaderComponent implements OnInit {
   open(value: boolean) {
     this.sideBarOpened.emit(value);
     this.opened =! this.opened;
-    this.icon === "close" ? this.icon = "menu" : this.icon = "close";
+    if (this.icon === "none") {}
+    else this.icon === "close" ? this.icon = "menu" : this.icon = "close";
   }
 
-  icon : string = "close" 
+  @Input() icon : string = "close" 
 
 
 }
