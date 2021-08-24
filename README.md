@@ -87,11 +87,14 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Angular animation](https://www.youtube.com/watch?v=ra5qNKNc95U)
 - [Angular responsive dashboard](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
 - [Angular Authorization](https://www.tutorialspoint.com/angular8/angular8_authentication_and_authorization.htm)
+- [Angular Testing Quick](https://www.youtube.com/watch?v=BumgayeUC08)
+- [Angular testing](https://www.youtube.com/watch?v=yG4FH60fhUE)
 - [Repository pattern](https://www.youtube.com/watch?v=rtXpYpZdOzM&t=8s)
 - [Spring JPA](https://spring.io/guides/gs/accessing-data-rest/)
 - [Spring boot tutorial](https://www.youtube.com/watch?v=vtPkZShrvXQ)
 - [Download visual studio code](https://code.visualstudio.com/Download)
 - [Karate Video](https://www.youtube.com/watch?v=yu3uupBZyxc)
+- [NextJS](https://www.youtube.com/watch?v=Sklc_fQBmcs)
 - [Goto PSM Hackathon -> Round 1 ](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/round_1/Readme.md)
 
 # PSM Phase 2 - Hackathon
