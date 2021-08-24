@@ -18,6 +18,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ReactiveFormsModule } from '@angular/forms'
+import { AdminComponent } from 'src/uic/template/admin/admin.component';
+
+import { GetdatabaseService } from 'src/services/getdatabase.service';
 
 
 
@@ -28,6 +31,7 @@ import { ReactiveFormsModule } from '@angular/forms'
     SidebarComponent,
     HomeComponent,
     LoginComponent,
+    AdminComponent,
     LogoutComponent
   ],
   imports: [
@@ -44,7 +48,9 @@ import { ReactiveFormsModule } from '@angular/forms'
     MatSidenavModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    GetdatabaseService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

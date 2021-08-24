@@ -1,3 +1,4 @@
+import { AdminComponent } from './../uic/template/admin/admin.component';
 import { SidebarComponent } from './../uic/layout/sidebar/sidebar.component';
 import { HomeComponent } from './../uic/template/home/home.component';
 import { NgModule } from '@angular/core';
@@ -9,8 +10,9 @@ import { NotFoundComponent } from 'src/uic/template/not-found/not-found.componen
 import { ExpenseGuard } from './expense.guard';
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent },
-  {path: 'sidebar', component: SidebarComponent, canActivate: [ExpenseGuard]},
+  { path: 'home', component: HomeComponent },
+  { path: 'admin', redirectTo: 'sidebar', pathMatch: 'full' },
+  { path: 'sidebar', component: SidebarComponent, canActivate: [ExpenseGuard]},
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
