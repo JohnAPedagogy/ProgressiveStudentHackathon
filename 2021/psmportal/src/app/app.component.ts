@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'psmportal';
+
+   isUserLoggedIn = false;
+
+   constructor(private authService: AuthService) {}
+
+   ngOnInit() {
+      let storeData = localStorage.getItem("isUserLoggedIn");
+      console.log("StoreData: " + storeData);
+
+      if( storeData != null && storeData == "true")
+         this.isUserLoggedIn = true;
+      else
+         this.isUserLoggedIn = false;
+   }
 }

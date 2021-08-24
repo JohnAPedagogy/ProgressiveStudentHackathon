@@ -14,8 +14,10 @@ export class SidebarComponent implements OnInit {
 
   sideBarOpened = true;
 
+  items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
+  expandedIndex = 0;
   openSidebar(value: boolean) {
-    value ? this.sideBarOpened = true : this.sideBarOpened = false;
+    value ? this.sideBarOpened = true : this.sideBarOpened = false; 
   }
 
 }
