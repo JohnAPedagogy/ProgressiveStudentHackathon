@@ -89,6 +89,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Angular Authorization](https://www.tutorialspoint.com/angular8/angular8_authentication_and_authorization.htm)
 - [Angular Testing Quick](https://www.youtube.com/watch?v=BumgayeUC08)
 - [Angular testing](https://www.youtube.com/watch?v=yG4FH60fhUE)
+- [Jasmine Documentation](https://jasmine.github.io/pages/docs_home.html)
 - [Repository pattern](https://www.youtube.com/watch?v=rtXpYpZdOzM&t=8s)
 - [Spring JPA](https://spring.io/guides/gs/accessing-data-rest/)
 - [Spring boot tutorial](https://www.youtube.com/watch?v=vtPkZShrvXQ)
