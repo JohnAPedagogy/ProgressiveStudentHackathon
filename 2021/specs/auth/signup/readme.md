@@ -1,13 +1,13 @@
-# Registration/Authentication Epic
+# Registration/Authentication  -> Registration/Sign up Epic
 The authentication system will enable the user to authenticate securely and based on their role will allocate what the user sees and has access to.
 ![Authentication module](../auth.PNG)
 <!-- ![Authentication module](../../karate/k01.PNG) -->
 
+The Registration and signup epic will have the following features.
 
-## Registration/Signup Feature
+## A. Registration/Signup Feature
 
 As a user I want to register on the platform so I can access the platform
-
 
 ### Acceptance Criteria (Rules)
 
@@ -15,12 +15,13 @@ As a user I want to register on the platform so I can access the platform
 2. user is allowed one account per email (i.e a user cannot use one email to register multiple accounts)
 3. All users are registered as tutors by default
 Password and confirmation password field must be masked
-4. Password must be 6 characters
+4. Password must be at least 6 characters and at most 255 characters long
 5. Should be limited to the following characters
     - Uppercase letters: A-Z.
     - Lowercase letters: a-z.
     - Numbers: 0-9.
-    - Symbols: ~`! @#$%^&*()_-+={[}]|\:;"'<,>.?/
+    - Symbols: ~! @#$%^&*()_-+={[}]|\:;<,>.?/
+6. Should not include "'` and any other character not listed in rule 5.
 
 ### Scenarios
 1. Sign up with valid credentials
@@ -30,7 +31,7 @@ Password and confirmation password field must be masked
 5. Sign up with blank mandatory field(s)
 6. Sign up with already registered email
 
-## Verification email on sign up feature
+## B. Verification email on sign up feature
 
 As a newly registered user,
 I want to verify my email 
