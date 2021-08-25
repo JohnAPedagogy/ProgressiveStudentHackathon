@@ -1,29 +1,52 @@
-# Registration/Authentication
+# Registration/Authentication Epic
 The authentication system will enable the user to authenticate securely and based on their role will allocate what the user sees and has access to.
-![Authentication module](auth.PNG)
-
-```gherkin
-
+![Authentication module](../auth.PNG)
+<!-- ![Authentication module](../../karate/k01.PNG) -->
 
 
-
-
-
-1. Sign Up
+## Registration/Signup Feature
 
 As a user I want to register on the platform so I can access the platform
 
 
-# Details
+### Acceptance Criteria (Rules)
 
-email and password and password confirmation fields are mandatory
-user is allowed one account per email (i.e a user cannot use one email to register multiple accounts)
-All users are registered as tutors by default
+1. email and password and password confirmation fields are mandatory
+2. user is allowed one account per email (i.e a user cannot use one email to register multiple accounts)
+3. All users are registered as tutors by default
 Password and confirmation password field must be masked
+4. Password must be 6 characters
+5. Should be limited to the following characters
+    - Uppercase letters: A-Z.
+    - Lowercase letters: a-z.
+    - Numbers: 0-9.
+    - Symbols: ~`! @#$%^&*()_-+={[}]|\:;"'<,>.?/
+
+### Scenarios
+1. Sign up with valid credentials
+2. Sign up with invalid email
+3. Sign up with invalid password
+4. Sign up with non matching password
+5. Sign up with blank mandatory field(s)
+6. Sign up with already registered email
+
+## Verification email on sign up feature
+
+As a newly registered user,
+I want to verify my email 
+So i can start using the system
+
+### Acceptance Criteria (Rules)
+1. Verification link is sent to email on complete registration
+2. Verification link is valid for 24 hours
+
+### Scenarios
+ 1. verification link is available on sign up
 
 
-Accceptance criteria
 
+
+```gherkin
 Scenario 1. Sign up with valid credentials
 
 Given user is on the progressive registration page
@@ -122,7 +145,7 @@ Scenario 4. Account verified but not logged in
 Given user has verified the account verification link
 when user logs in
 
-Scenario 3. account verification with expired link
+Scenario 5. account verification with expired link
 
 Given user acceses account verification link
 And the verification link is expired (after 24 hours of registration
@@ -132,10 +155,10 @@ And the account is not verified
 And an expired link message displayed to 
 And user is prompted to request new activation link
 
-Scenario 4. Verification link not sent
+Scenario 6. Verification link not sent
 Given user 
 
-Scenario 5. Reuse of verification link
+Scenario 7. Reuse of verification link
 
 Given user has already verified the verification link
 When user verifies the link again
@@ -162,12 +185,6 @@ And Login is unsuccesful
 
 
 
-**A tutor can change status to HOD
-**Only one HOD is allowed on the system (i.e if a tutor has assigned HOD to self no other can reassign HOD status)
-**An admin can asign HOD status to tutor
-***How would the system identify different departments
-if a tutor is unregistered , can an admin assign a class
-Admin assisgns class
 
 
 
