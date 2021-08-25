@@ -8,4 +8,7 @@ The class diagram below illustrates the repository pattern.
 ![image](https://user-images.githubusercontent.com/54987004/130732142-eb87bdfc-4b3c-4a33-abf4-233bdf8d9aea.png)
 ![image](https://user-images.githubusercontent.com/54987004/130732303-7d4dabd4-d98b-4d2f-bd28-ec24b8711e76.png)
 ![image](https://user-images.githubusercontent.com/54987004/130732352-4adbba75-492f-4259-be75-cbc2287d0ae2.png)
+![image](https://user-images.githubusercontent.com/54987004/130733280-18900f6f-c996-4f4d-b4e8-b9203712b276.png)
+![image](https://user-images.githubusercontent.com/54987004/130733311-e0f2c2bb-99f9-49a2-aa99-6d9ab90f7a3a.png)
+
 
