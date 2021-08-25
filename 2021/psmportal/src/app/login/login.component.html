@@ -1,0 +1,24 @@
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+       <div class="col-lg-12 text-center" style="padding-top: 20px;">
+          <div class="container box" style="margin-top: 10px; padding-left: 0px; padding-right: 0px;">
+             <div class="row">
+                <div class="col-12" style="text-align: center;">
+                                     <form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" 
+                                           class="form-signin">
+                                     <h2 class="form-signin-heading">Please sign in</h2>
+                                     <label for="inputEmail" class="sr-only">Email address</label>
+                                     <input type="text" id="username" class="form-control" 
+                                           formControlName="userName" placeholder="Username" required autofocus>
+                                     <label for="inputPassword" class="sr-only">Password</label>
+                                     <input type="password" id="inputPassword" class="form-control" 
+                                           formControlName="password" placeholder="Password" required>
+                                     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                                     </form>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>

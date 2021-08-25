@@ -2,7 +2,7 @@
 
 # MongoDB Database
 
-
+This is a sample document from the person table.
 ```
   {
     "GroupID": 1,

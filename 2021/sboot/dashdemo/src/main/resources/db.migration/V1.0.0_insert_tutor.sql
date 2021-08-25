@@ -1,0 +1,1 @@
+insert into tutor (tutor_id,person_id) values (1, 15);

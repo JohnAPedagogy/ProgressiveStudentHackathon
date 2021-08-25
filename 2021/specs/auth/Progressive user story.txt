@@ -1,0 +1,111 @@
+Registration/Authentication
+
+1. Sign Up
+
+As a user I want to register on the platform so I can access the platform
+
+
+Details
+
+email and password and password confirmation fields are mandatory
+user is allowed one account per email (i.e a user cannot use one email to register multiple accounts)
+All users are registered as tutors by default
+Password and confirmation password field must be masked
+
+
+**A tutor can change status to HOD
+**Only one HOD is allowed on the system (i.e if a tutor has assigned HOD to self no other can reassign HOD status)
+**An admin can asign HOD status to tutor
+***How would the system identify different departments
+if a tutor is unregistered , can an admin assign a class
+Admin assisgns class
+
+Flow
+Teacher signs up
+
+
+
+
+
+Accceptance criteria
+
+Scenario 1. Sign up with valid credentials
+Given user is on the progressive registration page
+When user enters a valid email 
+And enters a valid password
+And enters a matching confirmation password
+And click on sign up
+Then a verification email is sent to the user
+
+Scenario 2. Sign up with invalid email
+Given user is on the progressive system
+When user enters an invalid email 
+And enters a valid password
+And enters a matching confirmation password
+And click on sign up
+Then registration is unsuccesful
+And an  error message that specifies email is invalid is displayed.
+
+Scenario 3. Sign up with invalid password
+Password criteria is not defined
+
+Scenario 4. Sign up with non matching password
+Given user is on the progressive system
+When user enters an invalid email 
+And enters a valid password
+and enters a non matching confirmation password
+And clicks on sign up
+Then registration is unsuccesful
+An an  error message that specifies password confirmation doesn't match is displayed
+
+Scenario 5. Sign up with blank mandatory field(s)
+Given user is on the progressive system
+When user leaves  mandatory field(s) blank
+And clicks on sign up
+Then registration is unsuccesful
+Andan  error message that specifies that a mandatory field(s) is blank = " x field"  cannot be blank
+**And the field is higlighted
+
+
+Scenario 6. Sign up with already registered email
+Given user is on the progressive system
+When user enters an already used email 
+And enters a valid password
+And enters a matching confirmation password
+And click on sign up
+Then registration is unsuccesful
+And an  error message that tells user the email already exists 
+And prompts user to 
+
+
+
+2. Verification email on sign up
+As a newly registered user,
+I want to verify my email 
+So i can start using the system
+
+Details
+Verification link is sent to email on complete registration
+Verification link is valid for 24 hours
+
+Scenario 1. verification link is available on sign up
+
+Scenario 2. account verification with valid link
+Scenario 3. account verification with expired link
+Scenario 4. Verification link not sent
+Scenario 5. Login without link verification
+Scenario 5. Reuse of verification link
+
+
+3. Log in
+As a user 
+I want to log in with my credentials 
+so I can access the system
+Scenario 1. Login with valid credentials
+Scenario 2. Login with invalid email (invalid email, password and unregistered email, **unverified email, blank field)
+
+
+
+
+
+

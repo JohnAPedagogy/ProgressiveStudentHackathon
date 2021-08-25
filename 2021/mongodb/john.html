@@ -9,11 +9,20 @@
 		</div>
 </body>
 <script>
+
+// const credential = new UserApiKeyCredential("KqbNcVLKlxtjzdVPx4GVlW49FvZsfmPGUjmiQWzvQoO5gXHTIi6LFObae9jXFTvw")
+// stitch.defaultAppClient.auth.loginWithCredential(credential)
+//   .then(authedId => {
+//      console.log(`successfully logged in with id: ${authedId}`);
+//   })
+//   .catch(err => console.error(`login failed with error: ${err}`));
+
 const client = stitch.Stitch.initializeDefaultAppClient('progressive-student-ljdmz');
 const db = client.getServiceClient(stitch.RemoteMongoClient.factory,'mongodb-atlas').db('progressive');
 
 function run_query(q,t) {
   return client.auth.loginWithCredential(new stitch.AnonymousCredential()).then(user => {
+  // return client.auth.loginWithCredential(credential).then(user => {
     //  document.getElementById('test2').innerHTML = 
     //    `Logged in ${user.id}`;
     //   console.dir(user);
@@ -30,9 +39,16 @@ function run_query(q,t) {
 }
 // const app = new Realm.App({ id: "<Your App ID>" });
 // window.onload = initializeAndLogin;
+function insert_data(table,id,data){
+	db.collection(table).updateOne({ID:id},{$set:data}, {upsert:true})
+		.then(()=>{
+			samplequery(table);
+	}).catch(err => {
+			 	console.error(err);
+	})
+}
 
-function samplequery() {
-	const table = "student"
+function samplequery(table) {
 	const q = { } //[{$sort:{order_date:-1}},{$skip:hchcs.pageSkip*pageSize},{$limit:pageSize}];
 		run_query(q,table).then(docs=>{ 
 			console.log("found "+docs.length+" document(s)!");
@@ -42,8 +58,15 @@ function samplequery() {
 		});
 }
 
-			samplequery();
-
-
+const data =   {
+    "GroupID": 1,
+    "LastName":"Craig",
+    "OtherNames":"Roberts",
+    "SGCode" : "",
+    "UniCode":"u12345u7",
+    "StartDate":"2021-01-01"
+  }
+	
+insert_data('Person',1,data);
 </script>
 </html>
