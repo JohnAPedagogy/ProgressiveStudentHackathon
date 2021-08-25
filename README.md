@@ -3,7 +3,7 @@ The Progressive Student Manager (PSM) enables tutors, administrators and all stu
 
 ## PSM Phase 1 - Features
 The roadmap for the features of the PSM Phase 1 is given in the figure below.
-![image](https://user-images.githubusercontent.com/54987004/129058387-2f2ada12-69e5-4be3-b642-6000f2963ee5.png)
+![image](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/mindmap.png)
 
 Screenshots of some of the main features of the Phase one are given in the images below:
 ### Group module list
