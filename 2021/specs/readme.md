@@ -7,7 +7,7 @@ The documentation for the Progressive Student Manager Portal is divided accordin
 
 1. [Student Manager Module](attendance/readme.md)
  - 1.1. Attendance Epic 
- - 1.1.1 [View teaching classes](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/specs/attendance/ViewTeachingClasses.md)
+  * 1.1.1 [View teaching classes](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/specs/attendance/ViewTeachingClasses.md)
 2. [Authentication and Registration Module](auth/readme.md)
  - 2.1. Registration Epic
   * 2.1.1 Registration Data Entry feature
