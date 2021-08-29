@@ -1,4 +1,5 @@
 
+import * as Realm from "realm-web";
 import {IRepository} from "../interfaces/IRepo"
 
 export class StitchContext<Type> implements IRepository<Type> {
