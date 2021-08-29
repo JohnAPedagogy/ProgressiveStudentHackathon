@@ -5,6 +5,7 @@ import {IRepository} from "../interfaces/IRepo"
 export class StitchContext<Type> implements IRepository<Type> {
 
   app: Realm.App = new Realm.App({ id: "progressive-student-ljdmz" });
+  db:any
   // constructor(
   //   protected Context : IRepository<Type>
   // ){
@@ -14,19 +15,31 @@ export class StitchContext<Type> implements IRepository<Type> {
     const credentials = Realm.Credentials.anonymous();
     try {
       // Authenticate the user
-      const user: Realm.User = await app.logIn(credentials);
+      const user: Realm.User = await this.app.logIn(credentials);
       // `App.currentUser` updates to match the logged in user
-      if(app.currentUser)console.log(user.id === app.currentUser.id?"Login Successful!":"Invalid user!")
+      if(this.app.currentUser)console.log(user.id === this.app.currentUser.id?"Login Successful!":"Invalid user!");
+      this.db = this.app.getServiceClient(Realm.RemoteMongoClient.factory,'mongodb-atlas').db('progressive');
       return user
     } catch(err) {
       console.error("Failed to log in", err);
     }
   }
 
-  // get(id:Number): Type
-  // {
-  //   return this.Context.get(id);
-  // }
+  run_query(q:object,t:string) {
+    return this.db.collection(t).find(q).asArray()
+      .then( (docs: any) => {
+      console.dir(docs);
+      //const props=Object.keys(c)
+      return docs;
+    }).catch((err: any) => {
+      console.error(err);
+    });
+  }
+  
+  get(id:Number): Type
+  {
+    return this.run_query({},"Person");
+  }
  
   // getAll(): Type[]
   // {
