@@ -14,8 +14,8 @@ fdescribe('StitchContext', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-  it('should connect to DB server', () =>{
-    service.init_db().then(user=> {
+  it('should connect to DB server', async () =>{
+    await service.init_db().then(user=> {
       expect(user).toBeDefined();
     });
   })

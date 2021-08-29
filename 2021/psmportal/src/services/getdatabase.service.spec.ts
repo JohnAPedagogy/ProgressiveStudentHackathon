@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { GetdatabaseService } from './getdatabase.service';
 
-fdescribe('GetdatabaseService', () => {
+describe('GetdatabaseService', () => {
   let service: GetdatabaseService;
 
   beforeEach(() => {
