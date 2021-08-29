@@ -1,6 +1,6 @@
 export interface IRepository<Type> {
 
-  // get(id:Number): Type;
+  get(id:Number): Type;
  
   // getAll(): Type[];
  

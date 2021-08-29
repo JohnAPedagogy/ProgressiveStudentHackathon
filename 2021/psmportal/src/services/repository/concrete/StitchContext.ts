@@ -3,15 +3,13 @@ import {IRepository} from "../interfaces/IRepo"
 
 export class StitchContext<Type> implements IRepository<Type> {
 
+  app: Realm.App = new Realm.App({ id: "progressive-student-ljdmz" });
   // constructor(
   //   protected Context : IRepository<Type>
   // ){
 
   // }
   async init_db():Promise<any>{
-    const app: Realm.App = new Realm.App({ id: "progressive-student-ljdmz" });
-  
-  
     const credentials = Realm.Credentials.anonymous();
     try {
       // Authenticate the user
