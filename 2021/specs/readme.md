@@ -1,8 +1,7 @@
 # Progressive Student Manager Document
 
 ## Introduction
-The documentation for the Progressive Student Manager Portal is divided according to the modules and features.  The sub folders are therefore have the following pattern.
-*Module --> Epic --> Feature*.
+This document contains the specification for the Progressive Student Manager Portal.  The arrangement of this document follows a module, then epic, and then features hierarchy.  You will find that the sub folders, therefore, follow this pattern:  *Module --> Epic --> Feature*.
 ## Contents
 
 1. [Student Manager Module](attendance/readme.md)
