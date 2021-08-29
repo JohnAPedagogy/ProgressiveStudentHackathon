@@ -1,5 +1,5 @@
 # Registration and Authentication Module
-The authentication system will enable the user to authenticate securely and based on their role will allocate what the user sees and has access to.
+The authentication system will enable the user to authenticate securely and, based on their roles, will allocate what the user sees and has access to.
 ![Authentication module](auth.PNG)
 
 This module has the following epics
