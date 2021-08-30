@@ -1,4 +1,5 @@
 
+import { ReadVarExpr } from "@angular/compiler";
 import * as Realm from "realm-web";
 import {IRepository} from "../interfaces/IRepo"
 
@@ -18,7 +19,7 @@ export class StitchContext<Type> implements IRepository<Type> {
       const user: Realm.User = await this.app.logIn(credentials);
       // `App.currentUser` updates to match the logged in user
       if(this.app.currentUser)console.log(user.id === this.app.currentUser.id?"Login Successful!":"Invalid user!");
-      this.db = this.app.getServiceClient(Realm.RemoteMongoClient.factory,'mongodb-atlas').db('progressive');
+      // this.db = this.app.getServiceClient(Realm.RemoteMongoClient.factory,'mongodb-atlas').db('progressive');
       return user
     } catch(err) {
       console.error("Failed to log in", err);
@@ -26,19 +27,25 @@ export class StitchContext<Type> implements IRepository<Type> {
   }
 
   run_query(q:object,t:string) {
-    return this.db.collection(t).find(q).asArray()
-      .then( (docs: any) => {
-      console.dir(docs);
-      //const props=Object.keys(c)
-      return docs;
-    }).catch((err: any) => {
-      console.error(err);
-    });
+    if(!this.app.currentUser)return;
+    const mongodb = this.app.currentUser.mongoClient("mongodb-atlas");
+    return mongodb.db('progressive').collection(t).find(q);
+    // return mongodb.db("progressive").collection(t).find(q)
+    //   .then( (docs: any) => {
+    //   console.dir(docs);
+    //   //const props=Object.keys(c)
+    //   return docs[0] as Type;
+    // }).catch((err: any) => {
+    //   console.error(err);
+    // });
   }
   
-  get(id:Number): Type
+  async get(id:Number): Promise<Type>
   {
-    return this.run_query({},"Person");
+    return  await this.run_query({},"Person")
+        ?.then((data:any[] )=>{
+          return data[0];
+        }) as Type;
   }
  
   // getAll(): Type[]
