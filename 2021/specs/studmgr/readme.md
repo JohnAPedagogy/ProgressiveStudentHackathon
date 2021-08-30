@@ -1,10 +1,16 @@
-# Registration and Authentication Module
-The authentication system will enable the user to authenticate securely and based on their role will allocate resources to the as per what the user sees and has access to.
-![Authentication module](auth.PNG)
+# Student Management Module
+The student manager module is at the core of the PSM Portal and it is the module that takes care of the student progress while in the school.  The student manager module has the following epics:
+1. Attendance epic
+1. Assessment epic
+1. RPAG report epic
+1. Email
+1. Admin
+
+![Authentication module](dash.PNG)
 
 This module has the following epics
 
-## A. Sign Up
+## A. Dashboard cards
 
 As a user I want to register on the platform so I can access the platform
 
@@ -16,7 +22,7 @@ As a user I want to register on the platform so I can access the platform
 3. All users are registered as tutors by default
 4. Password and confirmation password field must be masked
 
-## B. Verification email on sign up
+## B. Dashboard 
 
 As a newly registered user,
 I want to verify my email 

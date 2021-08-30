@@ -14,9 +14,15 @@ fdescribe('StitchContext', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-  it('should connect to DB server', async () =>{
-    await service.init_db().then(user=> {
-      expect(user).toBeDefined();
+  // it('should connect to DB server', async () =>{
+  //   await service.init_db().then(user=> {
+  //     expect(user).toBeDefined();
+  //   });
+  // })
+  it('should get the type from db', async () =>{
+    await service.get(2).then(data=> {
+      console.dir(data);
+      expect(data).toBeDefined();
     });
   })
 });

@@ -1,6 +1,9 @@
-# Registration/Authentication Epic --> Login Feature
-The authentication system will enable the user to authenticate securely and based on their role will allocate what the user sees and has access to.
-![Authentication module](../auth.PNG)
+# Attendance Epic
+## Introduction
+This epic wil cater for the student attendance data.  The features include
+1. 
+
+![Authentication module](attendance.PNG)
 <!-- ![Authentication module](../../karate/k01.PNG) -->
 
 

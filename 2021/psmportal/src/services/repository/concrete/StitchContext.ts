@@ -7,19 +7,22 @@ export class StitchContext<Type> implements IRepository<Type> {
 
   app: Realm.App = new Realm.App({ id: "progressive-student-ljdmz" });
   db:any
-  // constructor(
-  //   protected Context : IRepository<Type>
-  // ){
-
-  // }
+  constructor(
+    // protected Context : IRepository<Type>
+  ){
+    this.init_db();
+  }
   async init_db():Promise<any>{
     const credentials = Realm.Credentials.anonymous();
     try {
       // Authenticate the user
       const user: Realm.User = await this.app.logIn(credentials);
       // `App.currentUser` updates to match the logged in user
-      if(this.app.currentUser)console.log(user.id === this.app.currentUser.id?"Login Successful!":"Invalid user!");
-      // this.db = this.app.getServiceClient(Realm.RemoteMongoClient.factory,'mongodb-atlas').db('progressive');
+      if(this.app.currentUser){
+        console.log(user.id === this.app.currentUser.id?"Login Successful!":"Invalid user!");
+        const mongodb = this.app.currentUser.mongoClient("mongodb-atlas");
+        this.db=mongodb.db('progressive');
+      }
       return user
     } catch(err) {
       console.error("Failed to log in", err);
@@ -27,9 +30,11 @@ export class StitchContext<Type> implements IRepository<Type> {
   }
 
   run_query(q:object,t:string) {
-    if(!this.app.currentUser)return;
-    const mongodb = this.app.currentUser.mongoClient("mongodb-atlas");
-    return mongodb.db('progressive').collection(t).find(q);
+    if(this.app.currentUser){
+      const mongodb = this.app.currentUser.mongoClient("mongodb-atlas");
+      this.db=mongodb.db('progressive');
+    }
+    return this.db.collection(t).find(q);
     // return mongodb.db("progressive").collection(t).find(q)
     //   .then( (docs: any) => {
     //   console.dir(docs);
@@ -42,9 +47,11 @@ export class StitchContext<Type> implements IRepository<Type> {
   
   async get(id:Number): Promise<Type>
   {
-    return  await this.run_query({},"Person")
+    return  await this.run_query({"ID":id},"Person")
         ?.then((data:any[] )=>{
           return data[0];
+        }).catch((err:any)=>{
+          console.error(err);
         }) as Type;
   }
  
