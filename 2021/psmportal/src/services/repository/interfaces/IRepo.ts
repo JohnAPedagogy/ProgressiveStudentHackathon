@@ -2,17 +2,19 @@ export interface IRepository<T> {
 
  get(id:Number): Promise<T>;
  
-  // getAll(): Type[];
+  getAll(): Promise<T[]>;
  
-  // add(item:Type):Type
+  add(item:T):Promise<T>
 
-  // addRange(...items: Type[]): number;
+  addRange(...items: T[]): Promise<number>;
 
-  // remove(item:Type):Type
+  remove(item:T):Promise<T>
 
-  // removeRange(...items: Type[]): void;
+  removeRange(...items: T[]): Promise<void>;
 
-  // find(gql:any): Type[]
+  find(gql:any): Promise<T[]>
+
+  serverFun(fun:string,gql:any): Promise<any>
  
 }
 

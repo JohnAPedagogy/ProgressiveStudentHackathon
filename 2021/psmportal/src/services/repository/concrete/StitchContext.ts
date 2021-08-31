@@ -8,10 +8,12 @@ export class StitchContext<T> implements IRepository<T> {
   app: Realm.App = new Realm.App({ id: "progressive-student-ljdmz" });
   db:any
   private TName : string;
+
   constructor(x : string) {
     this.TName = x;
     this.init_db();
   }
+
   async init_db():Promise<any>{
     const credentials = Realm.Credentials.anonymous();
     try {
@@ -27,6 +29,32 @@ export class StitchContext<T> implements IRepository<T> {
     } catch(err) {
       console.error("Failed to log in", err);
     }
+  }
+  
+  insert_data(table:string,id:number,data:any){
+    if(this.app.currentUser){
+      const mongodb = this.app.currentUser.mongoClient("mongodb-atlas");
+      this.db=mongodb.db('progressive');
+    }
+    this.db.collection(table).updateOne({ID:id},{$set:data}, {upsert:true})
+        .then(()=>{
+            return this.run_query({},table);
+    }).catch((err:any) => {
+        console.error(err);
+    })
+  }
+
+  delete_data(table:string,id:number){
+    if(this.app.currentUser){
+      const mongodb = this.app.currentUser.mongoClient("mongodb-atlas");
+      this.db=mongodb.db('progressive');
+    }
+    return this.db.collection(table).deleteOne({ID:id})
+        .then(()=>{
+            return this.run_query({},table);
+    }).catch((err:any) => {
+        console.error(err);
+    })
   }
 
   run_query(q:object,t:string) {
@@ -57,29 +85,64 @@ export class StitchContext<T> implements IRepository<T> {
         }) as T[];
   }
 
-  // add(item:Type):Type
-  // {
-  //   return this.Context.add(item);
-  // }
+  async add(item:T):Promise<T>
+  {
+    return  await this.run_query({},this.TName)
+      ?.then((data:any[] )=>{
+        return data;
+      }).catch((err:any)=>{
+        console.error(err);
+      }) as T;
+  }
 
-  // addRange(...items: Type[]): number
-  // {
-  //   return this.Context.addRange(...items);
-  // }
+  async addRange(...items: T[]): Promise<number>
+  {
+    const t = await this.run_query({},this.TName)
+      ?.then((data:any[] )=>{
+        return data;
+      }).catch((err:any)=>{
+        console.error(err);
+      }) as T[];
+    return t.length;
+  }
 
-  // remove(item:Type):Type
-  // {
-  //   return this.Context.add(item);
-  // }
+  async remove(item:T):Promise<T>
+  {
+    return  await this.run_query({},this.TName)
+      ?.then((data:any[] )=>{
+        return data;
+      }).catch((err:any)=>{
+        console.error(err);
+      }) as T;
+  }
 
-  // removeRange(...items: Type[]): void
-  // {
-  //   return this.Context.removeRange(...items);
-  // }
+  async removeRange(...items: T[]): Promise<void>
+  {
+    const t = await this.run_query({},this.TName)
+      ?.then((data:any[] )=>{
+        return data;
+      }).catch((err:any)=>{
+        console.error(err);
+      }) as T[];
+  }
 
-  // find(gql:any): Type[]
-  // {
-  //   return this.Context.find(gql);
-  // }
+  async find(gql:any): Promise<T[]>
+  {
+    return  await this.run_query({},this.TName)
+        ?.then((data:any[] )=>{
+          return data;
+        }).catch((err:any)=>{
+          console.error(err);
+        }) as T[];
+  }
+
+  async serverFun(fun:string, gql:any):Promise<any>{
+    return  await this.run_query({},this.TName)
+        ?.then((data:any[] )=>{
+          return data;
+        }).catch((err:any)=>{
+          console.error(err);
+        }) ;
+  }
  
 }
