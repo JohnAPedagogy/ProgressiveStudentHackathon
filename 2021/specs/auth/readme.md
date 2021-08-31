@@ -32,6 +32,10 @@ I want to log in with my credentials
 so I can access the system
 
 ### Acceptance Criteria
+1. email and password and password confirmation fields are mandatory
+2. Password and confirmation password field must be masked
+3. No validation checks necessary
+4. Should log in if authenticated
 
 ## D. System Role Configuration
 
