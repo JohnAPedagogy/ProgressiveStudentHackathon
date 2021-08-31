@@ -30,18 +30,6 @@ Password and confirmation password field must be masked
 5. Sign up with blank mandatory field(s)
 6. Sign up with already registered email
 
-## Verification email on sign up feature
-
-As a newly registered user,
-I want to verify my email 
-So i can start using the system
-
-### Acceptance Criteria (Rules)
-1. Verification link is sent to email on complete registration
-2. Verification link is valid for 24 hours
-
-### Scenarios
- 1. verification link is available on sign up
 
 
 
@@ -54,8 +42,10 @@ When user enters a valid email
 And enters a valid password
 And enters a matching confirmation password
 And click on sign up
-Then account is registered (ie. username amnd password saved to the system)
-and a verification email is sent to the user
+Then account is registered (ie. username and password saved to the system)
+And a message specifying succesful registration is displayed
+And a verification email is sent to the user
+
 
 Scenario 2. Sign up with invalid email
 
@@ -69,7 +59,15 @@ And an  error message that specifies email is invalid is displayed.
 
 Scenario 3. Sign up with invalid password
 
-Password criteria is not defined
+Given user is on the progressive homepage
+When user enters valid email 
+And enters an invalid password 
+And enters a matching confirmation password
+And click on sign up
+Then registration is unsuccesful
+And an  error message that specifies password is invalid is displayed.
+
+
 
 Scenario 4. Sign up with non matching password
 
@@ -87,8 +85,8 @@ Given user is on the progressive system
 When user leaves  mandatory field(s) blank
 And clicks on sign up
 Then registration is unsuccesful
-And an  error message that specifies that a mandatory field(s) is blank = " x field"  cannot be blank
-**And the field is higlighted
+And an  error message that specifies that  mandatory field(s) is blank = " x field"  cannot be blank
+And the field is higlighted
 
 
 Scenario 6. Sign up with already registered email
