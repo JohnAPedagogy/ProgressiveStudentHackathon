@@ -9,18 +9,28 @@ import { NotFoundComponent } from 'src/uic/template/not-found/not-found.componen
 
 import { ExpenseGuard } from './expense.guard';
 
-const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'admin', redirectTo: 'sidebar', pathMatch: 'full' },
-  { path: 'sidebar', component: SidebarComponent, canActivate: [ExpenseGuard]},
-  { path: 'login', component: LoginComponent },
-  { path: 'logout', component: LogoutComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', component: NotFoundComponent }
-];
+let routes: Routes = getRoute();
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+ }
+
+ function getRoute(){
+  return [
+    { path: 'home', component: HomeComponent },
+    { path: 'home/teaching', component: SidebarComponent },
+    { path: 'admin', redirectTo: 'sidebar', pathMatch: 'full' },
+    { path: 'sidebar', component: SidebarComponent, canActivate: [ExpenseGuard]},
+    { path: 'login', component: LoginComponent },
+    { path: 'logout', component: LogoutComponent },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '**', component: NotFoundComponent }
+  ]
+}
+
+
+
