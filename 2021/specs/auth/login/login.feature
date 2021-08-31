@@ -23,10 +23,13 @@ Scenario: 1 Login with valid credentials
     Given driver 'http://localhost:4200'
     And driver.maximize()
     And waitFor("{button}Login").click()
-    And delay(3000)
     # When user enters valid email and password
-    When
-    
+    When waitFor("#username").clear()
+    And input("#username", "admin")
+    And delay(5000)
+    # And input("inputPassword", "admin")
+    # And waitFor("{button}sign in").click()
+
     # Then Login is successful
     # And user is redirected to their dashboard
     # Then
