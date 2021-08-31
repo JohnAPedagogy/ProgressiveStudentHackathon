@@ -1,6 +1,6 @@
-export interface IRepository<Type> {
+export interface IRepository<T> {
 
- get(id:Number): Promise<Type>;
+ get(id:Number): Promise<T>;
  
   // getAll(): Type[];
  
@@ -17,7 +17,12 @@ export interface IRepository<Type> {
 }
 
 
+export class TypeHelper {
 
+  static typeName(ctor: { name:string }) : string {
+      return ctor.name;
+  }
+}
 /*
 interface Array<Type> {
   /**

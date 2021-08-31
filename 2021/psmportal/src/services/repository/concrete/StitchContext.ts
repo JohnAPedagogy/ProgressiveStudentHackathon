@@ -1,15 +1,15 @@
 
-import { ReadVarExpr } from "@angular/compiler";
-import * as Realm from "realm-web";
-import {IRepository} from "../interfaces/IRepo"
 
-export class StitchContext<Type> implements IRepository<Type> {
+import * as Realm from "realm-web";
+import {IRepository, TypeHelper} from "../interfaces/IRepo"
+
+export class StitchContext<T> implements IRepository<T> {
 
   app: Realm.App = new Realm.App({ id: "progressive-student-ljdmz" });
   db:any
-  constructor(
-    // protected Context : IRepository<Type>
-  ){
+  private TName : string;
+  constructor(x : string) {
+    this.TName = x;
     this.init_db();
   }
   async init_db():Promise<any>{
@@ -35,30 +35,27 @@ export class StitchContext<Type> implements IRepository<Type> {
       this.db=mongodb.db('progressive');
     }
     return this.db.collection(t).find(q);
-    // return mongodb.db("progressive").collection(t).find(q)
-    //   .then( (docs: any) => {
-    //   console.dir(docs);
-    //   //const props=Object.keys(c)
-    //   return docs[0] as Type;
-    // }).catch((err: any) => {
-    //   console.error(err);
-    // });
   }
   
-  async get(id:Number): Promise<Type>
+  async get(id:Number): Promise<T>
   {
-    return  await this.run_query({"ID":id},"Person")
+    return  await this.run_query({"ID":id},this.TName)
         ?.then((data:any[] )=>{
           return data[0];
         }).catch((err:any)=>{
           console.error(err);
-        }) as Type;
+        }) as T;
   }
  
-  // getAll(): Type[]
-  // {
-  //   return this.Context.getAll();
-  // }
+  async getAll(): Promise<T[]>
+  {
+    return  await this.run_query({},this.TName)
+        ?.then((data:any[] )=>{
+          return data;
+        }).catch((err:any)=>{
+          console.error(err);
+        }) as T[];
+  }
 
   // add(item:Type):Type
   // {

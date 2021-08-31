@@ -4,12 +4,12 @@
 
 
 
-export interface Person {
-  id: number;
-  groupId: number;
-  uniCode: string;
-  sgCode: string|null;
-  lastName: string;
-  otherNames: string;
-  startDate: Date|string;
+export class Person {
+  public id!: number;
+  public groupId!: number;
+  public uniCode!: string;
+  public sgCode!: string | null;
+  public lastName!: string;
+  public otherNames!: string;
+  public startDate!: Date | string;
 }
