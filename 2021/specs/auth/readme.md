@@ -43,6 +43,12 @@ so I can access the system
 5. if a tutor is unregistered , can an admin assign a class
 6. Admin assisgns class
 
+## E. Authorisation
+As a user, I want to access resources according to my role. 
+
+### Acceptance Criteria
+
+
 
 
 
