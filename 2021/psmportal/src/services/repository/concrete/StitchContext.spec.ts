@@ -8,7 +8,7 @@ fdescribe('StitchContext', () => {
   let service: StitchContext<Person>;
 
   beforeEach(() => {
-    service = new StitchContext<Person>();
+    service = new StitchContext<Person>('Person');
   });
 
   it('should be created', () => {
