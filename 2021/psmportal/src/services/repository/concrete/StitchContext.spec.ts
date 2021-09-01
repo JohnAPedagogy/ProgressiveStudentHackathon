@@ -4,7 +4,7 @@ import { StitchContext } from './StitchContext';
 import {Person} from "../../../models/domain/Person"
 
 
-fdescribe('StitchContext', () => {
+describe('StitchContext', () => {
   let service: StitchContext<Person>;
 
   beforeEach(() => {
@@ -21,6 +21,12 @@ fdescribe('StitchContext', () => {
   // })
   it('should get the type from db', async () =>{
     await service.get(2).then(data=> {
+      console.dir(data);
+      expect(data).toBeDefined();
+    });
+  })
+  it('should get a list of type from db', async () =>{
+    await service.getAll().then(data=> {
       console.dir(data);
       expect(data).toBeDefined();
     });

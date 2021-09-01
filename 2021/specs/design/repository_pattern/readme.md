@@ -11,7 +11,7 @@ Here we see that the IRepository interface declares 8 methods
 1. addRange()
 1. remove()
 1. removeRange()
-1. find
+1. find()
 1. serverFun()
 
-We also use a strategy pattern to represent the different data strategies i.e how object relational mapping is achieved and connection to the database.
+We also use a strategy pattern to represent the different data strategies i.e how object relational mapping is achieved and connection to the database.  This is done so that the strategy can be swapped for a different ORM implementation.  For example, one may use a GraghQL context instead of the MongoContext.

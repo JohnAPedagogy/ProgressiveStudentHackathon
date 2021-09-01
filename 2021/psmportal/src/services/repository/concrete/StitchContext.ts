@@ -31,14 +31,14 @@ export class StitchContext<T> implements IRepository<T> {
     }
   }
   
-  insert_data(table:string,id:number,data:any){
+  insert_data(data:any,table:string){
     if(this.app.currentUser){
       const mongodb = this.app.currentUser.mongoClient("mongodb-atlas");
       this.db=mongodb.db('progressive');
     }
-    this.db.collection(table).updateOne({ID:id},{$set:data}, {upsert:true})
+    return this.db.collection(table).updateOne(data,{$set:data}, {upsert:true})
         .then(()=>{
-          return this.run_query({},table);
+          return this.run_query(data,table);
     }).catch((err:any) => {
         console.error(err);
     })
@@ -87,9 +87,9 @@ export class StitchContext<T> implements IRepository<T> {
 
   async add(item:T):Promise<T>
   {
-    return  await this.run_query({},this.TName)
+    return  await this.insert_data(item,this.TName)
       ?.then((data:any[] )=>{
-        return data;
+        return data[0];
       }).catch((err:any)=>{
         console.error(err);
       }) as T;

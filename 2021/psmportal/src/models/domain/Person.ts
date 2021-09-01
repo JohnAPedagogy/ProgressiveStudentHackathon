@@ -1,7 +1,4 @@
-
-
-
-
+import {FakerTypeName} from "../../services/repository/utilities/seed"
 
 
 export class Person {
@@ -9,7 +6,7 @@ export class Person {
   public groupId!: number;
   public uniCode!: string;
   public sgCode!: string | null;
-  public lastName!: string;
+  @FakerTypeName()  public lastName!: string;
   public otherNames!: string;
   public startDate!: Date | string;
 }
