@@ -3,7 +3,7 @@ The authentication system will enable the user to authenticate securely and base
 ![Authentication module](../auth.PNG)
 <!-- ![Authentication module](../../karate/k01.PNG) -->
 
-
+Feature: Login
 ## Login
 
 As a user 
@@ -13,7 +13,6 @@ so I can access the system
 
 ### Acceptance Criteria (Rules)
 
-### Acceptance Criteria
 1. email and password and password confirmation fields are mandatory
 2. Password and confirmation password field must be masked
 3. No validation checks necessary
@@ -24,23 +23,29 @@ so I can access the system
 2. Login with invalid email (invalid email, password and unregistered email, **unverified email, blank field)
 3. Login without acount link verification
 
+Scenario: 1 Login with valid credentials
+    # Given user is on the login page
+    Given driver 'http://localhost:4200'
+    And driver.maximize()
+    And waitFor("{button}Login").click()
+    # When user enters valid email and password
+    When
+    # Then Login is successful
+    # And user is redirected to their dashboard
+    Then
 
-## Verification email on sign up feature
 
-As a newly registered user,
-I want to verify my email 
-So i can start using the system
 
-### Acceptance Criteria (Rules)
-1. Verification link is sent to email on complete registration
-2. Verification link is valid for 24 hours
 
-### Scenarios
-1. verification link is available on sign up
-2. account verification with valid link/session
-3. account verification with valid link/ expired session
-4. Account verified but not logged in
-5. account verification with expired link
-6. Verification link not sent
-7. Reuse of verification link
+
+Scenario: 3 Login with invalid email
+
+    # Given that I can access the portal
+    # When I enter an innvalid email
+    # Then Login is unsuccesful
+    # And  an error message is displayed.
+
+
+
+
 
