@@ -1,6 +1,7 @@
-# Dashboard cards
+# Dashboard Cards
 
 As a user I will be able to see a range of cards that will display different type of information
+
 
 # Tutor feautures 
 
@@ -54,3 +55,7 @@ This card displays 4 odometers, each showing the overall progress of tasks in ea
 2. Clicking on the card shows 4 tabs
 3. Each tab represents one of the 4 categories and should conatin a list of bar graphs that show the progress for different task of the desired category. 
 4. Clicking on one of the graphs will show the people who have completed the tasks and those who have not
+
+### Sceneraios 
+
+1. The user clicks on the card 
