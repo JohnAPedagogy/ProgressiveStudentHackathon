@@ -7,8 +7,8 @@ export class StitchContext<T> implements IRepository<T> {
 
   app: Realm.App = new Realm.App({ id: "progressive-student-ljdmz" });
   db:any
-  private TName : string;
 
+  [key: string]: any
   constructor(x : string) {
     this.TName = x;
     this.init_db();
@@ -38,7 +38,7 @@ export class StitchContext<T> implements IRepository<T> {
     }
     this.db.collection(table).updateOne({ID:id},{$set:data}, {upsert:true})
         .then(()=>{
-            return this.run_query({},table);
+          return this.run_query({},table);
     }).catch((err:any) => {
         console.error(err);
     })
@@ -51,7 +51,7 @@ export class StitchContext<T> implements IRepository<T> {
     }
     return this.db.collection(table).deleteOne({ID:id})
         .then(()=>{
-            return this.run_query({},table);
+        return this.run_query({},table);
     }).catch((err:any) => {
         console.error(err);
     })
@@ -68,21 +68,21 @@ export class StitchContext<T> implements IRepository<T> {
   async get(id:Number): Promise<T>
   {
     return  await this.run_query({"ID":id},this.TName)
-        ?.then((data:any[] )=>{
-          return data[0];
-        }).catch((err:any)=>{
-          console.error(err);
-        }) as T;
+      ?.then((data:any[] )=>{
+        return data[0];
+      }).catch((err:any)=>{
+        console.error(err);
+      }) as T;
   }
  
   async getAll(): Promise<T[]>
   {
     return  await this.run_query({},this.TName)
-        ?.then((data:any[] )=>{
-          return data;
-        }).catch((err:any)=>{
-          console.error(err);
-        }) as T[];
+      ?.then((data:any[] )=>{
+        return data;
+      }).catch((err:any)=>{
+        console.error(err);
+      }) as T[];
   }
 
   async add(item:T):Promise<T>
