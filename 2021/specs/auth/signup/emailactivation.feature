@@ -28,8 +28,7 @@ So I can start using the system
 Scenario: 1. verification link is available on sign up
 Given user is newly registered 
 And account verification link is sent
-when user accesses the the email used for registration
-then account verificaltion link is available
+when user accesses the email used for registration then account verificaltion link is available
 
 Scenario: 2. account verification with valid link/session 
 

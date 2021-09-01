@@ -97,6 +97,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Karate Video](https://www.youtube.com/watch?v=yu3uupBZyxc)
 - [Another Karate Video](https://www.youtube.com/watch?v=YWK4J3lhFw4)
 - [NextJS](https://www.youtube.com/watch?v=Sklc_fQBmcs)
+- [Faker API](https://www.npmjs.com/package/faker)
 - [Goto PSM Hackathon -> Round 1 ](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/round_1/Readme.md)
 
 # PSM Phase 2 - Hackathon
