@@ -1,24 +1,17 @@
-# DashBoard Module
-
+# Student Manager -> Admin
 ## Introduction
 
-The dashboard is the landing page of the PSM portal. It will feature graph and card components showing student and tutor performance metrics.
+The admin is used by user's with the admin role. This page is used to interact with the databse. 
 
-![Authentication module](Dashboard.PNG)
+![Authentication module](admin.PNG)
 
 This module has the following epics
 
-# A. Performance Metriix
+# A. Add entity feature 
 
-## A.i. Graphs
+As a user with the admin role, I should be able to add differnt instances of an entit to the database
 
-As a user I will be able to see two graphs that will give a summary of the students attendance and academic progress
-
-### 1. Bell curve with student grades
-
-This graph will show the percentage of students that are getting a certian grade. 
-
-#### Acceptance Criteria (Rules)
+## Acceptance Criteria (Rules)
 
 1. Clicking on the graph Show a list of students and their current grade on each module
 2. The list will be divided by RPAG scores
@@ -86,11 +79,15 @@ This card displays 4 odometers, each showing the overall progress of tasks in ea
 
 # B. Side Bar
 
-## B.i. Marks Assesment 
+## B.i. Performance Metrics 
 
-As a user, I am able to see infomation on the students assesments 
+As a user, I am able to see infomation on the students assesments.  The performance matrix will have the following features:
+1. Marks Assessment
+2. All modules
+3. Pass rate
 
 ### Acceptance Criteria
+#### Marks Assessment
 1. A list of all the groups/pathaways for that term is shown 
 2. The user can show/hide second and third attemps 
 3. The user is able to show all module scores for a specific group/pathway 
