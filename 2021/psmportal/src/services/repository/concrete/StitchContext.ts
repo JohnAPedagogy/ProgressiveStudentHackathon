@@ -97,13 +97,16 @@ export class StitchContext<T> implements IRepository<T> {
 
   async addRange(...items: T[]): Promise<number>
   {
-    const t = await this.run_query({},this.TName)
-      ?.then((data:any[] )=>{
-        return data;
-      }).catch((err:any)=>{
+    if(this.app.currentUser){
+      const mongodb = this.app.currentUser.mongoClient("mongodb-atlas");
+      this.db=mongodb.db('progressive');
+    }
+    return this.db.collection(this.TName).updateMany(items,{$set:items}, {upsert:true})
+        .then(()=>{
+          return items;//refactor not test worthy
+    }).catch((err:any) => {
         console.error(err);
-      }) as T[];
-    return t.length;
+    })
   }
 
   async remove(item:T):Promise<T>
