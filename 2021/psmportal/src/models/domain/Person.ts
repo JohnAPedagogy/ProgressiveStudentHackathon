@@ -1,12 +1,14 @@
-import {FakerTypeName} from "../../services/repository/utilities/seed"
+// import {FakerTypeName} from "../../services/repository/utilities/seed"
+import * as faker from "faker";
 
+const uid = faker.datatype.number(99999);
 
 export class Person {
-  public id!: number;
-  public groupId!: number;
-  public uniCode!: string;
-  public sgCode!: string | null;
-  @FakerTypeName()  public lastName!: string;
-  public otherNames!: string;
-  public startDate!: Date | string;
+  id?: number =  uid;
+  groupId?: number=1;
+  uniCode?: string = `u20${uid.toString().padEnd(5,'0')}`;
+  sgCode?: string | null=`s20${uid.toString().padEnd(5,'0')}`;
+  lastName?: string = faker.name.lastName();
+  otherNames?: string=faker.name.firstName();
+  startDate?: Date | string = '2021-01-01'
 }

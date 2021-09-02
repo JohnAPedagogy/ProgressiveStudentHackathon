@@ -1,7 +1,7 @@
 import { Faker } from './seed';
 
 
-fdescribe('database seed/generator', () => {
+describe('database seed/generator', () => {
   let service: Faker;
 
   beforeEach(() => {
@@ -12,9 +12,14 @@ fdescribe('database seed/generator', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should be created', () => {
-    const value = service.personeOne();
-    console.log(value);
-    expect(value.lastName=='faker').toBeFalse();
+  it('should be a random person', () => {
+    const value = service.personOne();
+    expect(value.lastName).toBeDefined();
   });
+  
+  it('should be a 2 people', () => {
+    const value = service.personMany(2);
+    expect(value.length==2).toBeDefined();
+  });
+  
 });

@@ -5,16 +5,16 @@ import { Person } from "src/models/domain/Person";
 export class Faker{
   constructor(){}
 
-  public personeOne():Person{
-    return ({
-      id: 10,
-      groupId: 1,
-      uniCode: 'u7654321',
-      sgCode: '',
-      lastName: 'faker',
-      otherNames: 'Othername',
-      startDate: '2021-01-01'
-    });
+  personOne():Person{
+    return new Person();
+  }
+
+  personMany(count:number):Person[]{
+    const people:Person[]=[];
+    for(let i=0;i<count;i++){
+      people.push(new Person() );
+    }
+    return people ;
   }
 }
 
@@ -30,9 +30,9 @@ export function FakerTypeName() {
         return val;
     };
     const setter = (next:any) => {
-        console.log('generating fake name...');
         if(next=="Faker" || next =='faker')
-        val = faker.name.findName();
+          val = faker.name.findName();
+        console.log('generated fake name=',val);
     };
 
     Object.defineProperty(target, key, {
