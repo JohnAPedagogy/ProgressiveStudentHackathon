@@ -82,6 +82,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Angular 11 Tutorial](https://www.youtube.com/watch?v=3dHNOWTI7H8&t=95s)
 - [Angular material](https://material.angular.io)
 - [Angular forms](https://www.youtube.com/watch?v=hAaoPOx_oIw&t=1017s)
+- [Reactive forms](https://www.youtube.com/watch?v=bo1Wu0aiigU)
 - [Angular Bootstrap tutorial](https://www.youtube.com/watch?v=nZbZ5AHZJnc)
 - [Angular routing](https://www.youtube.com/watch?v=tUCa3JcFILI)
 - [Angular animation](https://www.youtube.com/watch?v=ra5qNKNc95U)
