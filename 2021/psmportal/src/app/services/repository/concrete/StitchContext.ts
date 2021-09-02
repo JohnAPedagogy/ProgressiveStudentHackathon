@@ -103,7 +103,7 @@ export class StitchContext<T> implements IRepository<T> {
     }
     return this.db.collection(this.TName).updateMany(items,{$set:items}, {upsert:true})
         .then(()=>{
-          return items;//refactor not test worthy
+        return items;//refactor this: not test worthy
     }).catch((err:any) => {
         console.error(err);
     })

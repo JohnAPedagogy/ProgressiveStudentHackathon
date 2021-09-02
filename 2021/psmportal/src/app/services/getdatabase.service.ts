@@ -26,8 +26,8 @@ export class GetdatabaseService {
       const user: Realm.User = await app.logIn(credentials);
       // `App.currentUser` updates to match the logged in user
       if(app.currentUser)console.log(user.id === app.currentUser.id?"Login Successful!":"Invalid user!")
-      return user
-    } catch(err) {
+      return user;
+    }catch(err) {
       console.error("Failed to log in", err);
     }
   }
