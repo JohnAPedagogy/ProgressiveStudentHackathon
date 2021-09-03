@@ -103,6 +103,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [NextJS](https://www.youtube.com/watch?v=Sklc_fQBmcs)
 - [Faker API](https://www.npmjs.com/package/faker)
 - [GraphQL](https://www.youtube.com/watch?v=8D9XnnjFGMs)
+- [GraphQL with apollo](https://www.youtube.com/watch?v=SEMTj8w04Z8)
 - [Goto PSM Hackathon -> Round 1 ](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/round_1/Readme.md)
 
 # PSM Phase 2 - Hackathon
