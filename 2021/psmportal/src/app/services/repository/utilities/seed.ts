@@ -1,6 +1,6 @@
 
 import * as faker from "faker";
-import { Person } from "src/models/domain/Person";
+import { Person } from "src/app/models/domain/Person";
 
 export class Faker{
   constructor(){}

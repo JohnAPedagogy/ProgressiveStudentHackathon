@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GetdatabaseService } from 'src/services/getdatabase.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,14 +13,6 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  database : GetdatabaseService = new GetdatabaseService();
-
-
-  getTable(value : string){
-    this.database.sayHello(value);
-  }
-
-  Table = "<>"
 
 
   sideBarOpened = true;
