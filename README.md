@@ -130,7 +130,7 @@ In this section, the design of the PSM phase 2 features are discussed.  The use-
 
 ## Progressive Student Manager (PSM) Use Case Model 
 
-The use case diagram for the PSM describes the features that we are aiming to develop with this project. The use case diagram is as follows:
+The use case diagram for the PSM illustrated below describes the overall features developed.
 ![PSM Use Case Diagram](UseCaseHackathon.png)
 
 ## Database Design
