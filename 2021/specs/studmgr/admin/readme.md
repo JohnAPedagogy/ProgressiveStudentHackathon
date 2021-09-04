@@ -7,6 +7,7 @@ The admin is used by user's with the admin role. This page is used to interact w
 1. Modify entity
 1. View all entities
 5. Select entity to view
+1. Data Exchange
 
 ![Authentication module](admin.PNG)
 
@@ -56,4 +57,10 @@ There will be a side bar with an admin dropdown (expandable) showing all the ent
 
 1. It is possible to get a list of collections (entities) from the database directly
 1. This will be a server-side functions that you can get from the repository implementation
+1. 
+
+## F. Data Exchange
+As a user with the admin role, I should be able to remove import student list into the persons table from a csv file.
+### Acceptance Criteria (Rules)
+
 1. 
