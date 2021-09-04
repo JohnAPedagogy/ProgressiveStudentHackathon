@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router, UrlTree } from '@angular/router';
-
+import { Session } from '../sauth/login.service';
+import { Observable } from 'rxjs';
+import { SessionState } from 'src/app/store/session.state';
+import { Store, Select } from '@ngxs/store';
 import { AuthService } from './auth.service';
 
 @Injectable({
@@ -8,7 +11,10 @@ import { AuthService } from './auth.service';
 })
 export class ExpenseGuard implements CanActivate {
 
-   constructor(private authService: AuthService, private router: Router) {}
+   @Select(SessionState.getSession) 
+   session!: Observable<Session>;
+   
+  constructor(private authService: AuthService, private router: Router) {}
 
    canActivate(
    next: ActivatedRouteSnapshot,

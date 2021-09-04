@@ -5,7 +5,7 @@ import {Person} from "../../../models/domain/Person"
 import { Faker } from '../utilities/seed';
 
 
-fdescribe('StitchContext', () => {
+describe('StitchContext', () => {
   let service: StitchContext<Person>;
   let faker = new Faker();
 

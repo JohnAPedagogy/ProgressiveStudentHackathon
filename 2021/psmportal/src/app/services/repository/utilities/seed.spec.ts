@@ -12,12 +12,12 @@ describe('database seed/generator', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should be a random person', () => {
+  it('should generate a random person', () => {
     const value = service.personOne();
     expect(value.lastName).toBeDefined();
   });
   
-  it('should be a 2 people', () => {
+  it('should generate 2 people', () => {
     const value = service.personMany(2);
     expect(value.length==2).toBeDefined();
   });

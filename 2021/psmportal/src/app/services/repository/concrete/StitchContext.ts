@@ -21,7 +21,7 @@ export class StitchContext<T> implements IRepository<T> {
       const user: Realm.User = await this.app.logIn(credentials);
       // `App.currentUser` updates to match the logged in user
       if(this.app.currentUser){
-        console.log(user.id === this.app.currentUser.id?"Login Successful!":"Invalid user!");
+        // console.log(user.id === this.app.currentUser.id?"Login Successful!":"Invalid user!");
         const mongodb = this.app.currentUser.mongoClient("mongodb-atlas");
         this.db=mongodb.db('progressive');
       }

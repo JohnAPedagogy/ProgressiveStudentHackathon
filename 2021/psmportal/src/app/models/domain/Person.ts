@@ -7,8 +7,9 @@ export class Person {
   id?: number =  uid;
   groupId?: number=1;
   uniCode?: string = `u20${uid.toString().padEnd(5,'0')}`;
-  sgCode?: string | null=`s20${uid.toString().padEnd(5,'0')}`;
+  sgCode?: string | null = `s20${uid.toString().padEnd(5,'0')}`;
+  password?: string;
   lastName?: string = faker.name.lastName();
-  otherNames?: string=faker.name.firstName();
+  otherNames?: string = faker.name.firstName();
   startDate?: Date | string = '2021-01-01'
 }
