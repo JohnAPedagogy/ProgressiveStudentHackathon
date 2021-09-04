@@ -1,6 +1,7 @@
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { LoginSession, SessionLogin } from './session.actions';
 import { Session, SessionStatus } from '../services/sauth/login.service';
+import { Injectable } from '@angular/core';
 
 export class SessionStateModel {
     session!: Session;
@@ -13,6 +14,7 @@ export class SessionStateModel {
     }
 })
 
+@Injectable()
 export class SessionState {
 
   @Selector()
