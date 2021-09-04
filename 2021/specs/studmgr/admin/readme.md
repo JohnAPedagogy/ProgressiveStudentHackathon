@@ -1,18 +1,34 @@
-# Student Manager -> Admin
+# Student Manager -> Admin Epic
 ## Introduction
 
+<<<<<<< HEAD
 The admin is used by users to interact with entities managed by the database. 
 
 ![Admin module](admin.PNG)
+=======
+The admin is used by user's with the admin role. This page is used to interact with the database.  This epic has the following features
+1. Add Entity
+2. Remove Entity
+1. Modify entity
+1. View all entities
+5. Select entity to view
+1. Data Exchange
 
-This module has the following epics
+![Authentication module](./admin.png)
+>>>>>>> a648ff4fe336bb2d97d3d10d05c92a5ea2338e4f
 
-# A. Add entity feature 
 
+## A. Add entity feature 
+
+<<<<<<< HEAD
 As a user, I should be able to add different instances of an entity to the database
+=======
+As a user with the admin role, I should be able to add different instances of an entity to the database
+>>>>>>> a648ff4fe336bb2d97d3d10d05c92a5ea2338e4f
 
-## Acceptance Criteria (Rules)
+### Acceptance Criteria (Rules)
 
+<<<<<<< HEAD
 1. The entity being added needs to be inserted into the database
 2. The table where the entity belongs is determined by the UI
 2. The user needs to enter the entity's information
@@ -84,4 +100,51 @@ As a user with the admin role, I should be able to export and import data from a
 1. The user can upload students to the database
 
 
+=======
+1. 
 
+## B. Remove Entity
+
+As a user with the admin role, I should be able to modify different instances of an entity to the database
+
+### Acceptance Criteria (Rules)
+
+1. 
+
+## C. Modify Entity
+As a user with the admin role, I should be able to remove different instances of an entity to the database
+### Acceptance Criteria (Rules)
+
+1. 
+
+## D. View all Entities
+
+This view shows a configurable list of all the records of a particular entity.
+
+### Acceptance Criteria (Rules)
+
+1. Should be able to sort
+1. Should be able to filter
+1. Should be able to modify pagination
+1. Should be able to create new entity from page
+1. Should be able to edit/delete entity from view
+1. Select multiple records to delete
+
+
+## E. Select Entity to view from a list of all entities
+
+There will be a side bar with an admin dropdown (expandable) showing all the entities 
+
+
+### Acceptance Criteria (Rules)
+
+1. It is possible to get a list of collections (entities) from the database directly
+1. This will be a server-side functions that you can get from the repository implementation
+1. 
+
+## F. Data Exchange
+As a user with the admin role, I should be able to remove import student list into the persons table from a csv file.
+### Acceptance Criteria (Rules)
+>>>>>>> a648ff4fe336bb2d97d3d10d05c92a5ea2338e4f
+
+1. 

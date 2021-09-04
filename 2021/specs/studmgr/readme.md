@@ -6,51 +6,37 @@ The student manager module is at the core of the PSM Portal and it is the module
 1. Email
 1. Admin
 
-![Authentication module](dash.PNG)
+![Student manager module](studmgr.PNG)
 
 This module has the following epics
 
-## A. Dashboard cards
+## A. Attendance Epic
 
-As a user I want to register on the platform so I can access the platform
+The attendance Epic has the following features
 
+### Features
 
-### Acceptance Critera
+1. 
 
-1. email and password and password confirmation fields are mandatory
-2. user is allowed one account per email (i.e a user cannot use one email to register multiple accounts)
-3. All users are registered as tutors by default
-4. Password and confirmation password field must be masked
+## B. Assessment Epic 
 
-## B. Dashboard 
+The assessment epic has the following Features
 
-As a newly registered user,
-I want to verify my email 
-So i can start using the system
+### Features
+1. 
 
-### Acceptance Criteria
-1. Verification link is sent to email on complete registration
-2. Verification link is valid for 24 hours
+## C. RPAG Report
+The RPAG report has the following features:
 
-## C. Log in
-As a user 
-I want to log in with my credentials 
-so I can access the system
+### Features
 
-### Acceptance Criteria
+## D. Email
 
-## D. System Role Configuration
+The email epic has the following features:
+### Features
+1. 
+## E. Admin
 
-### Acceptance Criteria
-1. **A tutor can change status to HOD
-**Only one HOD is allowed on the system (i.e 2. if a tutor has assigned HOD to self no other can reassign HOD status)
-3. **An admin can asign HOD status to tutor
-4. ***How would the system identify different departments
-5. if a tutor is unregistered , can an admin assign a class
-6. Admin assisgns class
-
-
-
-
-
-```
+The admin epic has the following features:
+### Features
+1. 

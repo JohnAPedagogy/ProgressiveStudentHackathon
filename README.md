@@ -92,7 +92,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Angular testing](https://www.youtube.com/watch?v=yG4FH60fhUE)
 - [RxJx Tutorial](https://www.youtube.com/watch?v=PhggNGsSQyg&list=RDCMUCVyRiMvfUNMA1UPlDPzG5Ow&index=8)
 - [NGRX](https://www.youtube.com/watch?v=9P5DTlg9oLc&list=RDCMUCVyRiMvfUNMA1UPlDPzG5Ow&start_radio=1&rv=9P5DTlg9oLc&t=0)
-- [NGXS](https://www.youtube.com/watch?v=SGj11j4hxmg)
+- [NGXS](https://www.youtube.com/watch?v=SfiO3bDUK7Q&t=911s)[_](https://www.youtube.com/watch?v=SGj11j4hxmg)
 - [Jasmine Documentation](https://jasmine.github.io/pages/docs_home.html)
 - [Repository pattern](https://www.youtube.com/watch?v=rtXpYpZdOzM&t=8s)
 - [Spring JPA](https://spring.io/guides/gs/accessing-data-rest/)
@@ -102,6 +102,8 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Another Karate Video](https://www.youtube.com/watch?v=YWK4J3lhFw4)
 - [NextJS](https://www.youtube.com/watch?v=Sklc_fQBmcs)
 - [Faker API](https://www.npmjs.com/package/faker)
+- [GraphQL](https://www.youtube.com/watch?v=8D9XnnjFGMs)
+- [GraphQL with apollo](https://www.youtube.com/watch?v=SEMTj8w04Z8)
 - [Goto PSM Hackathon -> Round 1 ](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/round_1/Readme.md)
 
 # PSM Phase 2 - Hackathon
@@ -130,7 +132,7 @@ In this section, the design of the PSM phase 2 features are discussed.  The use-
 
 ## Progressive Student Manager (PSM) Use Case Model 
 
-The use case diagram for the PSM describes the features that we are aiming to develop with this project. The use case diagram is as follows:
+The use case diagram for the PSM illustrated below describes the overall features developed.
 ![PSM Use Case Diagram](UseCaseHackathon.png)
 
 ## Database Design

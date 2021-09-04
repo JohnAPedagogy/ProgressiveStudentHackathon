@@ -1,0 +1,119 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" [(opened)] = "sideBarOpened">
+          <mat-accordion multi>
+                        
+            <!-- Admin -->
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon>view_list</mat-icon>
+                    Admin
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-list>
+                    <mat-list-item> 
+                      <button (click)="getTable('Person')">
+                        <mat-icon>trip_origin</mat-icon> 
+                        Person 
+                      </button>
+                    </mat-list-item>
+                    <mat-list-item> 
+                      <button (click)="getTable('Teaching Class')">
+                        <mat-icon>trip_origin</mat-icon> 
+                        Teaching Class 
+                      </button>
+                    </mat-list-item>
+                    <mat-list-item> 
+                        <mat-icon>trip_origin</mat-icon> 
+                        People Role 
+                    </mat-list-item>
+                    <mat-list-item> 
+                        <mat-icon>trip_origin</mat-icon> 
+                        Pathways 
+                    </mat-list-item>
+                    <mat-list-item> 
+                        <mat-icon>trip_origin</mat-icon> 
+                        Group 
+                    </mat-list-item>
+                    <mat-list-item> 
+                        <mat-icon>trip_origin</mat-icon> 
+                        Pathway Module
+                    </mat-list-item>
+                    <mat-list-item> 
+                        <mat-icon>trip_origin</mat-icon> 
+                        Module 
+                    </mat-list-item>
+                    <mat-list-item> 
+                        <mat-icon>trip_origin</mat-icon> 
+                        Task 
+                    </mat-list-item>
+                    <mat-list-item> 
+                        <mat-icon>trip_origin</mat-icon> 
+                        Login Role 
+                    </mat-list-item>
+                    <mat-list-item> 
+                        <mat-icon>trip_origin</mat-icon> 
+                        Batch 
+                    </mat-list-item>
+                    <mat-list-item> 
+                        <mat-icon>trip_origin</mat-icon> 
+                        Progression 
+                    </mat-list-item>
+                </mat-list>
+            </mat-expansion-panel>
+ 
+            <!-- Mail -->
+            <mat-expansion-panel disabled>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon>mail</mat-icon>
+                    Mail
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+
+            <!-- Calendar -->
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon>event</mat-icon>
+                    Teaching Classes
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-list>
+                    <mat-list-item> 
+                        <mat-icon>trip_origin</mat-icon> 
+                        Software Design Group 14 & 13 
+                    </mat-list-item>
+                    <mat-list-item> 
+                        <mat-icon>trip_origin</mat-icon> 
+                        Software Design Group 1  
+                    </mat-list-item>
+                    <mat-list-item> 
+                      <mat-icon>trip_origin</mat-icon> 
+                      Math Group 1  
+                    </mat-list-item>
+                    <mat-list-item> 
+                      <mat-icon>trip_origin</mat-icon> 
+                      Math Group 9  
+                    </mat-list-item>
+                </mat-list>
+            </mat-expansion-panel>
+
+            <!-- Settings -->
+            <mat-expansion-panel disabled>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon>settings</mat-icon>
+                    Settings
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+
+          </mat-accordion>
+    </mat-sidenav>
+    <mat-sidenav-content> 
+        <app-header (sideBarOpened)="openSidebar($event)"></app-header>
+        <!-- <div [innerHTML]="Table"></div> -->
+    </mat-sidenav-content>
+</mat-sidenav-container>
