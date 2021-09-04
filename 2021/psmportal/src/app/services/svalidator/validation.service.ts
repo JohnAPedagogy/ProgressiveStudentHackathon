@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Optional } from '@angular/core';
 import { Person } from 'src/app/models/domain/Person';
 import { PersonRepository } from '../repository/concrete/PersonRepository';
 import { StitchContext } from '../repository/concrete/StitchContext';
@@ -32,19 +32,23 @@ export abstract class Rule extends Validator{
 }
 
 // ------------------------------ Validators ------------------------------
+@Injectable({
+  providedIn: 'root'
+})
 export class LoginValidator extends Validator{
   public session:Session;
-  public personContext:PersonRepository
-   = new PersonRepository(new StitchContext<Person>("Person"))//TODO: Get this injected centrally
-  constructor(session:Session){
+  constructor(session:Session,
+    @Optional() public personContext?:PersonRepository
+     ){
     super(''+session.loginInfo.useremail);
     this.session=session;
   }
   public validate(): SessionStatus {
-      this.personContext.login(this.session).then((status:SessionStatus)=>{
-        
-      });
-      return this.status;
+    this.personContext?.login(this.session).then((status:SessionStatus)=>{
+      this.status = status;
+      this.statuses.push(this.status);
+    });
+    return this.status;
   }
 }
 

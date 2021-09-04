@@ -1,10 +1,15 @@
+import { Injectable } from "@angular/core";
 import { Person } from "src/app/models/domain/Person";
 import { Session, SessionStatus } from "../../sauth/login.service";
 import { Repository } from "../concrete/Repository";
 import { IRepository } from "../interfaces/IRepo";
+import { StitchContext } from "./StitchContext";
 
+@Injectable({
+  providedIn: 'root'
+})
 export class PersonRepository extends Repository<Person> {
-  constructor(context:IRepository<Person>){
+  constructor(context:IRepository<Person>=new StitchContext<Person>("Person")){
     super(context);
   }
 

@@ -1,8 +1,8 @@
-# Student Manager -> Admin Epic
+# Student Manager -> Admin Epic -> Resource Entity Scenario (sub-feature)
 ## Introduction
 
-The admin is used by user's with the admin role. This page is used to interact with the database.  This epic has the following features
-1. Add Entity
+The admin is used by user's with the admin role. This page is used to interact with the database.  This sub feature/super scenario has the following scenarios
+1. Add a Resource Entity
 2. Remove Entity
 1. Modify entity
 1. View all entities

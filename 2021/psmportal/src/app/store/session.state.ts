@@ -23,7 +23,7 @@ export class SessionState {
   }
 
   @Action(LoginSession)
-  add({getState, patchState }: StateContext<SessionStateModel>, { payload }:LoginSession) {
+  loginSession({getState, patchState }: StateContext<SessionStateModel>, { payload }:LoginSession) {
       const state = getState();
       let clone:Session ={...state.session} as Session;
       clone.loginInfo = payload;
@@ -34,7 +34,7 @@ export class SessionState {
   }
 
   @Action(SessionLogin)
-  update({getState, patchState }: StateContext<SessionStateModel>, { payload }:SessionLogin  ) {
+  sessionLogin({getState, patchState }: StateContext<SessionStateModel>, { payload }:SessionLogin  ) {
       const state = getState();
       let patch:Session = {...state.session} as Session;
       patch.login();
