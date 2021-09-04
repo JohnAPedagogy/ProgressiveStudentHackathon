@@ -23,6 +23,6 @@ There will be a side bar with an admin dropdown (expandable) showing all the ent
 
 ### Scenarios
 
-5. User is able to see the admin expender
+1. User is able to see the admin expender
 1. Admin expander has list of entities containing the "Resource" item 
 2. The user can select the resource item to display a list of resources
