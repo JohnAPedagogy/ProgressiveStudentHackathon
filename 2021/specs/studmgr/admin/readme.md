@@ -9,7 +9,7 @@ The admin is used by user's with the admin role. This page is used to interact w
 5. Select entity to view
 1. Data Exchange
 
-![Authentication module](admin.PNG)
+![Authentication module](./admin.PNG)
 
 
 ## A. Add entity feature 
