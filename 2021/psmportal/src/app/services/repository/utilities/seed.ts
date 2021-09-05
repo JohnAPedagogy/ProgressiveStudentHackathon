@@ -20,7 +20,7 @@ export class Faker{
 
 
 
-// Property Decorator
+// Property Decorator // Not used
 export function FakerTypeName() {
   return function(target: any, key: string) {
 

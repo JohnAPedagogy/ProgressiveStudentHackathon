@@ -100,6 +100,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Download visual studio code](https://code.visualstudio.com/Download)
 - [Karate Video](https://www.youtube.com/watch?v=yu3uupBZyxc)
 - [Another Karate Video](https://www.youtube.com/watch?v=YWK4J3lhFw4)
+- [Karate with mongo](https://medium.com/clarityai-engineering/your-path-to-black-belt-begins-here-java-mongodb-and-karate-dsl-a455b5a5eef6)
 - [NextJS](https://www.youtube.com/watch?v=Sklc_fQBmcs)
 - [Faker API](https://www.npmjs.com/package/faker)
 - [GraphQL](https://www.youtube.com/watch?v=8D9XnnjFGMs)

@@ -59,7 +59,7 @@ import { PersonRepository } from './services/repository/concrete/PersonRepositor
   ],
   providers: [
     AuthService,
-    PersonRepository,
+    //PersonRepository,
   ],
   bootstrap: [AppComponent]
 })

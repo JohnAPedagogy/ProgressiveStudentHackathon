@@ -37,8 +37,9 @@ export abstract class Rule extends Validator{
 })
 export class LoginValidator extends Validator{
   public session:Session;
+  private personContext = new PersonRepository(new StitchContext<Person>("Person"));
   constructor(session:Session,
-    @Optional() public personContext?:PersonRepository
+    //@Optional() public personContext?:PersonRepository
      ){
     super(''+session.loginInfo.useremail);
     this.session=session;

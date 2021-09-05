@@ -5,11 +5,12 @@ import { Repository } from "../concrete/Repository";
 import { IRepository } from "../interfaces/IRepo";
 import { StitchContext } from "./StitchContext";
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable(
+//   //{providedIn: 'root'}
+// )
 export class PersonRepository extends Repository<Person> {
-  constructor(context:IRepository<Person>=new StitchContext<Person>("Person")){
+  //constructor(context:IRepository<Person>=new StitchContext<Person>("Person")){
+  constructor(context:IRepository<Person>){
     super(context);
   }
 
