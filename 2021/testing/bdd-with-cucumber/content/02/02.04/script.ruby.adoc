@@ -1,0 +1,169 @@
+include::./title.adoc[]
+
+Let's create our first feature file. Call the file `hear_shout.feature` shot::[1]
+
+[source,bash]
+----
+$ touch features/hear_shout.feature
+----
+
+shot::[2]
+All feature files start with the keyword `Feature:`
+shot::[3]
+followed by a name.
+It’s a good convention to give it a name that matches the file name.
+
+shot::[4]
+Now let’s write out our first scenario.
+
+.hear_shout.feature
+[source,gherkin]
+----
+Feature: Hear shout
+  Scenario: Listener is within range
+    Given Lucy is located 15m from Sean
+    When Sean shouts "free bagels at Sean's"
+    Then Lucy hears Sean’s message
+----
+
+Save the file, switch back to the command-prompt shot::[5] and run
+`cucumber`. shot::[6]
+
+You’ll see Cucumber has found our feature file and read it back to us.shot::[7] We can
+see a summary of the test results below the scenario: shot::[8] one scenario, shot::[9] three
+steps - all undefined. shot::[10]
+
+[source,bash]
+----
+$ bundle exec cucumber
+Feature: Hear shout
+
+  Scenario: Listener is within range         # features/hear_shout.feature:2
+    Given Lucy is located 15m from Sean      # features/hear_shout.feature:3
+    When Sean shouts "free bagels at Sean's" # features/hear_shout.feature:4
+    Then Lucy hears Sean's message           # features/hear_shout.feature:5
+
+1 scenario (1 undefined)
+3 steps (3 undefined)
+0m0.051s
+
+You can implement step definitions for undefined steps with these snippets:
+
+Given("Lucy is located {int}m from Sean") do |int|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When("Sean shouts {string}") do |string|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("Lucy hears Sean's message") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+----
+
+shot::[11]
+_Undefined_ means Cucumber doesn’t know what to do for any of the three steps we wrote in our Gherkin scenario. It needs us to provide some _step definitions_.
+
+shot::[11.1, "02.04.animation.mp4"]
+
+Step definitions translate from the plain language you use in Gherkin into Ruby code.
+
+When Cucumber runs a step, it looks for a step definition that matches the text in the Gherkin step. If it finds one, then it executes the code in the step definition.
+
+If it doesn’t find one… well, you’ve just seen what happens. Cucumber helpfully prints out some code snippets that we can use as a basis for new step definitions.
+
+shot::[12]
+Let’s copy those to create our first step definitions.
+
+shot::[13] shot::[14]
+We’ll paste them into a Ruby file under the `step_definitions` directory, inside the `features` directory. We'll just call it `steps.rb`.
+
+.steps.rb
+[source,ruby]
+----
+Given("Lucy is located {int}m from Sean") do |int|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When("Sean shouts {string}") do |string|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("Lucy hears Sean's message") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+----
+
+shot::[15]
+Now run Cucumber again.
+
+This time the output is a little different. None of the steps are undefined anymore. We now have a pending step shot::[16] and two skipped ones.shot::[17] This means Cucumber found all our step definitions, and executed the first one.
+shot::[18]
+But that first step definition throws a `PendingException`, which causes Cucumber to stop, skip the rest of the steps, and mark the scenario as pending. 
+
+[source,bash]
+----
+$ bundle exec cucumber
+Feature: Hear shout
+
+  Scenario: Listener is within range         # features/hear_shout.feature:2
+    Given Lucy is located 15m from Sean      # features/step_definitions/steps.rb:1
+      TODO (Cucumber::Pending)
+      ./features/step_definitions/steps.rb:2:in `"Lucy is located {int}m from Sean"'
+      features/hear_shout.feature:3:in `Given Lucy is located 15m from Sean'
+    When Sean shouts "free bagels at Sean's" # features/step_definitions/steps.rb:5
+    Then Lucy hears Sean's message           # features/step_definitions/steps.rb:9
+
+1 scenario (1 pending)
+3 steps (2 skipped, 1 pending)
+0m0.008s
+----
+
+Now that we've wired up our step definitions to the Gherkin steps, it's almost time to start working on our solution. First though, let's tidy up the generated code.
+
+shot::[19]
+We'll rename the `int` parameter to something that better reflects its meaning. We’ll call it `distance`.
+
+shot::[20]
+We can print it to the terminal to see what's happening.
+
+[source,ruby]
+----
+Given("Lucy is located {int}m from Sean") do |distance|
+  puts distance
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When("Sean shouts {string}") do |string|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("Lucy hears Sean's message") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+----
+
+If we run `cucumber` again on our terminal, shot::[21] we can see the number 15 pop up in the output.shot::[22]
+
+[source,bash]
+----
+$ bundle exec cucumber 
+Feature: Hear shout
+
+  Scenario: Listener is within range         # features/hear_shout.feature:2
+    Given Lucy is located 15m from Sean      # features/step_definitions/steps.rb:1
+      15
+      TODO (Cucumber::Pending)
+      ./features/step_definitions/steps.rb:3:in `"Lucy is located {int}m from Sean"'
+      features/hear_shout.feature:3:in `Given Lucy is located 15m from Sean'
+    When Sean shouts "free bagels at Sean's" # features/step_definitions/steps.rb:6
+    Then Lucy hears Sean's message           # features/step_definitions/steps.rb:10
+
+1 scenario (1 pending)
+3 steps (2 skipped, 1 pending)
+0m0.005s
+----
+
+Notice that the number 15 does not appear anywhere in our Ruby code. The value is automatically passed from the Gherkin step to the step definition. If you're curious, that’s the shot::[23]`{int}` in the step definition pattern or _cucumber expression_. We’ll explain these patterns in detail in a future lesson.
+

@@ -1,0 +1,65 @@
+include::./title.adoc[]
+
+Cucumber is first and foremost a tool that facilitates a common understanding between people on a project. Imagine our customers were cats. We could write our features in English, but the cats would obviously not understand that, so I'll show you how to write a scenario in LOLCAT instead.
+
+You can get a list of all the supported languages with --i18n-languages. shot::[1]
+
+[source]
+----
+npm test -- --i18n-languages
+----
+
+Cucumber supports over 70 different languages, thanks to contributions from people from all over the world.
+
+To see the translation of the Gherkin keywords for a particular language, just use the '--i18n' option with the language code. shot::[2]
+
+[source]
+----
+npm test -- --i18n-keywords en-lol
+----
+
+Now create a new feature file in the features folder called cat.feature shot::[3]
+
+The first line tells Cucumber which language the feature file is written in. shot::[4]
+.hear-shout.feature
+[source,gherkin]
+----
+include::../code/js/10-add-lolcat-feature/features/cat.feature[lines=1]
+----
+
+
+Cucumber then expects the Gherkin keywords to be in LOLCAT shot::[5]
+
+.hear-shout.feature
+[source,gherkin]
+----
+include::../code/js/10-add-lolcat-feature/features/cat.feature[]
+----
+
+The step is undefined, but we can quickly generate it by running Cucumber shot::[6, npm test] Cucumber has generated a step definition. Implementing step definitions in non-english languages is exactly the same,shot::[7] so we won't go any further with LOLCAT just now. Let's delete the cat.feature file shot::[8] and check that we're still green shot::[9]
+
+Notice that the scenarios in hear_shout.feature are being run in the order that the occur in the feature file shot::[10, expand/highlight the test results] That's fine, but there's a chance that since they always run in the same order we might accidentally make one scenario dependent on some other scenario.
+
+Each scenario should be isolated - it's result should not depend on the outcome of any other scenario. To help you catch any dependencies between your scenarios, Cucumber can be told to run your scenarios in a random order.
+
+To do this, we can use the random flag in the profile file. shot::[11]
+
+.cucumber.js
+[source,yaml]
+----
+include::../code/js/12-execute-in-random-order/cucumber.js[]
+----
+
+Now when we run Cucumber, the scenarios are run in a random order shot::[12, run Cucumber & show new order of scenario execution]. Now there's almost no chance of a dependency between scenarios slipping through without being noticed.
+
+shot::[13]
+// 13, "show List configuration options section of https://cucumber.io/docs/cucumber/api/#options"
+A full list of Cucumber's configuration properties can be found by passing the `--help` flag on the command line. shot::[14, highlight top of output] Or using the abbreviated version `-h` shot::[15]
+
+[source]
+----
+npm test -- --help
+npm test -- -h
+----
+
+That's quite a lot to digest, but to make Cucumber really useful to your team, it’s good to spend some time learning the details of how to configure it. In this lesson, we showcased two of Cucumber’s configuration options and you learned how to write your scenarios in different spoken languages.
