@@ -1,4 +1,4 @@
-# Registration/Authentication Epic --> System Role Configuration and Authorisation
+# Registration/Authentication Epic --> System Role Configuration and Authorisation Sub-epic
 The authentication system will enable the user to authenticate securely and based on their role will allocate what the user sees and has access to.
 ![Authentication module](../auth.PNG)
 <!-- ![Authentication module](../../karate/k01.PNG) -->
