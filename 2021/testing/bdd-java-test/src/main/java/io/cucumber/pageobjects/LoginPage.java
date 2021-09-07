@@ -22,7 +22,7 @@ public class LoginPage extends PageObject {
     @FindBy(id="signup")
     private WebElement submitButton;
 
-    public SignUpPage(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         super(driver);
     }
 
@@ -42,8 +42,8 @@ public class LoginPage extends PageObject {
         this.zipCode.sendKeys(zipCode);
     }
 
-    public ReceiptPage submit(){
-        submitButton.click();
-        return new ReceiptPage(driver);
-    }
+    // public ReceiptPage submit(){
+    //     submitButton.click();
+    //     return new ReceiptPage(driver);
+    // }
 }

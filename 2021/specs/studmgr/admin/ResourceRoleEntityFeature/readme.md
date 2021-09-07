@@ -10,16 +10,15 @@ The admin is used by user's with the admin role. This page is used to interact w
 
 ![Admin ResourceRole Activity](admin_ResourceRole_activity.png)
 
-## ResourceRole Fields
-1. ID  --> Int
-2. ResourceId --> String
-3. ResourceRoleUrl --> String
-4. ResourceRoleCategory --> Enum (Int)
+## ResourceRole Fields (Ui-Hint)
+1. ID  --> Int  --> DisabledText
+2. ResourceId --> Int --> DropDown
+3. RoleId --> Int --> Checkbox
 
 ## Sub-Features and API Design
 These features listed above have the following API ResourceRoles
 1. Add a ResourceRole  --> [post] /dashboard/admin/ResourceRole
-2. Remove a Reource --> [delete] /dashboard/admin/ResourceRole
+2. Remove a ResourceRole --> [delete] /dashboard/admin/ResourceRole
 3. Modify a ResourceRole [patch] /dashboard/admin/ResourceRole
 4. View all ResourceRoles --> [get] /dashboard/admin/ResourceRole
 
@@ -51,8 +50,6 @@ As a user with the admin role, I should be able to remove different instances of
 
 There will be a side bar with an admin dropdown (expandable) showing all the entities 
 #### Acceptance Criteria (Rules)
-1. It is possible to get a list of collections (entities) from the database directly
-1. This will be a server-side functions that you can get from the repository implementation
 1. If you select ResourceRole from the side bar, the list of all ResourceRole entities should be displayed in the screen
 1. Should be able to sort
 1. Should be able to filter
