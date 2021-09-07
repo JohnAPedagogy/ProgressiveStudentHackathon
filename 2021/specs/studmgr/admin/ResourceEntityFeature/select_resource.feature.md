@@ -9,7 +9,7 @@ The following examples ensue.
 1. Admin expander has list of entities containing the "Resource" item 
 2. The user can select the resource item to display a list of resources
 
-![Admin epic](../admin.PNG)
+![Admin epic](../admin.png)
 
 ## Feature: Select Resource to view from a list of all Resource entities
 
