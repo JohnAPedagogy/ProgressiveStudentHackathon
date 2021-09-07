@@ -10,6 +10,12 @@ The admin is used by user's with the admin role. This page is used to interact w
 
 ![Admin epic](../admin.png)
 
+## Rest API Resources
+- [get] /dashboard/admin/resource
+- [post] /dashboard/admin/resource
+- [delete] /dashboard/admin/resource
+- [patch] /dashboard/admin/resource
+
 
 ## A. Add a Resource entity feature 
 
