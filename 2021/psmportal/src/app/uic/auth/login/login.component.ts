@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
    password: string = "";
    formData: FormGroup;
 
-   loginInfo!:LoginInfo;
+   loginInfo:LoginInfo ={useremail:'', password:''};
 
    @Select(SessionState.getSession) 
    session!: Observable<Session>;
@@ -46,13 +46,13 @@ export class LoginComponent implements OnInit {
    onClickSubmit(data: any) {
       this.userName = data.userName;
       this.password = data.password;
-      this.loginInfo.useremail = data.useremail;
-      this.loginInfo.password = data.password;
+      // this.loginInfo.useremail = data.useremail;
+      // this.loginInfo.password = data.password;
 
       console.log("Login page: " + this.userName);
       console.log("Login page: " + this.password);
 
-      this.store.dispatch(new LoginSession(this.loginInfo));
+      // this.store.dispatch(new LoginSession(this.loginInfo));
 
       this.authService.login(this.userName, this.password)
          .subscribe( data => { 

@@ -28,10 +28,25 @@ There will be a side bar with an admin dropdown (expandable) showing all the ent
 1. Admin expander has list of entities containing the "Resource" item 
 2. The user can select the resource item to display a list of resources
 
-Scenario: 1. User is able to see the admin expander
+Background:
+  # Given I have logged in to the portal successfully
+  Given driver 'http://localhost:4200'
+  #And driver.maximize()
+  And waitFor("{button}Login").click()
+  And waitFor("#username").clear()
+  And input("#username", "admin")
+  And waitFor("#inputPassword").clear()
+  And input("#inputPassword", "admin")
+  When click("{button}Sign in")
+  Then waitFor("{}Admin")
 
-  Given I have logged in to the portal successfully
-  And I am on the dashboard page
-  When I select the admin on the sidebar
-  Then the sidebar should expand to reveal the {Resource} item
+Scenario: 1. User is able to see the admin expander
+  # And I am on the dashboard page
+  Then waitFor("#adminbtn")
+
+Scenario: 2. The Expander should Reveal the Resource Item
+  # When I select the admin on the sidebar
+  When click("#adminbtn")
+  # Then the sidebar should expand to reveal the {Resource} item
+  Then waitFor("{}Resource")
   
