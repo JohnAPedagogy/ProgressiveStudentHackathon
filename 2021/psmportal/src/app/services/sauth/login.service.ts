@@ -24,16 +24,7 @@ export class Session{
     this.status=this.validations[0].validate()
   }
 }
-export enum SessionStatus {
-  InvalidUserOrPass,
-  LoginSuccess,
-  UserNotFound,
-  PasswordOK,
-  PasswordTooShort,
-  PasswordDifferentFromRepeat,
-  Login,
-  LoginSession
-}
+
 export interface LoginInfo{
   useremail?:string;
   password:string

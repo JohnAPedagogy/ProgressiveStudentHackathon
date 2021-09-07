@@ -2,7 +2,8 @@ import { Injectable, Optional } from '@angular/core';
 import { Person } from 'src/app/models/domain/Person';
 import { PersonRepository } from '../repository/concrete/PersonRepository';
 import { StitchContext } from '../repository/concrete/StitchContext';
-import { Session, SessionStatus } from '../sauth/login.service';
+import { SessionStatus } from '../../enumerations/domain_enums';
+import { Session } from '../sauth/login.service';
 
 @Injectable({
   providedIn: 'root'

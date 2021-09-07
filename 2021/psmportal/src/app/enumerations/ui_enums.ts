@@ -1,0 +1,5 @@
+
+
+export enum ResourceCategory {
+  Admin,
+}
