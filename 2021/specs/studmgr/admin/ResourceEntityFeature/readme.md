@@ -17,7 +17,7 @@ As a user with the admin role, I should be able to add different instances of an
 
 ### Acceptance Criteria (Rules)
 
-1. 
+1.The added Resource item should be seen in the database
 
 ## B. Remove a Resource Entity
 
@@ -25,14 +25,14 @@ As a user with the admin role, I should be able to modify different instances of
 
 ### Acceptance Criteria (Rules)
 
-1. 
+1. the removed resource should no longer be in the database
 
 ## C. Modify a Resource Entity
 As a user with the admin role, I should be able to remove different instances of an entity to the database
 
 ### Acceptance Criteria (Rules)
 
-1. 
+1. The original and modified Resource from the database should differ in at least a field
 
 ## D. View all Resource Entities
 
