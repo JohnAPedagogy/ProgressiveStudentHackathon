@@ -16,6 +16,11 @@ The admin is used by user's with the admin role. This page is used to interact w
 - [delete] /dashboard/admin/resource
 - [patch] /dashboard/admin/resource
 
+## Resource Fields
+1. ID  --> Int
+2. ResourceName --> String
+3. REsourceUrl --> String
+4. ResourceCategory --> Enum (Int)
 
 ## A. Add a Resource entity feature 
 
