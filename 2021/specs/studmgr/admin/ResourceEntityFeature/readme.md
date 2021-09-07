@@ -19,7 +19,7 @@ The admin is used by user's with the admin role. This page is used to interact w
 ## Resource Fields
 1. ID  --> Int
 2. ResourceName --> String
-3. REsourceUrl --> String
+3. ResourceUrl --> String
 4. ResourceCategory --> Enum (Int)
 
 ## A. Add a Resource entity feature 
