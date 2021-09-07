@@ -8,7 +8,7 @@ The admin is used by user's with the admin role. This page is used to interact w
 1. Modify a Resource entity
 1. View all Resource entities
 
-![Admin epic](../admin.png)
+![Admin epic](../admin_resource_activity.png)
 
 ## Rest API Resources
 - [get] /dashboard/admin/resource
