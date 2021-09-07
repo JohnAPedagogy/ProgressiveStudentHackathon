@@ -1,5 +1,7 @@
 package io.cucumber.pagetests;
 
+import org.junit;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import io.cucumber.pageobjects;
