@@ -1,6 +1,6 @@
-# Registration and Authentication Module --> Registration
+# Registration and Authentication Module --> Registration Epic
 The authentication system will enable the user to authenticate securely and based on their role will allocate resources to the as per what the user sees and has access to.
-![Authentication module](registration.png)
+![Registration epic](registration.png)
 ## Introduction
 
 The registration epic allows the user to create a login for the Progressive Student Management.  This epic has the following features:
@@ -11,7 +11,8 @@ The registration epic allows the user to create a login for the Progressive Stud
 1. Email Activation
 1. User Activation
 
-As a user I want to register on the platform so I can access the platform
+As a user I want to register on the platform so I can access the platform. The use case for this user story is as follows:
+![Registration Use case](registration_use_case.png)
 
 
 ### Acceptance Critera
@@ -21,7 +22,6 @@ As a user I want to register on the platform so I can access the platform
 3. All users are registered as tutors by default
 4. Password and confirmation password field must be masked
 
-1. ![Authentication module](registration_use_case.png)
 
 ## A. Enter Details
 As A user I would like to enter my details to register
@@ -30,6 +30,7 @@ As A user I would like to enter my details to register
 The fields would include
 1. User email
 1. Password
+3. Repeat Password
 
 ## B. Validate Details
 As A user I would like to enter my details to register
