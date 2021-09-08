@@ -1,17 +1,19 @@
-# Registration and Authentication Module --> Registration
+# Registration and Authentication Module --> Registration Epic
 The authentication system will enable the user to authenticate securely and based on their role will allocate resources to the as per what the user sees and has access to.
-![Authentication module](registration.png)
+![Registration epic](registration.png)
+
 ## Introduction
 
 The registration epic allows the user to create a login for the Progressive Student Management.  This epic has the following features:
 
 1. Registration Details
 1. Validatoin
-1. Registration Success
+1. Registration Process Successful
 1. Email Activation
-1. User Activation
+1. User Activation/Registration Process Complete
 
-As a user I want to register on the platform so I can access the platform
+As a user I want to register on the platform so I can access the platform. The use case for this user story is as follows:
+![Registration Use case](registration_use_case.png)
 
 
 ### Acceptance Critera
@@ -21,44 +23,36 @@ As a user I want to register on the platform so I can access the platform
 3. All users are registered as tutors by default
 4. Password and confirmation password field must be masked
 
-1. ![Authentication module](registration_use_case.png)
 
 ## A. Enter Details
-As A user I would like to enter my details to register
+As A user I would like to enter my details to during the registration process
 
 ### Acceptance Critera
 The fields would include
 1. User email
 1. Password
+3. Repeat Password
 
 ## B. Validate Details
-As A user I would like to enter my details to register
+As A user I would like to be notified if there are any problems while entering my details during the registration process.
 
 ### Acceptance Critera
-The fields would include
-1. User email
-1. Password
+1. 
 
-## A. Enter Details
-As A user I would like to enter my details to register
+## C. Registration Initiation Successful
+As A user I would like to be notified that my details has been entered into the system and that the registration process has been initiated.
 
 ### Acceptance Critera
-The fields would include
-1. User email
-1. Password
+1. 
 
-## A. Enter Details
-As A user I would like to enter my details to register
+## D. Email Activation
+As A user I would like to complete the registration process by clicking the activation link in my email before it expires.
 
 ### Acceptance Critera
-The fields would include
-1. User email
-1. Password
+1. 
 
-## A. Enter Details
-As A user I would like to enter my details to register
+## E. Activate User/Registration Complete
+As A user I would like to be notified of the Registration Process completion after email activation
 
 ### Acceptance Critera
-The fields would include
-1. User email
-1. Password
+1. 
