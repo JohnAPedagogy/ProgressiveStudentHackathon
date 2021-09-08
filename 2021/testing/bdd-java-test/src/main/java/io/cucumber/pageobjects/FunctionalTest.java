@@ -8,6 +8,8 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FunctionalTest {
     protected static WebDriver driver;
@@ -15,8 +17,7 @@ public class FunctionalTest {
 
     @BeforeClass
     public static void setUp(){
-        System.setProperty("webdriver.chrome.driver",
-        "C:\\Users\\User\\Dropbox\\rtmp\\src\\js\\pedagogy\\2021\\testing\\bdd-java-test\\junit4jars\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }

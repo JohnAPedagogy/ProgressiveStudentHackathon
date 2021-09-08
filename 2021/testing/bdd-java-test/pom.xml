@@ -40,15 +40,20 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
+            <version>3.14.0</version>
         </dependency>
-<dependency>
-    <groupId>org.junit</groupId>
-    <artifactId>junit</artifactId>
-    <version>4.8.2</version>
-    <scope>system</scope>
-    <systemPath>${project.basedir}/junit4jars/junit4-4.8.2.jar</systemPath>
-</dependency>        
+        <dependency>
+            <groupId>org.junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/junit4jars/junit4-4.8.2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.0.1</version>
+        </dependency>
     </dependencies>
 
     <build>

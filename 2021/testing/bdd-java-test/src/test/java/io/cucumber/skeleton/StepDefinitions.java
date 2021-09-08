@@ -15,7 +15,7 @@ public class StepDefinitions {
     @When("I wait {int} hour")
     public void i_wait_hour(Integer int1) {
         LoginPageTest login = new LoginPageTest();
-        //login.signUp();
+        login.signUp();
         // Write code here that turns the phrase above into concrete actions
         //throw new io.cucumber.java.PendingException();
     }
