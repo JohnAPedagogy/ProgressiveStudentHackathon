@@ -30,3 +30,4 @@ As A user I would like to enter my details to register
 The fields would include
 1. User email
 1. Password
+3. Repeat Password
