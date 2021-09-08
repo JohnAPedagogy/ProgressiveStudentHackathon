@@ -1,6 +1,7 @@
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { LoginSession, SessionLogin } from './session.actions';
-import { Session, SessionStatus } from '../services/sauth/login.service';
+import { Session } from '../services/sauth/login.service';
+import { SessionStatus } from "src/app/enumerations/domain_enums";
 import { Injectable } from '@angular/core';
 
 export class SessionStateModel {

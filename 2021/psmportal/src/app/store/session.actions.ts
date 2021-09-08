@@ -1,5 +1,6 @@
-import { Person } from "../models/domain/Person"
-import { LoginInfo, SessionStatus } from "../services/sauth/login.service"
+
+import { LoginInfo } from "../services/sauth/login.service"
+import { SessionStatus } from "src/app/enumerations/domain_enums";
 
 
 export class LoginSession {
