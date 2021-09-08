@@ -1,6 +1,8 @@
 # Registration and Authentication Module --> Registration --> User Details
 The authentication system will enable the user to authenticate securely and based on their role will allocate resources to the as per what the user sees and has access to.
+
 ![Authentication module](registration.png)
+
 ## Introduction
 
 The registration epic allows the user to create a login for the Progressive Student Management.  This epic has the following features:
