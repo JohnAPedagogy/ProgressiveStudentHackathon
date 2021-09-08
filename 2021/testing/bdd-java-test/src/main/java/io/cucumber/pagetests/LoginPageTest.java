@@ -10,6 +10,7 @@ public class LoginPageTest extends FunctionalTest {
 
     @Test
     public void signUp(){
+        FunctionalTest.setUp();
         driver.get("http://www.kimschiller.com/page-object-pattern-tutorial/index.html");
 
         LoginPage signUpPage = new LoginPage(driver);
@@ -17,6 +18,9 @@ public class LoginPageTest extends FunctionalTest {
 
         signUpPage.enterName("First", "Last");
         signUpPage.enterAddress("123 Street", "12345");
+
+        //signUpPage.cleanUp();
+        FunctionalTest.tearDown();
 
         // ReceiptPage receiptPage = signUpPage.submit();
         // assertTrue(receiptPage.isInitialized());

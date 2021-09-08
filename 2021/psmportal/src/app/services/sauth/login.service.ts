@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Person } from 'src/app/models/domain/Person';
 import { Validator,LoginValidator } from '../svalidator/validation.service';
+import { SessionStatus } from "src/app/enumerations/domain_enums";
 
 @Injectable({
   providedIn: 'root'

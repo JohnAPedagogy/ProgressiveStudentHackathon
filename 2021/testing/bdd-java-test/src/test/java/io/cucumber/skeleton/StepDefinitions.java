@@ -1,5 +1,7 @@
 package io.cucumber.skeleton;
 
+import io.cucumber.pagetests.LoginPageTest;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
@@ -12,6 +14,8 @@ public class StepDefinitions {
     }
     @When("I wait {int} hour")
     public void i_wait_hour(Integer int1) {
+        LoginPageTest login = new LoginPageTest();
+        login.signUp();
         // Write code here that turns the phrase above into concrete actions
         //throw new io.cucumber.java.PendingException();
     }

@@ -1,9 +1,8 @@
-import { Injectable } from "@angular/core";
 import { Person } from "src/app/models/domain/Person";
-import { Session, SessionStatus } from "../../sauth/login.service";
+import { Session } from "../../sauth/login.service";
+import { SessionStatus } from "src/app/enumerations/domain_enums";
 import { Repository } from "../concrete/Repository";
 import { IRepository } from "../interfaces/IRepo";
-import { StitchContext } from "./StitchContext";
 
 // @Injectable(
 //   //{providedIn: 'root'}

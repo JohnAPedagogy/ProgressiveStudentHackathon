@@ -1,6 +1,5 @@
 
 import { IRepository } from "../interfaces/IRepo";
-import {StitchContext} from "./StitchContext"
 
 export class Repository<T> implements IRepository<T> {
 

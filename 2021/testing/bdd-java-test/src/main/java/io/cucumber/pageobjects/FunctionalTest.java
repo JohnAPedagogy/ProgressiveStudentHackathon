@@ -12,8 +12,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class FunctionalTest {
     protected static WebDriver driver;
 
+
     @BeforeClass
     public static void setUp(){
+        System.setProperty("webdriver.chrome.driver",
+        "C:\\Users\\User\\Dropbox\\rtmp\\src\\js\\pedagogy\\2021\\testing\\bdd-java-test\\junit4jars\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
