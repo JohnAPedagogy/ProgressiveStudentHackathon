@@ -1,4 +1,4 @@
-# Student Manager -> Admin Epic -> Add Entity Super Scenario (sub-feature)
+# Student Manager Module -> Admin Epic -> Add Entity Super Scenario (sub-feature)
 ## Introduction
 
 The admin is used by user's with the admin role. This page is used to interact with the database. The add super feature has the following sub-features
@@ -11,8 +11,7 @@ The admin is used by user's with the admin role. This page is used to interact w
 
 ## Sub-Features and API Design
 
-1. Add a ResourceRole  --> [post] /dashboard/admin/add?personNAME=Francisco
-
+1. Add a Entity  --> [post] /dashboard/admin/Entity
 ## Sub Features
 ### A. Enter entity information
 
