@@ -11,4 +11,4 @@ The UI should display an error if the data being entered is wrong
 ### Scenarios
 
 1. Error is displayed after error
-2. The right message is displayed for teh respective error
+2. The right message is displayed for the respective error
