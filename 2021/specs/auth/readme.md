@@ -52,9 +52,3 @@ As a user, I want to access resources according to my role.
 
 ### Acceptance Criteria
 
-
-
-
-
-
-```
