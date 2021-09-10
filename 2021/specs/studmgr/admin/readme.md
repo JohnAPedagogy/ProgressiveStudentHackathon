@@ -10,6 +10,14 @@ The admin is used by user's with the admin role. This page is used to interact w
 1. Data Exchange
 
 ![Authentication module](./admin.png)
+![Authentication module use case](./admin_usecase.png)
+
+## Sub-Features and API Design
+
+1. Add a Entity  --> [post] /dashboard/admin/Entity
+1. Delete a Entity  --> [delete] /dashboard/admin/Entity
+1. View a Entity  --> [get] /dashboard/admin/Entity
+1. Modify a Entity  --> [patch] /dashboard/admin/Entity
 
 
 ## A. Add entity feature 

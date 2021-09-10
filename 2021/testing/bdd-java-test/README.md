@@ -67,16 +67,16 @@ For available options and overriding rules, please consult the following Maven c
 
 Specify a particular scenario by *line*
 
-    -Dcucumber.features="classpath:skeleton/belly.feature:4"
+    -Dcucumber.features="classpath:skeleton/registerDetails.feature:4"
 
 This works because Maven puts `./src/test/resources` on your `classpath`.
 You can also specify files to run by filesystem path:
 
-    -Dcucumber.features="src/test/resources/skeleton/belly.feature:4"
+    -Dcucumber.features="src/test/resources/skeleton/registerDetails.feature:4"
 
 In case you have many feature files or scenarios to run against, separate them with commas `,`
 
-    -Dcucumber.features="src/test/resources/skeleton/belly.feature:4, src/test/resources/skeleton/stomach.feature"
+    -Dcucumber.features="src/test/resources/skeleton/registerDetails.feature:4, src/test/resources/skeleton/stomach.feature"
 
 You can also specify what to run by *tag*:
 

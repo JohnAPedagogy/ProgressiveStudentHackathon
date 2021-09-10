@@ -1,4 +1,4 @@
-# Student Manager -> Admin Epic -> Resource Entity Super Scenario (sub-feature)
+# Student Manager -> Admin Epic -> Resource Entity Super feature
 ## Introduction
 
 The admin is used by user's with the admin role. This page is used to interact with the database.  This super feature has the following sub-features

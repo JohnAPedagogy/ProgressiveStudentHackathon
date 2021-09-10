@@ -7,11 +7,12 @@ The admin is used by user's with the admin role. This page is used to interact w
 1. Assign a unique ID to the new entity
 1. Display an error in the UI if the data is incorrect 
 
-<!-- ![Admin ResourceRole Activity](admin_ResourceRole_activity.png) -->
+![Admin ResourceRole Activity](admin_activity.png)
 
 ## Sub-Features and API Design
 
 1. Add a Entity  --> [post] /dashboard/admin/Entity
+
 ## Sub Features
 ### A. Enter entity information
 
