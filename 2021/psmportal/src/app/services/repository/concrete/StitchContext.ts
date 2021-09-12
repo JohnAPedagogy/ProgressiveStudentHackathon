@@ -111,6 +111,10 @@ export class StitchContext<T> implements IRepository<T> {
 
   async remove(item:T):Promise<T>
   {
+    // const query = { "name": "lego" };
+    // itemsCollection.deleteOne(query)
+    //   .then(result => console.log(`Deleted ${result.deletedCount} item.`))
+    //   .catch(err => console.error(`Delete failed with error: ${err}`))
     return  await this.run_query({},this.TName)
       ?.then((data:any[] )=>{
         return data;
@@ -121,6 +125,10 @@ export class StitchContext<T> implements IRepository<T> {
 
   async removeRange(...items: T[]): Promise<void>
   {
+    // const query = { "reviews": { "$size": 0 } };
+    // itemsCollection.deleteMany(query)
+    //   .then(result => console.log(`Deleted ${result.deletedCount} item(s).`))
+    //   .catch(err => console.error(`Delete failed with error: ${err}`))
     const t = await this.run_query({},this.TName)
       ?.then((data:any[] )=>{
         return data;
@@ -131,7 +139,7 @@ export class StitchContext<T> implements IRepository<T> {
 
   async find(gql:any): Promise<T[]>
   {
-    return  await this.run_query({},this.TName)
+    return  await this.run_query(gql,this.TName)
         ?.then((data:any[] )=>{
           return data;
         }).catch((err:any)=>{
@@ -140,6 +148,9 @@ export class StitchContext<T> implements IRepository<T> {
   }
 
   async serverFun(fun:string, gql:any):Promise<any>{
+    // const functionName = "sum";
+    // const args = [2, 3];
+    // const result: number = await user.callFunction(functionName, args);
     return  await this.run_query({},this.TName)
         ?.then((data:any[] )=>{
           return data;
