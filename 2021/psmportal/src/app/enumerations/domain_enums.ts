@@ -10,3 +10,9 @@ export enum SessionStatus {
   LoginSession
 }
 
+export enum PersonPosition{
+  Student,
+  Tutor,
+  HOD,
+  
+}
