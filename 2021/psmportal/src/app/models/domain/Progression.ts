@@ -4,7 +4,7 @@ import * as faker from "faker";
 const id = faker.datatype.number(99999);
 
 export class Progression {
-  progressionId?: number =  id;
+  id?: number =  id;
   personId?: string | null = 'u12122212';
   taskId?: string | null = 't1112';
   completionStatus?: boolean = false;

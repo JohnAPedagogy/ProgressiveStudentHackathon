@@ -4,7 +4,7 @@ import * as faker from "faker";
 const id = faker.datatype.number(99999);
 
 export class Batch {
-  batchId?: number =  id;
+  id?: number =  id;
   batchCode?: string =`'b10${id.toString().padEnd(5,'0')}`;
   term1StartDate?: Date | string = '2021-01-01';
   term2StartDate?: Date | string = '2021-08-01';

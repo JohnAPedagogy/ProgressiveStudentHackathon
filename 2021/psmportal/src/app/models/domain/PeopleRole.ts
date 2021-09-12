@@ -1,6 +1,10 @@
 import * as faker from "faker";
 
+const id = faker.datatype.number(99999);
+
+
 export class PeopleRole {
-  personID?: string = 'u177717';
-  loginRoleID?: string = '2';
+  id: number = id;
+  personId?: number ;
+  loginRoleId?: number  ;
 }  

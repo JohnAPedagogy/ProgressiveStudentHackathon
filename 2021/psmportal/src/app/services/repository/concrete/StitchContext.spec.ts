@@ -35,11 +35,11 @@ describe('StitchContext', () => {
       expect(data).toBeDefined();
     });
   })
-  it('should insert a value of type into db', async () =>{
-    const person = faker.personOne();
-    await service.add(person).then(data=> {
-      console.log(data);
-      expect(data).toBeDefined();
-    });
-  })
+  // it('should insert a value of type into db', async () =>{
+  //   const person = faker.personOne();
+  //   await service.add(person).then(data=> {
+  //     console.log(data);
+  //     expect(data).toBeDefined();
+  //   });
+  // })
 });
