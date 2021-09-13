@@ -109,32 +109,30 @@ export class StitchContext<T> implements IRepository<T> {
     })
   }
 
-  async remove(item:T):Promise<T>
+  async remove(item:T):Promise<number>
   {
-    // const query = { "name": "lego" };
-    // itemsCollection.deleteOne(query)
-    //   .then(result => console.log(`Deleted ${result.deletedCount} item.`))
-    //   .catch(err => console.error(`Delete failed with error: ${err}`))
-    return  await this.run_query({},this.TName)
-      ?.then((data:any[] )=>{
-        return data;
-      }).catch((err:any)=>{
-        console.error(err);
-      }) as T;
+    const query = item;
+    if(this.app.currentUser){
+      const mongodb = this.app.currentUser.mongoClient("mongodb-atlas");
+      this.db=mongodb.db('progressive');
+    }
+    return await this.db.collection(this.TName).deleteOne(query)
+      .then((result:any) => result.deletedCount)
+        // console.log(`Deleted ${result.deletedCount} item.`))
+      .catch((err:any) => console.error(`Delete failed with error: ${err}`))
   }
 
-  async removeRange(...items: T[]): Promise<void>
+  async removeRange(...items: number[]): Promise<number>
   {
-    // const query = { "reviews": { "$size": 0 } };
-    // itemsCollection.deleteMany(query)
-    //   .then(result => console.log(`Deleted ${result.deletedCount} item(s).`))
-    //   .catch(err => console.error(`Delete failed with error: ${err}`))
-    const t = await this.run_query({},this.TName)
-      ?.then((data:any[] )=>{
-        return data;
-      }).catch((err:any)=>{
-        console.error(err);
-      }) as T[];
+    const query = { "id": { "$in": items } };
+    if(this.app.currentUser){
+      const mongodb = this.app.currentUser.mongoClient("mongodb-atlas");
+      this.db=mongodb.db('progressive');
+    }
+    return await this.db.collection(this.TName).deleteMany(query)
+      .then((result:any) => result.deletedCount)
+      //console.log(`Deleted ${result.deletedCount} item(s).`))
+      .catch((err:any) => console.error(`Delete failed with error: ${err}`))
   }
 
   async find(gql:any): Promise<T[]>
@@ -147,16 +145,20 @@ export class StitchContext<T> implements IRepository<T> {
         }) as T[];
   }
 
+  async count(): Promise<number>
+  {
+    return  await this.serverFun('get_count',this.TName)
+  }
+
   async serverFun(fun:string, gql:any):Promise<any>{
-    // const functionName = "sum";
-    // const args = [2, 3];
-    // const result: number = await user.callFunction(functionName, args);
-    return  await this.run_query({},this.TName)
+    if(this.app.currentUser){
+      return await this.app.currentUser.callFunction(fun,gql)
         ?.then((data:any[] )=>{
           return data;
         }).catch((err:any)=>{
           console.error(err);
         }) ;
+    }
   }
  
 }

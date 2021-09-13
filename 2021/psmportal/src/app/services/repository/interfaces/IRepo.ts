@@ -8,9 +8,9 @@ export interface IRepository<T> {
 
   addRange(...items: T[]): Promise<number>;
 
-  remove(item:T):Promise<T>
+  remove(item:T):Promise<number>
 
-  removeRange(...items: T[]): Promise<void>;
+  removeRange(...items: number[]): Promise<number>;
 
   find(gql:any): Promise<T[]>
 

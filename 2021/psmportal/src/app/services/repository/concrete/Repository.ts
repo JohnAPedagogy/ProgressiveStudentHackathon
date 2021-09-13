@@ -27,12 +27,12 @@ export class Repository<T> implements IRepository<T> {
     return await this.context.addRange(...items);
   }
 
-  async remove(item:T):Promise<T>
+  async remove(item:T):Promise<number>
   {
     return  await this.context.remove(item)
   }
 
-  async removeRange(...items: T[]): Promise<void>
+  async removeRange(...items: number[]): Promise<number>
   {
     return await this.context.removeRange(...items)
   }

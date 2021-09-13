@@ -4,7 +4,7 @@ import * as faker from "faker";
 const uid = faker.datatype.number(99999);
 
 export class Person {
-  id?: number =  uid;
+  id: number =  uid;
   groupId?: number=1;
   pathwayId?: number=1;
   departmentId?: number=1;
