@@ -10,56 +10,14 @@
                     Admin
                   </mat-panel-title>
                 </mat-expansion-panel-header>
-                <mat-list>
+                 <mat-list *ngFor="let entity of entities">
                     <mat-list-item> 
-                      <button (click)="getTable('Person')">
+                      <button id = {{entity}}>
                         <mat-icon>trip_origin</mat-icon> 
-                        Person 
+                        {{entity}}
                       </button>
                     </mat-list-item>
-                    <mat-list-item> 
-                      <button (click)="getTable('Teaching Class')">
-                        <mat-icon>trip_origin</mat-icon> 
-                        Teaching Class 
-                      </button>
-                    </mat-list-item>
-                    <mat-list-item> 
-                        <mat-icon>trip_origin</mat-icon> 
-                        People Role 
-                    </mat-list-item>
-                    <mat-list-item> 
-                        <mat-icon>trip_origin</mat-icon> 
-                        Pathways 
-                    </mat-list-item>
-                    <mat-list-item> 
-                        <mat-icon>trip_origin</mat-icon> 
-                        Group 
-                    </mat-list-item>
-                    <mat-list-item> 
-                        <mat-icon>trip_origin</mat-icon> 
-                        Pathway Module
-                    </mat-list-item>
-                    <mat-list-item> 
-                        <mat-icon>trip_origin</mat-icon> 
-                        Module 
-                    </mat-list-item>
-                    <mat-list-item> 
-                        <mat-icon>trip_origin</mat-icon> 
-                        Task 
-                    </mat-list-item>
-                    <mat-list-item> 
-                        <mat-icon>trip_origin</mat-icon> 
-                        Login Role 
-                    </mat-list-item>
-                    <mat-list-item> 
-                        <mat-icon>trip_origin</mat-icon> 
-                        Batch 
-                    </mat-list-item>
-                    <mat-list-item> 
-                        <mat-icon>trip_origin</mat-icon> 
-                        Progression 
-                    </mat-list-item>
-                </mat-list>
+                  </mat-list>
             </mat-expansion-panel>
  
             <!-- Mail -->
@@ -73,32 +31,22 @@
             </mat-expansion-panel>
 
             <!-- Calendar -->
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    <mat-icon>event</mat-icon>
-                    Teaching Classes
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <mat-list>
-                    <mat-list-item> 
-                        <mat-icon>trip_origin</mat-icon> 
-                        Software Design Group 14 & 13 
-                    </mat-list-item>
-                    <mat-list-item> 
-                        <mat-icon>trip_origin</mat-icon> 
-                        Software Design Group 1  
-                    </mat-list-item>
-                    <mat-list-item> 
+            <mat-expansion-panel id="calendarbtn">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon>event</mat-icon>
+                  Calendar
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+               <mat-list id="Calendar" *ngFor="let teachingClass of teachingClasses">
+                  <mat-list-item> 
+                    <button id = {{teachingClass}}>
                       <mat-icon>trip_origin</mat-icon> 
-                      Math Group 1  
-                    </mat-list-item>
-                    <mat-list-item> 
-                      <mat-icon>trip_origin</mat-icon> 
-                      Math Group 9  
-                    </mat-list-item>
+                      {{teachingClass}}
+                    </button>
+                  </mat-list-item>
                 </mat-list>
-            </mat-expansion-panel>
+          </mat-expansion-panel>
 
             <!-- Settings -->
             <mat-expansion-panel disabled>
@@ -114,6 +62,6 @@
     </mat-sidenav>
     <mat-sidenav-content> 
         <app-header (sideBarOpened)="openSidebar($event)"></app-header>
-        <!-- <div [innerHTML]="Table"></div> -->
+        <div><table>Hello</table></div>
     </mat-sidenav-content>
 </mat-sidenav-container>

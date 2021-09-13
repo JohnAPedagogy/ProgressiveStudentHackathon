@@ -22,23 +22,35 @@ span{
     padding-left: 1rem;
     width:100%;
 }
+
 .mat-list{
     .mat-icon{
         color:black;
-        font-size: 25px;
-        width: 35px;
-
-
+        font-size: 15px;
+        width: 25px;
     }
-    font-size: 20px;
-}
-
-.mat-expansion-panel-body {
-    padding-left: 5px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    button{
+        background-color: white;
+        border: 0;
+        font-size: 25px;        
+    }
+    padding-left: 0px;
 }
 
 .mat-expansion-panel-header[aria-disabled=true] {
    color:black;
 }
+
+#Calendar{
+    .mat-icon{
+        font-size: 8px;
+    }
+    button{
+        background-color: white;
+        border: 0;
+        font-size: 15px;        
+    }
+    padding-left: 0px;
+
+}
+
