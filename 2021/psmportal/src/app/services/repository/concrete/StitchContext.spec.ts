@@ -18,11 +18,13 @@ describe('StitchContext', () => {
     expect(service).toBeTruthy();
     expect(faker).toBeTruthy();
   });
+
   // it('should connect to DB server', async () =>{
   //   await service.init_db().then(user=> {
   //     expect(user).toBeDefined();
   //   });
   // })
+  
   it('should get the type from db', async () =>{
     await service.get(2).then(data=> {
       console.log(data);

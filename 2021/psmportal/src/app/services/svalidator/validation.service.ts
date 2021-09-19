@@ -3,14 +3,18 @@ import { Person } from 'src/app/models/domain/Person';
 import { PersonRepository } from '../repository/concrete/PersonRepository';
 import { StitchContext } from '../repository/concrete/StitchContext';
 import { SessionStatus } from '../../enumerations/domain_enums';
-import { Session } from '../sauth/login.service';
+import { LoginService, Session } from '../sauth/login.service';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ValidationService {
 
-  constructor() { }
+  // constructor(private auth:LoginService,
+  //   loginValidator:LoginValidator) { 
+  //     loginValidator = new LoginValidator(this.auth.PersonContext)
+  //   }
 }
 
 export abstract class Validator{
@@ -19,12 +23,13 @@ export abstract class Validator{
   public statuses!: SessionStatus[];
   constructor(data:string){
     this.data=data;
+    this.statuses=[];
   };
   public getStatuses() : SessionStatus[]{
       return this.statuses;
   };
 
-  public abstract validate(): SessionStatus;
+  public abstract validate(): Promise<SessionStatus>;
 }
 
 export abstract class Rule extends Validator{
@@ -37,20 +42,17 @@ export abstract class Rule extends Validator{
   providedIn: 'root'
 })
 export class LoginValidator extends Validator{
-  public session:Session;
-  private personContext = new PersonRepository(new StitchContext<Person>("Person"));
-  constructor(session:Session,
-    //@Optional() public personContext?:PersonRepository
+  constructor(
+      public session:Session
      ){
-    super(''+session.loginInfo.useremail);
-    this.session=session;
+    super('');
   }
-  public validate(): SessionStatus {
-    this.personContext?.login(this.session).then((status:SessionStatus)=>{
+  public validate(): Promise<SessionStatus> {
+      return this.session.personContext?.login(this.session).then((status:SessionStatus)=>{
       this.status = status;
-      this.statuses.push(this.status);
+      this.getStatuses().push(this.status);
+      return this.status;
     });
-    return this.status;
   }
 }
 
@@ -58,9 +60,9 @@ export class PasswordValidator extends Validator {
   constructor(data:string){
     super(data);
   }
-  public validate(): SessionStatus {
+  public validate(): Promise<SessionStatus> {
     this.status = SessionStatus.PasswordOK
-    return this.status;
+    return Promise.resolve(this.status);
 }
 }
 
@@ -70,14 +72,14 @@ export class PassCharLimitRule extends Rule {
       super(data);
       this.validated = validator;
   }
-  public validate(): SessionStatus {
+  public validate(): Promise<SessionStatus> {
     if (this.data.length > this.limit){
       this.status = SessionStatus.PasswordOK;
     }else{
       this.status = SessionStatus.PasswordTooShort
       this.statuses.push(this.status);
     }
-    return this.status;
+    return Promise.resolve(this.status);
   }
 }
 
@@ -87,14 +89,14 @@ export class PassSameRepeatPass extends Rule {
       this.validated = validator;
   }
 
-  public validate(): SessionStatus {
+  public validate(): Promise<SessionStatus> {
     if (this.data == this.repeatPass){
       this.status = SessionStatus.PasswordOK;
     }else{
       this.status = SessionStatus.PasswordDifferentFromRepeat
       this.statuses.push(this.status);
     }
-    return this.status;
+    return Promise.resolve(this.status);
   }
 }
 

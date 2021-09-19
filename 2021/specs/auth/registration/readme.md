@@ -22,7 +22,7 @@ As a user I want to register on the platform so I can access the platform. The u
 2. user is allowed one account per email (i.e a user cannot use one email to register multiple accounts)
 3. All users are registered as tutors by default
 4. Password and confirmation password field must be masked
-
+1. Successful signups should have the passwords encrytped in the database
 
 ## A. Enter Details
 As A user I would like to enter my details to during the registration process

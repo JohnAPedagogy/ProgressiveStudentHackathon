@@ -21,9 +21,8 @@ export class AuthService {
    }
 
    login(userName: string, password: string): Observable<any> {
-      console.log(userName);
-      console.log(password);
-      this.store.dispatch(new SessionLogin());
+      this.store.dispatch(new SessionLogin());//.subscribe(data =>console.log(data));
+
       this.isUserLoggedIn = (userName == 'admin' && password == 'admin');
       localStorage.setItem('isUserLoggedIn', this.isUserLoggedIn ? "true" : "false"); 
 

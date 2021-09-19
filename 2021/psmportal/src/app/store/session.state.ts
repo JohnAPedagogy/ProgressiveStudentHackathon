@@ -1,6 +1,6 @@
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { LoginSession, SessionLogin } from './session.actions';
-import { Session } from '../services/sauth/login.service';
+import { LoginService, Session } from '../services/sauth/login.service';
 import { SessionStatus } from "src/app/enumerations/domain_enums";
 import { Injectable } from '@angular/core';
 
@@ -17,6 +17,8 @@ export class SessionStateModel {
 
 @Injectable()
 export class SessionState {
+
+    constructor(private auth:LoginService){}
 
   @Selector()
   static getSession(state: SessionStateModel) {
@@ -36,12 +38,12 @@ export class SessionState {
 
   @Action(SessionLogin)
   sessionLogin({getState, patchState }: StateContext<SessionStateModel>, { payload }:SessionLogin  ) {
-      const state = getState();
-      let patch:Session = {...state.session} as Session;
-      patch.login();
-      patchState({
-          session: patch
-      })
+    const state = getState();
+    let patch:Session = {...state.session} as Session;
+    this.auth.login(patch);
+    patchState({
+        session: patch
+    })
   }
   
 

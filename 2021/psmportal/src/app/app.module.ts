@@ -24,7 +24,9 @@ import { SessionState } from './store/session.state';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin' ;
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { AuthService } from './services/sauth/auth.service';
-import { PersonRepository } from './services/repository/concrete/PersonRepository';
+import { RepoService } from './services/repository/repo.service';
+import { LoginService } from './services/sauth/login.service';
+import { Session } from  './services/sauth/login.service';;
 
 
 
@@ -59,7 +61,9 @@ import { PersonRepository } from './services/repository/concrete/PersonRepositor
   ],
   providers: [
     AuthService,
-    //PersonRepository,
+    LoginService, 
+    Session, 
+    RepoService,
   ],
   bootstrap: [AppComponent]
 })

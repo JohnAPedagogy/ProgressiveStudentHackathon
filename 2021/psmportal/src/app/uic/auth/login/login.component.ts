@@ -31,28 +31,24 @@ export class LoginComponent implements OnInit {
       private router : Router
       ) {
         this.formData = new FormGroup({
-          userName: new FormControl("dede"),
-          password: new FormControl("dede"),
+          userName: new FormControl("admin"),
+          password: new FormControl("admin"),
          });
     }
 
    ngOnInit() {
-      this.formData = new FormGroup({
-         userName: new FormControl("dede"),
-         password: new FormControl("dede"),
-      });
    }
 
    onClickSubmit(data: any) {
       this.userName = data.userName;
       this.password = data.password;
-      // this.loginInfo.useremail = data.useremail;
-      // this.loginInfo.password = data.password;
+      this.loginInfo.useremail = data.userName;
+      this.loginInfo.password = data.password;
 
       console.log("Login page: " + this.userName);
       console.log("Login page: " + this.password);
 
-      // this.store.dispatch(new LoginSession(this.loginInfo));
+      this.store.dispatch(new LoginSession(this.loginInfo));
 
       this.authService.login(this.userName, this.password)
          .subscribe( data => { 
