@@ -1,3 +1,6 @@
+import { Repository } from './../../../services/repository/concrete/Repository';
+import { IPersonRepository } from './../../../services/repository/interfaces/IPersonRepo';
+import { PersonRepository } from './../../../services/repository/concrete/PersonRepository';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -25,10 +28,14 @@ export class SidebarComponent implements OnInit {
   teachingClasses = ['Software Design Group 1', 'Software Design Group 14 & 13',
   'Math Group 1','Math Group 9'];
 
+  table = []
+
   expandedIndex = 0;
 
   openSidebar(value: boolean) {
     value ? this.sideBarOpened = true : this.sideBarOpened = false; 
   }
+
+ 
 
 }
