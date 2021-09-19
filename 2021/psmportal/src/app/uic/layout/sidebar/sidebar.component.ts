@@ -19,7 +19,12 @@ export class SidebarComponent implements OnInit {
   }
   sideBarOpened = true;
 
-  items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
+  entities = ['Person', 'Teaching Class', 'People Role', 'Patways', 
+    'Group', 'Pathway Module', 'Module', 'Task', 'Login Role', 'Batch', 'Progression'];
+  
+  teachingClasses = ['Software Design Group 1', 'Software Design Group 14 & 13',
+  'Math Group 1','Math Group 9'];
+
   expandedIndex = 0;
 
   openSidebar(value: boolean) {
