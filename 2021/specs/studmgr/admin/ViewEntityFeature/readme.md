@@ -11,7 +11,9 @@ The admin is used by user's with the admin role. This page is used to interact w
 1. Edit entity from view
 1. Delete entity from view
 
-![Admin ResourceRole Activity](admin_activity.png)
+![Activity Diagram](view_activity.png)
+![Sub features](view_sub_features.png)
+
 
 ## Sub Features
 

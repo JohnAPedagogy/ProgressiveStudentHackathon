@@ -23,7 +23,7 @@ export class AppRoutingModule {
   return [
     { path: 'home', component: HomeComponent },
     { path: 'home/teaching', component: SidebarComponent },
-    { path: 'admin', redirectTo: 'sidebar', pathMatch: 'full' },
+    { path: 'admin', component: AdminComponent, pathMatch: 'full' },
     { path: 'sidebar', component: SidebarComponent, canActivate: [ExpenseGuard]},
     { path: 'login', component: LoginComponent },
     { path: 'logout', component: LogoutComponent },
