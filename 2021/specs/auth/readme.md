@@ -24,7 +24,7 @@ I want to verify my email
 So i can start using the system
 
 ### Acceptance Criteria
-1. Verification link is sent to email on complete registration
+1. Verification link is sent to email on complete registratin
 2. Verification link is valid for 24 hours
 
 ## C. Log in

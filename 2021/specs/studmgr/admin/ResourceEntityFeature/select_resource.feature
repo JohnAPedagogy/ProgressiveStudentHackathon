@@ -27,6 +27,7 @@ There will be a side bar with an admin dropdown (expandable) showing all the ent
 1. User is able to see the admin expender
 1. Admin expander has list of entities containing the "Resource" item 
 2. The user can select the resource item to display a list of resources
+3. When The user selects the Resource Item a table displays
 
 Background:
   # Given I have logged in to the portal successfully
@@ -49,4 +50,20 @@ Scenario: 2. The Expander should Reveal the Resource Item
   When click("#adminbtn")
   # Then the sidebar should expand to reveal the {Resource} item
   Then waitFor("{}Resource")
+  * delay(5000)
+
+Scenario: 3. The Expander should Reveal the Resource Item
+  # When I select the admin on the sidebar
+  When click("#adminbtn")
+  # Then the sidebar should expand to reveal the {Resource} item
+  Then waitFor("{}Resource")
+  * delay(5000)
+  
+Scenario: 4. When The user selects the Resource Item a table displays
+  # When I select the admin on the sidebar
+  When click("#adminbtn")
+  # Then the sidebar should expand to reveal the {Resource} item
+  Then waitFor("{}Resource")
+  Then waitFor("{div}")
+  * delay(5000)
   

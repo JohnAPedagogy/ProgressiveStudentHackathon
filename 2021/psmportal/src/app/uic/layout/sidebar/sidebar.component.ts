@@ -19,7 +19,7 @@ export class SidebarComponent implements OnInit {
   }
   sideBarOpened = true;
 
-  entities = ['Person', 'Teaching Class', 'People Role', 'Patways', 
+  entities = ['Person', 'Teaching Class', 'People Role', 'Pathways', 'Resource',
     'Group', 'Pathway Module', 'Module', 'Task', 'Login Role', 'Batch', 'Progression'];
   
   teachingClasses = ['Software Design Group 1', 'Software Design Group 14 & 13',

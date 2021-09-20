@@ -26,7 +26,8 @@ import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { AuthService } from './services/sauth/auth.service';
 import { RepoService } from './services/repository/repo.service';
 import { LoginService } from './services/sauth/login.service';
-import { Session } from  './services/sauth/login.service';;
+import { Session } from  './services/sauth/login.service';
+import { DataTableComponent } from './uic/widgets/data-table/data-table.component';;
 
 
 
@@ -38,7 +39,8 @@ import { Session } from  './services/sauth/login.service';;
     HomeComponent,
     LoginComponent,
     AdminComponent,
-    LogoutComponent
+    LogoutComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,
