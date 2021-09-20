@@ -27,7 +27,6 @@ There will be a side bar with an admin dropdown (expandable) showing all the ent
 1. User is able to see the admin expender
 1. Admin expander has list of entities containing the "Resource" item 
 2. The user can select the resource item to display a list of resources
-3. When The user selects the Resource Item a table displays
 
 Background:
   # Given I have logged in to the portal successfully
@@ -38,8 +37,8 @@ Background:
   And input("#username", "admin")
   And waitFor("#inputPassword").clear()
   And input("#inputPassword", "admin")
-  When click("{button}Sign in")
-  Then waitFor("{}Admin")
+  And click("{button}Sign in")
+  And waitFor("{}Admin")
 
 Scenario: 1. User is able to see the admin expander
   # And I am on the dashboard page
@@ -57,13 +56,13 @@ Scenario: 3. The Expander should Reveal the Resource Item
   When click("#adminbtn")
   # Then the sidebar should expand to reveal the {Resource} item
   Then waitFor("{}Resource")
-  * delay(5000)
   
-Scenario: 4. When The user selects the Resource Item a table displays
-  # When I select the admin on the sidebar
-  When click("#adminbtn")
-  # Then the sidebar should expand to reveal the {Resource} item
-  Then waitFor("{}Resource")
-  Then waitFor("{div}")
+Scenario: 4. The user can select the resource item to display a list of resources
+  # Given I select the admin on the sidebar
+  Given click("#adminbtn")
+  # And the sidebar should expand to reveal the {Resource} item
+  And waitFor("{}Resource")
+  When click("{}Resource")
+  Then waitFor("{h2}Resource")
   * delay(5000)
   
