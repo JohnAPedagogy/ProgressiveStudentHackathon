@@ -9,7 +9,7 @@ import { RepoService } from 'src/app/services/repository/repo.service';
   styleUrls: ['./data-table.component.scss']
 })
 export class DataTableComponent implements OnInit {
- @Input() resource!:Resource;
+
   constructor(private repository:RepoService) { }
   dataSource!:Person[];
 
@@ -17,7 +17,7 @@ export class DataTableComponent implements OnInit {
     this.repository.PersonContext.getAll().then((data:Person[])=>this.dataSource = data);
   }
 
-  
+  @Input() resource!:Resource;
   displayedColumns: string[] =Object.keys(new Person());
   clickedRows = new Set<Person>();
 }

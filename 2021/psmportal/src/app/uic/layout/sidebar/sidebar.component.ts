@@ -21,6 +21,8 @@ export class SidebarComponent implements OnInit {
   }
   sideBarOpened = true;
 
+  // currentResource : resp
+
 
   //entities = this.admin.Resources;
   //  ['Person', 'Teaching Class', 'People Role', 'Pathways', 'Resource',
