@@ -51,13 +51,7 @@ Scenario: 2. The Expander should Reveal the Resource Item
   Then waitFor("{}Resource")
   * delay(5000)
 
-Scenario: 3. The Expander should Reveal the Resource Item
-  # When I select the admin on the sidebar
-  When click("#adminbtn")
-  # Then the sidebar should expand to reveal the {Resource} item
-  Then waitFor("{}Resource")
-  
-Scenario: 4. The user can select the resource item to display a list of resources
+Scenario: 3. The user can select the resource item to display a list of resources
   # Given I select the admin on the sidebar
   Given click("#adminbtn")
   # And the sidebar should expand to reveal the {Resource} item

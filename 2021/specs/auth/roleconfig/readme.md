@@ -1,48 +1,24 @@
-# Registration/Authentication Epic --> Configuration Featu
-
+# Registration/Authentication Module --> Role Configuration Epic
 ## Introduction
 The authentication system will enable the user to authenticate securely and based on their role will allocate what the user sees and has access to.
 ![Authentication module](../auth.PNG)
 <!-- ![Authentication module](../../karate/k01.PNG) -->
 
 
-## Login
+## Role Configuration
 
-As a user 
-I want to log in with my credentials 
-so I can access the system
-
-
-### Acceptance Criteria (Rules)
-
+As an admin I want to set the assign role-based permissions to users of the system
 ### Acceptance Criteria
-1. email and password and password confirmation fields are mandatory
-2. Password and confirmation password field must be masked
-3. No validation checks necessary
-4. Should log in if authenticated
+1. The first user of the system automatically becomes admin
+1. **A tutor can change status to HOD
+**Only one HOD is allowed on the system (i.e 2. if a tutor has assigned HOD to self no other can reassign HOD status)
+3. **An admin can asign HOD status to tutor
+4. ***How would the system identify different departments
+5. if a tutor is unregistered , can an admin assign a class
+6. Admin assisgns class
+
+
 
 ### Scenarios
-1. Login with valid credentials
-2. Login with invalid email (invalid email, password and unregistered email, **unverified email, blank field)
-3. Login without acount link verification
 
-
-## Verification email on sign up feature
-
-As a newly registered user,
-I want to verify my email 
-So i can start using the system
-
-### Acceptance Criteria (Rules)
-1. Verification link is sent to email on complete registration
-2. Verification link is valid for 24 hours
-
-### Scenarios
-1. verification link is available on sign up
-2. account verification with valid link/session
-3. account verification with valid link/ expired session
-4. Account verified but not logged in
-5. account verification with expired link
-6. Verification link not sent
-7. Reuse of verification link
 

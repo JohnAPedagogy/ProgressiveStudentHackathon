@@ -39,7 +39,7 @@ so I can access the system
 4. Should log in if authenticated
 
 ## D. System Role Configuration
-
+As an admin I want to set the assign role-based permissions to users of the system
 ### Acceptance Criteria
 1. **A tutor can change status to HOD
 **Only one HOD is allowed on the system (i.e 2. if a tutor has assigned HOD to self no other can reassign HOD status)

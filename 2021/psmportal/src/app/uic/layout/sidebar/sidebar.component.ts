@@ -1,6 +1,5 @@
+import { DomainAdminService } from './../../../services/sadmin/domain-admin.service';
 import { Repository } from './../../../services/repository/concrete/Repository';
-import { IPersonRepository } from './../../../services/repository/interfaces/IPersonRepo';
-import { PersonRepository } from './../../../services/repository/concrete/PersonRepository';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() {
+  constructor(admin:DomainAdminService) {
    }
 
   ngOnInit(): void {
@@ -23,8 +22,9 @@ export class SidebarComponent implements OnInit {
   sideBarOpened = true;
 
 
-  entities = ['Person', 'Teaching Class', 'People Role', 'Pathways', 'Resource',
-    'Group', 'Pathway Module', 'Module', 'Task', 'Login Role', 'Batch', 'Progression'];
+  //entities = this.admin.Resources;
+  //  ['Person', 'Teaching Class', 'People Role', 'Pathways', 'Resource',
+  //   'Group', 'Pathway Module', 'Module', 'Task', 'Login Role', 'Batch', 'Progression'];
   
   teachingClasses = ['Software Design Group 1', 'Software Design Group 14 & 13',
   'Math Group 1','Math Group 9'];
@@ -36,4 +36,5 @@ export class SidebarComponent implements OnInit {
   openSidebar(value: boolean) {
     value ? this.sideBarOpened = true : this.sideBarOpened = false; 
   }
+  
 }
