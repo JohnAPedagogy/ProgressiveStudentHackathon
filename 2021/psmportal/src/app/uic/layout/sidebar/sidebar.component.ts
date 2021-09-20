@@ -22,6 +22,7 @@ export class SidebarComponent implements OnInit {
   }
   sideBarOpened = true;
 
+
   entities = ['Person', 'Teaching Class', 'People Role', 'Pathways', 'Resource',
     'Group', 'Pathway Module', 'Module', 'Task', 'Login Role', 'Batch', 'Progression'];
   
@@ -35,7 +36,4 @@ export class SidebarComponent implements OnInit {
   openSidebar(value: boolean) {
     value ? this.sideBarOpened = true : this.sideBarOpened = false; 
   }
-
- 
-
 }
