@@ -62,6 +62,6 @@
     </mat-sidenav>
     <mat-sidenav-content> 
         <app-header (sideBarOpened)="openSidebar($event)"></app-header>
-        <h1>Hello</h1>
-    </mat-sidenav-content>
+        <app-data-table [resource]='newVariable'></app-data-table>
+      </mat-sidenav-content>
 </mat-sidenav-container>
