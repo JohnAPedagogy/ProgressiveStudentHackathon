@@ -24,7 +24,7 @@ so I can access the system
 ### Scenarios
 1. Login with valid credentials
 2. Login with invalid email (invalid email, password and unregistered email, **unverified email, blank field)
-3. Login without acount link verification
+3. Login without account link verification
 
 
 ## Verification email on sign up feature
