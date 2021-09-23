@@ -28,7 +28,7 @@ export class ExpenseGuard implements CanActivate {
          let val: string | null = localStorage.getItem('isUserLoggedIn');
          if(val != null && val == "true"){
             if(url == "/login")
-               return this.router.parseUrl('/admin');
+               return this.router.parseUrl('/sidebar');
             else 
                return true;
          } 

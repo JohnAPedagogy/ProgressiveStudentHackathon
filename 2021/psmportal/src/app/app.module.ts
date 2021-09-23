@@ -18,8 +18,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import { LoginComponent } from './uic/auth/login/login.component';
 import { LogoutComponent } from './uic/auth/logout/logout.component';
-import { ReactiveFormsModule } from '@angular/forms'
-import { AdminComponent } from './uic/template/admin/admin.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgxsModule } from '@ngxs/store';
 import { SessionState } from './store/session.state';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin' ;
@@ -39,7 +38,6 @@ import { DataTableComponent } from './uic/widgets/data-table/data-table.componen
     SidebarComponent,
     HomeComponent,
     LoginComponent,
-    AdminComponent,
     LogoutComponent,
     DataTableComponent
   ],
