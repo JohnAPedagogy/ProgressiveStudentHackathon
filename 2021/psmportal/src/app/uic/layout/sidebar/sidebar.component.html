@@ -12,7 +12,7 @@
                 </mat-expansion-panel-header>
                  <mat-list *ngFor="let entity of entities">
                     <mat-list-item> 
-                      <button id = {{entity}}>
+                      <button (click)="onEntityClick(entity)" id = {{entity}}>
                         <mat-icon>trip_origin</mat-icon> 
                         {{entity}}
                       </button>
@@ -62,6 +62,6 @@
     </mat-sidenav>
     <mat-sidenav-content> 
         <app-header (sideBarOpened)="openSidebar($event)"></app-header>
-        <app-data-table></app-data-table>
+        <app-data-table [currentEntity] = "tableTitle"></app-data-table>
       </mat-sidenav-content>
 </mat-sidenav-container>
