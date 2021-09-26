@@ -1,4 +1,3 @@
-import { AdminComponent } from './../app/uic/template/admin/admin.component';
 import { SidebarComponent } from './../app/uic/layout/sidebar/sidebar.component';
 import { HomeComponent } from './../app/uic/template/home/home.component';
 import { NgModule } from '@angular/core';

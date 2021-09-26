@@ -1,6 +1,9 @@
 <h2>
-  Resource
+  <!-- The name of the table (Should dynamically change to the name of teh table) -->
+  {{title}}
 </h2>
+
+<!-- The table takes the data from the datasource variable -->
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
   <!-- Position Column -->
   <ng-container *ngFor="let col of displayedColumns" [matColumnDef]="col">
@@ -11,24 +14,7 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr
       mat-row
-      (click)="clickedRows.add(row)"
-      [class.demo-row-is-clicked]="clickedRows.has(row)"
       *matRowDef="let row; columns: displayedColumns;"
   ></tr>
 </table>
 
-<div>
-  <h3>
-    Click Log
-  </h3>
-</div>
-
-<div *ngIf="!clickedRows.size">
-  Clicked rows will be logged here
-</div>
-
-<ul>
-  <li *ngFor="let clickedRow of clickedRows">
-    Clicked on {{clickedRow.uniCode}}
-  </li>
-</ul>

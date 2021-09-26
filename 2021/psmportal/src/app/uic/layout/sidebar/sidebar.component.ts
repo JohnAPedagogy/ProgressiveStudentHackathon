@@ -1,3 +1,4 @@
+import { Person } from 'src/app/models/domain/Person';
 import { DomainAdminService } from './../../../services/sadmin/domain-admin.service';
 import { Repository } from './../../../services/repository/concrete/Repository';
 import { Component, OnInit } from '@angular/core';
@@ -23,15 +24,18 @@ export class SidebarComponent implements OnInit {
 
   // currentResource : resp
 
-
-  //entities = this.admin.Resources;
-  //  ['Person', 'Teaching Class', 'People Role', 'Pathways', 'Resource',
-  //   'Group', 'Pathway Module', 'Module', 'Task', 'Login Role', 'Batch', 'Progression'];
+  // entities = this.admin.Resources;
+  entities = ['Person', 'Teaching Class', 'People Role', 'Pathways', 'Resource',
+  'Group', 'Pathway Module', 'Module', 'Task', 'Login Role', 'Batch', 'Progression']
   
   teachingClasses = ['Software Design Group 1', 'Software Design Group 14 & 13',
   'Math Group 1','Math Group 9'];
 
-  table = []
+  tableTitle : string = ""
+
+  onEntityClick(newTitle : string){
+    this.tableTitle = newTitle;
+  }
 
   expandedIndex = 0;
 
