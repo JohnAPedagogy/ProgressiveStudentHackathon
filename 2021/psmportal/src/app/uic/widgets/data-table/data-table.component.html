@@ -8,7 +8,7 @@
   <!-- Position Column -->
   <ng-container *ngFor="let col of displayedColumns" [matColumnDef]="col">
     <th mat-header-cell *matHeaderCellDef>{{col}}</th>
-    <td mat-cell *matCellDef="let person">{{person[col]}}</td>
+    <td mat-cell *matCellDef="let entity">{{entity[col]}}</td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
