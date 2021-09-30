@@ -1,0 +1,303 @@
+include::./title.adoc[]
+
+shot::[1]
+Now that we have the step definitions matching, we can start working on our solution. We like to use our scenarios to _guide_ our development, so we'll start designing the objects we'll need by sketching out some code in our step definitions.
+
+The scenario will be failing while we do this, but we should see the error messages gradually progressing as we drive out the interface to our object model.
+
+Our next goal is for the scenario to fail because we need to implement the actual business logic. _Then_ we can work on changing the business logic inside our objects to make it pass.
+
+.steps.js
+[source,js]
+----
+include::../code/js/05-output-stepdef-argument-to-console/features/step_definitions/steps.js[]
+----
+
+To implement the first step, we need to create a couple of `Person` objects,shot::[2] with the specified distance between them. shot::[3] We can remove the `pending` status now,shot::[4] and this `console.log` statement,shot::[5] and write the implementation for the first step like this:
+
+.steps.js
+[source,js]
+----
+include::../code/js/06-person-undefined/features/step_definitions/steps.js[lines=3..7]
+----
+
+We have two instances of person, one representing Lucy, shot::[6]and one representing Sean. shot::[7]Then we call a method to move Lucy to the position specified in the scenario.shot::[8]
+
+shot::[9, "02.05.animation.mp4"]
+
+To keep things simple, we're going to assume all people are situated on a line: a one-dimensional co-ordinate system. We can always introduce proper geo-locations later. We'll place Sean in the centre, and Lucy 15 metres away from Sean.
+
+This might not be the design we'll end up with once this is all working, but it's a decent place to start.
+
+shot::[10]
+If we run Cucumber, we’ll see a compilation error from JavaScript: we need to define our `Person` class.shot::[11]
+
+[source,bash]
+----
+$ npm test
+
+> shouty@1.0.0 test /home/fedex/code/shouty-js/shouty
+> cucumber-js
+
+F--
+
+Failures:
+
+1) Scenario: Listener is within range # features/hear_shout.feature:2
+   ✖ Given Lucy is located 15 metres from Sean # features/step_definitions/steps.js:3
+       ReferenceError: Person is not defined
+           at World.<anonymous> (/home/fedex/code/shouty-js/shouty/features/step_definitions/steps.js:4:19)
+   - When Sean shouts "free bagels at Sean's" # features/step_definitions/steps.js:9
+   - Then Lucy hears Sean's message # features/step_definitions/steps.js:14
+
+1 scenario (1 failed)
+3 steps (1 failed, 2 skipped)
+0m00.011s (executing steps: 0m00.001s)
+npm ERR! Test failed.  See above for more details.
+----
+
+shot::[12]
+Let’s give our solution a home by creating a `src` directory.
+shot::[13]
+We’ll put our Shouty application in a JavaScript file called `shouty.js` in that directory.
+
+[source,bash]
+----
+$ mkdir src
+$ touch src/shouty.js
+----
+
+Then we can  create an empty `Person` class, shot::[14] and export it.shot::[15]
+
+.src/shouty.js
+[source,js]
+----
+include::../code/js/07-person-class-created/src/shouty.js[]
+----
+
+shot::[16]
+For now, we’ll just require the `Person` class from our `steps.js` file. In a later lesson we’ll talk more about how to organise this code a bit better.
+
+[source,js]
+----
+include::../code/js/07-person-class-created/features/step_definitions/steps.js[lines=1..1]
+----
+
+shot::[17]
+When we run the scenario, cucumber tells us that we're missing the `moveTo` method on the `Person` class.shot::[18]
+
+[source,bash]
+----
+$ npm test
+
+> shouty@1.0.0 test /home/fedex/code/shouty-js/shouty
+> cucumber-js
+
+F--
+
+Failures:
+
+1) Scenario: Listener is within range # features/hear_shout.feature:2
+   ✖ Given Lucy is located 15 metres from Sean # features/step_definitions/steps.js:4
+       TypeError: this.lucy.moveTo is not a function
+           at World.<anonymous> (/home/fedex/code/shouty-js/shouty/features/step_definitions/steps.js:7:13)
+   - When Sean shouts "free bagels at Sean's" # features/step_definitions/steps.js:10
+   - Then Lucy hears Sean's message # features/step_definitions/steps.js:15
+
+1 scenario (1 failed)
+3 steps (1 failed, 2 skipped)
+0m00.010s (executing steps: 0m00.001s)
+npm ERR! Test failed.  See above for more details.
+----
+
+shot::[19]
+We'll add the method definition without implementing it yet.
+
+[source,js]
+----
+include::../code/js/08-person-moveto-defined/src/shouty.js[lines=1..5]
+----
+
+When we run the scenario again,shot::[20] the first step is green!shot::[21]
+
+[source,bash]
+----
+$ npm test
+
+> shouty@1.0.0 test /home/fedex/code/shouty-js/shouty
+> cucumber-js
+
+.P-
+
+Warnings:
+
+1) Scenario: Listener is within range # features/hear_shout.feature:2
+   ✔ Given Lucy is located 15 metres from Sean # features/step_definitions/steps.js:4
+   ? When Sean shouts "free bagels at Sean's" # features/step_definitions/steps.js:10
+       Pending
+   - Then Lucy hears Sean's message # features/step_definitions/steps.js:15
+
+1 scenario (1 pending)
+3 steps (1 pending, 1 skipped, 1 passed)
+0m00.009s (executing steps: 0m00.001s)
+npm ERR! Test failed.  See above for more details.
+----
+
+We're making progress! 
+
+We'll keep working like this until we see the scenario failing for the right reasons.
+
+In the second step definition, we want to tell Sean to shout something.
+
+shot::[22]
+In order to send instructions to Sean, we need to store him in an property, which we already have, so that he’ll be accessible from all of our step definitions.
+
+shot::[23]
+In the `When` step, we're capturing Sean's message using the `{string}` pattern, and pass an argument to the function. shot::[24] We'll call it `message`.shot::[25]
+
+shot::[26]
+And now we can now tell him to _shout_ the message:
+
+[source,js]
+----
+include::../code/js/09-person-shout-defined/features/step_definitions/steps.js[lines=10..12]
+----
+
+shot::[27]
+If we run Cucumber, it's telling is that our `Person` class needs a `shout` method. 
+
+[source,bash]
+----
+$ npm test
+
+> shouty@1.0.0 test /home/fedex/code/shouty-js/shouty
+> cucumber-js
+
+.F-
+
+Failures:
+
+1) Scenario: Listener is within range # features/hear_shout.feature:2
+   ✔ Given Lucy is located 15 metres from Sean # features/step_definitions/steps.js:4
+   ✖ When Sean shouts "free bagels at Sean's" # features/step_definitions/steps.js:10
+       TypeError: this.sean.shout is not a function
+           at World.<anonymous> (/home/fedex/code/shouty-js/shouty/features/step_definitions/steps.js:11:13)
+   - Then Lucy hears Sean's message # features/step_definitions/steps.js:14
+
+1 scenario (1 failed)
+3 steps (1 failed, 1 skipped, 1 passed)
+0m00.009s (executing steps: 0m00.001s)
+npm ERR! Test failed.  See above for more details.
+----
+
+shot::[28]
+Let’s not worry about the implementation yet. The most important thing right now is to discover the shape of our domain model.
+
+.shouty.rb
+[source,js]
+----
+include::../code/js/09-person-shout-defined/src/shouty.js[lines=1..9]
+
+----
+
+And now the second step is green: shot::[29]
+
+[source,bash]
+----
+$ npm test
+
+> shouty@1.0.0 test /home/fedex/code/shouty-js/shouty
+> cucumber-js
+
+..P
+
+Warnings:
+
+1) Scenario: Listener is within range # features/hear_shout.feature:2
+   ✔ Given Lucy is located 15 metres from Sean # features/step_definitions/steps.js:4
+   ✔ When Sean shouts "free bagels at Sean's" # features/step_definitions/steps.js:10
+   ? Then Lucy hears Sean's message # features/step_definitions/steps.js:14
+       Pending
+
+1 scenario (1 pending)
+3 steps (1 pending, 2 passed)
+0m00.009s (executing steps: 0m00.001s)
+npm ERR! Test failed.  See above for more details.
+----
+
+shot::[30]
+The last step definition is where we implement a check, or assertion. We’ll verify that what Lucy has heard is exactly the same as what Sean shouted.
+
+shot::[31]
+Once again we’re are going to write the code we wish we had.
+
+But before, we need to import `assertThat` shot::[32] and `is` shot::[33] from `hamjest`shot::[34]
+
+[source,js]
+----
+include::../code/js/10-add-assertions-and-person-messagesheard/features/step_definitions/steps.js[lines=1..1]
+
+//...
+
+include::../code/js/10-add-assertions-and-person-messagesheard/features/step_definitions/steps.js[lines=16..18]
+----
+
+So we need a way to ask Lucy what messages she’s heard, and we also need to know what it was that Sean shouted.
+
+shot::[35]
+We can record what Sean shouts by storing it in the `this.message` property as the `When` step runs. This is a common pattern to use in Cucumber step definitions when you don’t want to repeat the same test data in different parts of a scenario. Now we can use that in the assertion check.
+
+[source,js]
+----
+include::../code/js/10-add-assertions-and-person-messagesheard/features/step_definitions/steps.js[lines=10..14]
+----
+
+shot::[36]
+We also need to add a `messagesHeard` method to our Person class. Let’s do that now, we'll just return an empty array for now shot::[37]
+
+[source,js]
+----
+include::../code/js/10-add-assertions-and-person-messagesheard/src/shouty.js[lines=1..13]
+----
+
+shot::[38]
+...and watch Cucumber run the tests again.
+
+[source,bash]
+----
+$ npm test
+
+> shouty@1.0.0 test /home/fedex/code/shouty-js/shouty
+> cucumber-js
+
+..F
+
+Failures:
+
+1) Scenario: Listener is within range # features/hear_shout.feature:2
+   ✔ Given Lucy is located 15 metres from Sean # features/step_definitions/steps.js:5
+   ✔ When Sean shouts "free bagels at Sean's" # features/step_definitions/steps.js:11
+   ✖ Then Lucy hears Sean's message # features/step_definitions/steps.js:16
+       AssertionError: 
+       Expected: is ["free bagels at Sean's"]
+            but: was []
+           + expected - actual
+
+           -[]
+           +[
+           +  "free bagels at Sean's"
+           +]
+
+           at World.<anonymous> (/home/fedex/code/shouty-js/shouty/features/step_definitions/steps.js:17:3)
+
+1 scenario (1 failed)
+3 steps (1 failed, 2 passed)
+0m00.014s (executing steps: 0m00.004s)
+npm ERR! Test failed.  See above for more details.
+----
+
+This is great! Whenever we do BDD, getting to our first failing test is a milestone. Seeing the test fail proves that it is capable of detecting errors in our code!
+
+Never trust an automated test that you haven’t seen fail!
+
+Now all we have to do is write the code to make it do what it's supposed to.

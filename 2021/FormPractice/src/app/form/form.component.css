@@ -1,0 +1,29 @@
+html{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200;
+    margin-left : 5%
+}
+
+h1{
+    font-size: xx-large;
+}
+
+form{
+    font-size: large;
+}
+
+input{
+    font-size: large;
+}
+
+br {
+    display: block;
+    margin: 100px;
+ }
+
+.button{
+    background-color:  #005ca3;
+    border-radius: 5%;
+    color: #FFF;
+    padding : 1%;
+}
