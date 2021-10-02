@@ -1,4 +1,4 @@
-import { Task } from '../../../models/domain/ModuleTask';
+import { Task } from '../../../models/domain/Task';
 import { Repository } from "./Repository";
 import { IRepository } from "../interfaces/IRepo";
 
