@@ -3,8 +3,6 @@
 The authentication system will enable the user to authenticate securely and based on their role will allocate what the user sees and has access to.
 ![Authentication module](../auth.PNG)
 <!-- ![Authentication module](../../karate/k01.PNG) -->
-
-
 ## Role Configuration
 
 As an admin I want to set the assign role-based permissions to users of the system.  This will involve assigning permissions to all resources the users can access.  This resources are identified by links to components.
