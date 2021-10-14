@@ -16,7 +16,7 @@ The admin is used by user's with the admin role. This page is used to interact w
 ## Sub Features
 ### A. Enter entity information
 
-As a user with the admin role, I should be able to specify the new entity's information 
+As a user with the admin role, I should be able to specify the new entity's information. This is done by a form that 
 
 #### Acceptance Criteria (Rules)
 

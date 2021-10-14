@@ -27,7 +27,8 @@ import { AuthService } from './services/sauth/auth.service';
 import { RepoService } from './services/repository/repo.service';
 import { LoginService } from './services/sauth/login.service';
 import { Session } from  './services/sauth/login.service';
-import { DataTableComponent } from './uic/widgets/data-table/data-table.component';;
+import { DataTableComponent } from './uic/widgets/data-table/data-table.component';
+import { CreateEditDomainModelComponent } from './uic/widgets/create-edit-domain-model/create-edit-domain-model.component';;
 
 
 
@@ -39,7 +40,8 @@ import { DataTableComponent } from './uic/widgets/data-table/data-table.componen
     HomeComponent,
     LoginComponent,
     LogoutComponent,
-    DataTableComponent
+    DataTableComponent,
+    CreateEditDomainModelComponent
   ],
   imports: [
     BrowserModule,

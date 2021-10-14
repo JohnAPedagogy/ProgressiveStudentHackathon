@@ -102,11 +102,9 @@ export class DataTableComponent implements OnInit {
          this.displayedColumns = Object.keys(new Progression());
          break; 
       } 
-      
-
-
       default: { 
-         //statements; 
+         this.repository.PersonContext.getAll().then((data:Person[])=>this.dataSource = data);
+         this.displayedColumns = Object.keys(new Person());
          break; 
       }     
    } 

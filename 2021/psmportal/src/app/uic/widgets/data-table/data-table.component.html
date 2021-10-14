@@ -1,7 +1,7 @@
-<h2>
-  <!-- The name of the table (Should dynamically change to the name of teh table) -->
-  {{title}}
-</h2>
+<div class="flex">
+  <h2>{{title}}</h2>
+  <button mat-raised-button color="primary">Create New</button>
+</div>
 
 <!-- The table takes the data from the datasource variable -->
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
