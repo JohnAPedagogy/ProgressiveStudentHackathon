@@ -60,8 +60,10 @@
 
           </mat-accordion>
     </mat-sidenav>
-    <mat-sidenav-content> 
+    <mat-sidenav-content > 
         <app-header (sideBarOpened)="openSidebar($event)"></app-header>
-        <app-data-table [currentEntity] = "tableTitle"></app-data-table>
+        <app-data-table *ng-if = "contentType == 1" [currentEntity] = "tableTitle"></app-data-table>
+        <h1 *ng-if = "contentType == 2">Bye</h1>
+        
       </mat-sidenav-content>
 </mat-sidenav-container>

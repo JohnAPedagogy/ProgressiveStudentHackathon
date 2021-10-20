@@ -14,8 +14,12 @@ export class SidebarComponent implements OnInit {
    }
 
   ngOnInit(): void {
+
   }
 
+
+  //1 for table, 2 for forms
+  contentType = 2;
 
   getTable(s:string){
 
@@ -38,6 +42,7 @@ export class SidebarComponent implements OnInit {
   }
 
   expandedIndex = 0;
+
 
   openSidebar(value: boolean) {
     value ? this.sideBarOpened = true : this.sideBarOpened = false; 
