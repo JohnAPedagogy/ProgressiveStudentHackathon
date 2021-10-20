@@ -18,8 +18,8 @@ export class SidebarComponent implements OnInit {
   }
 
 
-  //1 for table, 2 for forms
-  contentType = 2;
+  //1 for Dashboard, 2 for table and 3 for forms
+  contentType = 1;
 
   getTable(s:string){
 
@@ -39,6 +39,16 @@ export class SidebarComponent implements OnInit {
 
   onEntityClick(newTitle : string){
     this.tableTitle = newTitle;
+
+    // The content type is changed to show a table
+    if (this.contentType != 2){
+      this.contentType = 2
+    }
+    
+  }
+
+  onCreateNewPressed() {
+    this.contentType = 3;
   }
 
   expandedIndex = 0;

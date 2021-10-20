@@ -62,8 +62,13 @@
     </mat-sidenav>
     <mat-sidenav-content > 
         <app-header (sideBarOpened)="openSidebar($event)"></app-header>
-        <app-data-table *ng-if = "contentType == 1" [currentEntity] = "tableTitle"></app-data-table>
-        <h1 *ng-if = "contentType == 2">Bye</h1>
+        <h1 *ngIf="contentType == 1">Dashboard</h1>
+        <app-data-table 
+          *ngIf="contentType == 2" 
+          [currentEntity] = "tableTitle"
+          (form)="onCreateNewPressed()"
+        ></app-data-table>
+        <h1 *ngIf="contentType == 3">Form for {{tableTitle}}</h1>
         
       </mat-sidenav-content>
 </mat-sidenav-container>
