@@ -68,7 +68,7 @@
           [currentEntity] = "tableTitle"
           (form)="onCreateNewPressed()"
         ></app-data-table>
-        <h1 *ngIf="contentType == 3">Form for {{tableTitle}}</h1>
+        <app-entity-form *ngIf="contentType == 3" [currentEntity] = "tableTitle"></app-entity-form>
         
       </mat-sidenav-content>
 </mat-sidenav-container>

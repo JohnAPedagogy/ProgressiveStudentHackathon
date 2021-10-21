@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './uic/auth/login/login.component';
 import { LogoutComponent } from './uic/auth/logout/logout.component';
 import { NotFoundComponent } from 'src/app/uic/template/not-found/not-found.component';
+import { EntityFormComponent } from './uic/widgets/entity-form/entity-form.component';
 
 import { ExpenseGuard } from './services/sauth/expense.guard';
 

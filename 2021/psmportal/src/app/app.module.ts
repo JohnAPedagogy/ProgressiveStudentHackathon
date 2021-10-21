@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { FormsModule } from '@angular/forms'; 
 import {MatListModule} from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import { LoginComponent } from './uic/auth/login/login.component';
@@ -28,7 +29,8 @@ import { RepoService } from './services/repository/repo.service';
 import { LoginService } from './services/sauth/login.service';
 import { Session } from  './services/sauth/login.service';
 import { DataTableComponent } from './uic/widgets/data-table/data-table.component';
-import { CreateEditDomainModelComponent } from './uic/widgets/create-edit-domain-model/create-edit-domain-model.component';;
+import { CreateEditDomainModelComponent } from './uic/widgets/create-edit-domain-model/create-edit-domain-model.component';
+import { EntityFormComponent } from './uic/widgets/entity-form/entity-form.component';;
 
 
 
@@ -41,11 +43,14 @@ import { CreateEditDomainModelComponent } from './uic/widgets/create-edit-domain
     LoginComponent,
     LogoutComponent,
     DataTableComponent,
-    CreateEditDomainModelComponent
+    CreateEditDomainModelComponent,
+    EntityFormComponent,
+    EntityFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatFormFieldModule,
     MatListModule,
     NgbModule,
     BrowserAnimationsModule,
