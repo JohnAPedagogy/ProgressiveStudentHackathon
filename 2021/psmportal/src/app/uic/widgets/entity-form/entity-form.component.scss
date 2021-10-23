@@ -1,29 +1,30 @@
-html{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 200;
-    margin-left : 5%
+.warning{
+    background-color: rgb(249,229,224);
+    color: rgb(162,105,96);
+    padding: 1rem;
+    font-weight: 400;
 }
 
-h1{
-    font-size: xx-large;
+label{
+    font-size: x-large;
+    font-weight: 400;
 }
 
 form{
     font-size: large;
+    margin-left: 3rem;
+    margin-right: 50%;
+    
 }
 
 input{
     font-size: large;
 }
 
-br {
-    display: block;
-    margin: 100px;
- }
-
-.button{
-    background-color:  #005ca3;
-    border-radius: 5%;
-    color: #FFF;
-    padding : 1%;
+h2{
+    font-size: xx-large;
+    margin-left: 3rem;
+    padding-bottom: 2rem;
+    font-weight: normal;
 }
+

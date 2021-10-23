@@ -1,16 +1,19 @@
+<div>
+    <h2>Create New {{title}}</h2>
+</div>
 
-<!-- 
-<h1>Create</h1>
-<h2>{{title}}</h2>
+<form>
+    <div *ngFor="let element of ObjectElements; let i = index;" class="form-group">
+        <label for="{{element}}">{{element}}</label>
+        <input required ngModel name="{{element}}" 
+                #text="ngModel"
+               id="{{element}}" type="text" class="form-control">
+        <div class="warning" *ngIf="!text.valid && text.touched">{{element}} is required.</div>
+        <br>
+    </div>
+    <button mat-raised-button color="primary">Create</button>
+</form>
 
-<mat-form-field *ngFor="let element of ObjectElements; let i = index;" appearance="fill">
-    <mat-label>{{element}} </mat-label>
-    <input 
-        id={{element}}
-        name={{element}}
-        matInput
-    >
-</mat-form-field> -->
 
 
 

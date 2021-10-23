@@ -34,6 +34,6 @@ Background:
 Scenario: 1. The correct form appears when the add button is pressed on the view page
     Then click("{}Admin")
     Then click("#Person")
-    When click("#Create")
-    Then waitFor("{h2}Create Person")
+    Then click("{}Create New")
+    Then waitFor("{h2}Create New Person")
     

@@ -35,7 +35,7 @@ export class SidebarComponent implements OnInit {
   teachingClasses = ['Software Design Group 1', 'Software Design Group 14 & 13',
   'Math Group 1','Math Group 9'];
 
-  tableTitle : string = "Person"
+  tableTitle : string = "Group"
 
   onEntityClick(newTitle : string){
     this.tableTitle = newTitle;

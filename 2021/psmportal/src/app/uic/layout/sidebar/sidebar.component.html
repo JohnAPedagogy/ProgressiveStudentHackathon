@@ -12,7 +12,9 @@
                 </mat-expansion-panel-header>
                  <mat-list *ngFor="let entity of entities">
                     <mat-list-item> 
-                      <button (click)="onEntityClick(entity)" id = {{entity}}>
+                      <button (click)="onEntityClick(entity)" 
+                        id = {{entity}}
+                        class = {{entity}}>
                         <mat-icon>trip_origin</mat-icon> 
                         {{entity}}
                       </button>
