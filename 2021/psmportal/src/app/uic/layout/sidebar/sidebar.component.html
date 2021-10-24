@@ -12,7 +12,9 @@
                 </mat-expansion-panel-header>
                  <mat-list *ngFor="let entity of entities">
                     <mat-list-item> 
-                      <button (click)="onEntityClick(entity)" id = {{entity}}>
+                      <button (click)="onEntityClick(entity)" 
+                        id = {{entity}}
+                        class = {{entity}}>
                         <mat-icon>trip_origin</mat-icon> 
                         {{entity}}
                       </button>
@@ -60,8 +62,15 @@
 
           </mat-accordion>
     </mat-sidenav>
-    <mat-sidenav-content> 
+    <mat-sidenav-content > 
         <app-header (sideBarOpened)="openSidebar($event)"></app-header>
-        <app-data-table [currentEntity] = "tableTitle"></app-data-table>
+        <h1 *ngIf="contentType == 1">Dashboard</h1>
+        <app-data-table 
+          *ngIf="contentType == 2" 
+          [currentEntity] = "tableTitle"
+          (form)="onCreateNewPressed()"
+        ></app-data-table>
+        <app-entity-form *ngIf="contentType == 3" [currentEntity] = "tableTitle"></app-entity-form>
+        
       </mat-sidenav-content>
 </mat-sidenav-container>

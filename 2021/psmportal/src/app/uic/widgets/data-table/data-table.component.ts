@@ -12,6 +12,7 @@ import { LoginRole } from 'src/app/models/domain/LoginRole';
 import { Batch } from 'src/app/models/domain/Batch';
 import { Progression } from 'src/app/models/domain/Progression';
 import { Task } from 'src/app/models/domain/Task';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-data-table',
@@ -27,8 +28,6 @@ export class DataTableComponent implements OnInit {
 
   //OnInit we get all the data from the correct context and put it on the dataSource variable
   ngOnInit(): void {
-   this.repository.TeachingClassContext.getAll().then((data:TeachingClass[])=>this.dataSource = data);
-   this.displayedColumns = Object.keys(new TeachingClass());
     
   }
   
@@ -38,6 +37,11 @@ export class DataTableComponent implements OnInit {
 
   title : string = "";
 
+  @Output() form = new EventEmitter<boolean>();
+
+  updateForm() {
+   this.form.emit();
+ }
 
   @Input()  set currentEntity (value : string){
     if(this.dataSource != null) console.log(this.dataSource)
@@ -102,11 +106,9 @@ export class DataTableComponent implements OnInit {
          this.displayedColumns = Object.keys(new Progression());
          break; 
       } 
-      
-
-
       default: { 
-         //statements; 
+         this.repository.PersonContext.getAll().then((data:Person[])=>this.dataSource = data);
+         this.displayedColumns = Object.keys(new Person());
          break; 
       }     
    } 

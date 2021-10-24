@@ -1,0 +1,21 @@
+<div>
+    <h2>Create New {{title}}</h2>
+</div>
+
+<form>
+    <div *ngFor="let element of ObjectElements; let i = index;" class="form-group">
+        <label for="{{element}}">{{element}}</label>
+        <input required ngModel name="{{element}}" 
+                #text="ngModel"
+               id="{{element}}" type="text" class="form-control">
+        <div class="warning" *ngIf="!text.valid && text.touched">{{element}} is required.</div>
+        <br>
+    </div>
+    <button mat-raised-button color="primary">Create</button>
+</form>
+
+
+
+
+
+
