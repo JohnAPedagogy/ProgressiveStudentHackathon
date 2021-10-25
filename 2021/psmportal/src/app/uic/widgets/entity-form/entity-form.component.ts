@@ -33,6 +33,8 @@ export class EntityFormComponent implements OnInit {
    this.form.emit();
  }
 
+ entity : any;  
+
   @Input()  set currentEntity (value : string){
     switch(value) { 
       case "Person": { 
@@ -56,7 +58,12 @@ export class EntityFormComponent implements OnInit {
          break; 
       } 
       case 'Group': { 
-         this.ObjectElements = Object.keys(new Group());
+         this.entity = new Group();
+         this.entity.P2PCoach = "John A";
+         this.ObjectElements = ['ID', 'GroupCode', 'P2PCoach', 'TaughtTerm'];//Object.keys(this.entity);
+         console.log("Object.keys size=",Object.keys(this.entity).length);
+         console.log("Object.getOwnPropertyNames size=", Object.getOwnPropertyNames(this.entity).length);
+         console.log(Object.getOwnPropertyNames(this.entity));
          break; 
       } 
       case 'Pathway Module': { 

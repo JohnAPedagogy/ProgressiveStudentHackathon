@@ -19,7 +19,7 @@ export class SidebarComponent implements OnInit {
 
 
   //1 for Dashboard, 2 for table and 3 for forms
-  contentType = 1;
+  contentType = 3;
 
   getTable(s:string){
 

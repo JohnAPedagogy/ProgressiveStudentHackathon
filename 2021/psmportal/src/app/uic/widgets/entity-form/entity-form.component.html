@@ -3,12 +3,12 @@
 </div>
 
 <form>
-    <div *ngFor="let element of ObjectElements; let i = index;" class="form-group">
-        <label for="{{element}}">{{element}}</label>
-        <input required ngModel name="{{element}}" 
-                #text="ngModel"
-               id="{{element}}" type="text" class="form-control">
-        <div class="warning" *ngIf="!text.valid && text.touched">{{element}} is required.</div>
+    <div *ngFor="let property of ObjectElements; let i = index;" class="form-group">
+        <label for="{{property}}">{{property}}</label>
+        <input required [(ngModel)]="entity[property]" name="{{property}}" 
+                #ngModelVar = ngModel
+               id="{{property}}" type="text" class="form-control">
+        <div class="warning" *ngIf="!ngModelVar.valid && ngModelVar.touched">{{entity.errors}}</div>
         <br>
     </div>
     <button mat-raised-button color="primary">Create</button>
