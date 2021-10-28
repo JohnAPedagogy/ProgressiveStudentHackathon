@@ -1,1 +1,47 @@
-<p>create-edit-domain-model works!</p>
+<div>
+    <h2>Create New {{title}}</h2>
+</div>
+
+<form>
+    <div *ngFor="let property of ObjectElements; let i = index;" class="form-group">
+        <label for="{{property}}">{{property}}</label>
+        
+        <input 
+                required minlength=" metadata[property].min" 
+                maxlength=" metadata[property].max" pattern="Hello"
+                [(ngModel)]="entity[property]" 
+                name="{{property}}" 
+                id="{{property}}" 
+                type="text" 
+
+                #ngModelVar = ngModel
+                class="form-control">
+
+            <div class="warning" 
+                *ngIf= " !ngModelVar.valid && ngModelVar.touched && 
+                        (ngModelVar.value.trim().length == 0) && metadata[property].required">
+                {{property}} is required.
+            </div>
+            <div class="warning" *ngIf="!ngModelVar.valid && ngModelVar.touched && 
+            metadata[property].min > ngModelVar.value.length">
+                {{property}} needs to be longer than {{ metadata[property].min}}.
+            </div>
+            <div class="warning" *ngIf="!ngModelVar.valid && ngModelVar.touched && 
+            metadata[property].max < ngModelVar.value.length">
+                {{property}} needs to be shorter than {{ metadata[property].max}}.
+            </div>
+            <div class="warning" *ngIf="!ngModelVar.valid && ngModelVar.touched && 
+            metadata[property].pattern">
+                {{property}} is needs to follow the given pattern.
+            </div>
+   
+        <br>
+    </div>
+    <button mat-raised-button color="primary">Create</button>
+</form>
+
+
+
+
+
+
