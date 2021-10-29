@@ -30,7 +30,6 @@ import { LoginService } from './services/sauth/login.service';
 import { Session } from  './services/sauth/login.service';
 import { DataTableComponent } from './uic/widgets/data-table/data-table.component';
 import { CreateEditDomainModelComponent } from './uic/widgets/create-edit-domain-model/create-edit-domain-model.component';
-import { EntityFormComponent } from './uic/widgets/entity-form/entity-form.component';;
 
 
 
@@ -43,9 +42,7 @@ import { EntityFormComponent } from './uic/widgets/entity-form/entity-form.compo
     LoginComponent,
     LogoutComponent,
     DataTableComponent,
-    CreateEditDomainModelComponent,
-    EntityFormComponent,
-    EntityFormComponent
+    CreateEditDomainModelComponent
   ],
   imports: [
     BrowserModule,

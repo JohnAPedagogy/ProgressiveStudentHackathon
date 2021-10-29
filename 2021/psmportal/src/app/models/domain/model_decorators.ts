@@ -1,14 +1,15 @@
+import { Group } from "./Group";
 
 export function Required(limit: number) {
     return function(target: Object, propertyKey: string) { 
       let value : string;
+      // Group.missing.push(propertyKey);
       const getter = function() {
         console.log("getter called");
         return value;
       };
       const setter = function(newVal: string) {
         //  if(newVal.length < limit) {
-            console.log(Object.getOwnPropertyNames(target));
           Object.defineProperty(target, 'errors', {
             value: `Your password should be bigger than ${limit}`
           });
@@ -19,6 +20,7 @@ export function Required(limit: number) {
         // }      
       }; 
       Object.defineProperty(target, propertyKey, {
+        enumerable:true,
         get: getter,
         set: setter
       }); 

@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
+import { RepoService } from '../repository/repo.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DomainAdminService {
 
-  constructor() { }
+  constructor(private repository:RepoService) { }
 }
