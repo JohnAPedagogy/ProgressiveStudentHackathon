@@ -9,16 +9,22 @@ export class Group {
       "required":true,
       "max":10,
       "min":3,
-      "options":"P2pCoaches"
+      "selectmetadata":"",
+      "type":"select"
     },
     'GroupCode':{
       "required":true,
-      "max":5
+      "max":5,
+      "type":"text",
     },
     'TaughtTerm':{
+      "type":"select",
       "required":true,
+      "selectmetadata":""
     },
     'ID':{
+      "disabled":true,
+      "type":"text",
       "required":true,
       "min":7
     }

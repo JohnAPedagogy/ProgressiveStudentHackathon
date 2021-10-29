@@ -1,3 +1,4 @@
+import { DomainAdminService } from './../../../services/sadmin/domain-admin.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Batch } from 'src/app/models/domain/Batch';
 import { Group } from 'src/app/models/domain/Group';
@@ -18,9 +19,7 @@ import { TeachingClass } from 'src/app/models/domain/TeachingClass';
 })
 export class CreateEditDomainModelComponent implements OnInit {
 
-
-  
-  constructor() {  }
+  constructor(private domainAdminService:DomainAdminService) {  }
 
   ngOnInit(): void {
      console.log(this.sGroup['ID'].required)
@@ -34,13 +33,15 @@ export class CreateEditDomainModelComponent implements OnInit {
 
   get sGroup() {
    const mtd=Group.metadata;
-   //mtd.p2Pcoach.selectmetatda =service.getp2pcoeaches()
+   mtd.TaughtTerm.selectmetadata = this.domainAdminService.getNumbers()
+   mtd.P2PCoach.selectmetadata = this.domainAdminService.getP2pCoaches()
    return mtd;
 
  }
  get sPeopleRole() {
   const mtd=PeopleRole.metadata;
-  //mtd.p2Pcoach.selectmetatda =service.getp2pcoeaches()
+  
+  //mtd.p2Pcoach.selectmetatda = service.getp2pcoeaches()
   return mtd;
 
 }

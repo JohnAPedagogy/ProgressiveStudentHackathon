@@ -6,16 +6,27 @@
     <div *ngFor="let property of ObjectElements; let i = index;" class="form-group">
         <label for="{{property}}">{{property}}</label>
         
-        <input 
-                required minlength=" metadata[property].min" 
-                maxlength=" metadata[property].max" pattern="Hello"
-                [(ngModel)]="entity[property]" 
-                name="{{property}}" 
-                id="{{property}}" 
-                type="text" 
+        <div *ngIf= " metadata[property].type == 'select'">
+            <select name="{{property}}" id="{{property}}">
+                <option 
+                    *ngFor="let option of metadata[property].selectmetadata; let i = index" value="{{option.value}}">
+                    {{option.text}}
+                </option>
+            </select>
+        </div>
 
-                #ngModelVar = ngModel
-                class="form-control">
+        <div *ngIf= " metadata[property].type == 'text'">
+            <input  
+            required minlength=" metadata[property].min" 
+            maxlength=" metadata[property].max" pattern="Hello"
+            [(ngModel)]="entity[property]" 
+            name="{{property}}" 
+            id="{{property}}" 
+            type="text" 
+            disabled="metadata[property].disabled"
+
+            #ngModelVar = ngModel
+            class="form-control">
 
             <div class="warning" 
                 *ngIf= " !ngModelVar.valid && ngModelVar.touched && 
@@ -34,6 +45,9 @@
             metadata[property].pattern">
                 {{property}} is needs to follow the given pattern.
             </div>
+                
+        </div>
+        
    
         <br>
     </div>
