@@ -33,7 +33,7 @@ Background:
 
 Scenario: 1. The correct form appears when the add button is pressed on the view page
     Then click("{}Admin")
-    Then click("#Person")
+    Then click("#Group")
     Then click("{}Create New")
-    Then waitFor("{h2}Create New Person")
+    Then waitFor("{h2}Create New Group")
     

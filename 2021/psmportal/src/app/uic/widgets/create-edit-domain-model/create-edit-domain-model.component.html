@@ -7,7 +7,7 @@
         <label for="{{property}}">{{property}}</label>
         
         <div *ngIf= " metadata[property].type == 'select'">
-            <select name="{{property}}" id="{{property}}">
+            <select name="{{property}}" id="{{property}}" form="form-group">
                 <option 
                     *ngFor="let option of metadata[property].selectmetadata; let i = index" value="{{option.value}}">
                     {{option.text}}
@@ -15,15 +15,18 @@
             </select>
         </div>
 
-        <div *ngIf= " metadata[property].type == 'text'">
+        <div *ngIf= " metadata[property].type == 'boolean'">
+            <input type="checkbox" id="{{property}}" name="{{property}}" value="{{property}}">
+        </div>
+
+        <div *ngIf= " metadata[property].type == 'text' || metadata[property].type == 'date'">
             <input  
             required minlength=" metadata[property].min" 
             maxlength=" metadata[property].max" pattern="Hello"
             [(ngModel)]="entity[property]" 
             name="{{property}}" 
             id="{{property}}" 
-            type="text" 
-            disabled="metadata[property].disabled"
+            type="{{metadata[property].type}}"
 
             #ngModelVar = ngModel
             class="form-control">
@@ -47,8 +50,7 @@
             </div>
                 
         </div>
-        
-   
+
         <br>
     </div>
     <button mat-raised-button color="primary">Create</button>

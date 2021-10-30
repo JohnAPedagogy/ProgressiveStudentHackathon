@@ -11,7 +11,7 @@ import { Progression } from 'src/app/models/domain/Progression';
 import { Resource } from 'src/app/models/domain/Resource';
 import { Task } from 'src/app/models/domain/Task';
 import { TeachingClass } from 'src/app/models/domain/TeachingClass';
-
+import { Module } from 'src/app/models/domain/Module';
 @Component({
   selector: 'app-create-edit-domain-model',
   templateUrl: './create-edit-domain-model.component.html',
@@ -36,7 +36,6 @@ export class CreateEditDomainModelComponent implements OnInit {
    mtd.TaughtTerm.selectmetadata = this.domainAdminService.getNumbers()
    mtd.P2PCoach.selectmetadata = this.domainAdminService.getP2pCoaches()
    return mtd;
-
  }
  get sPeopleRole() {
   const mtd=PeopleRole.metadata;
@@ -46,10 +45,17 @@ export class CreateEditDomainModelComponent implements OnInit {
 
 }
  get sBatch() {
-   return {};//Batch.metadata;
+   const mtd=Batch.metadata;
+   return mtd;
  }
- get LoginRole() {
-   return {};//Batch.metadata;
+ get sModule() {
+   const mtd = Module.metadata;
+   console.log(mtd)
+   return mtd;
+ }
+ get sLoginRole() {
+   const mtd = LoginRole.metadata;
+   return mtd;
  }
  get Pathway() {
    return {};//Batch.metadata;
@@ -70,6 +76,7 @@ export class CreateEditDomainModelComponent implements OnInit {
  entity : any;  
 
   @Input()  set currentEntity (value : string){
+     console.log(value)
     switch(value) { 
       case "Person": { 
          this.ObjectElements = Object.keys(new Person());
@@ -103,12 +110,16 @@ export class CreateEditDomainModelComponent implements OnInit {
          this.ObjectElements = Object.keys(new PathwayModule());
          break; 
       }
-      // case 'Module': { 
-      //    this.ObjectElements = Object.keys(new Module());
-      //    break; 
-      // }
+      case 'Module': { 
+         this.entity = new Module();
+         this.ObjectElements = Object.keys(this.entity);
+         this.metadata = this.sModule;
+         break; 
+      }
       case 'Login Role': { 
-         this.ObjectElements = Object.keys(new LoginRole());
+         this.entity = new LoginRole();
+         this.ObjectElements = Object.keys(this.entity);
+         this.metadata = this.sLoginRole;
          break; 
       } 
       case 'Task': { 
@@ -116,7 +127,9 @@ export class CreateEditDomainModelComponent implements OnInit {
          break; 
       } 
       case 'Batch': { 
-         this.ObjectElements = Object.keys(new Batch());
+         this.entity = new Batch();
+         this.ObjectElements = Object.keys(this.entity);
+         this.metadata = this.sBatch;
          break; 
       } 
       case 'Progression': { 

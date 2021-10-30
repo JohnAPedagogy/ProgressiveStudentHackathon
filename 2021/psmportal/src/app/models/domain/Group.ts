@@ -23,10 +23,9 @@ export class Group {
       "selectmetadata":""
     },
     'ID':{
-      "disabled":true,
+      "disabled":"disabled",
       "type":"text",
       "required":true,
-      "min":7
     }
   };
 
