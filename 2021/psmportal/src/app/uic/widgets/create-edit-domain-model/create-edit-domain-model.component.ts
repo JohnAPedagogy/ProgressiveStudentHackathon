@@ -37,36 +37,50 @@ export class CreateEditDomainModelComponent implements OnInit {
    mtd.P2PCoach.selectmetadata = this.domainAdminService.getP2pCoaches()
    return mtd;
  }
- get sPeopleRole() {
-  const mtd=PeopleRole.metadata;
-  
-  //mtd.p2Pcoach.selectmetatda = service.getp2pcoeaches()
-  return mtd;
-
-}
  get sBatch() {
    const mtd=Batch.metadata;
    return mtd;
  }
  get sModule() {
    const mtd = Module.metadata;
-   console.log(mtd)
    return mtd;
  }
  get sLoginRole() {
    const mtd = LoginRole.metadata;
    return mtd;
  }
- get Pathway() {
-   return {};//Batch.metadata;
+ get sPathway() {
+   const mtd = Pathway.metadata;
+   return mtd;
  }
-//  import { PathwayModule } from 'src/app/models/domain/PathwayModule';
-//  import { PeopleRole } from 'src/app/models/domain/PeopleRole';
-//  import { Person } from 'src/app/models/domain/Person';
-//  import { Progression } from 'src/app/models/domain/Progression';
-//  import { Resource } from 'src/app/models/domain/Resource';
-//  import { Task } from 'src/app/models/domain/Task';
-//  import { TeachingClass } from 'src/app/models/domain/TeachingClass';
+ get sPathwayModule() {
+   const mtd = PathwayModule.metadata;
+   return mtd;
+ }
+ get sPeopleRole() {
+   const mtd = PeopleRole.metadata;
+   return mtd;
+ }
+ get sPerson() {
+   const mtd = Person.metadata;
+   return mtd;
+ }
+ get sProgression() {
+   const mtd = Progression.metadata;
+   return mtd;
+ }
+ get sResource() {
+   const mtd = Resource.metadata;
+   return mtd;
+ }
+ get sTask() {
+   const mtd = Task.metadata;
+   return mtd;
+ }
+ get sTeachingClass() {
+   const mtd = TeachingClass.metadata;
+   return mtd;
+ }
  
 
   updateForm() {
@@ -79,15 +93,21 @@ export class CreateEditDomainModelComponent implements OnInit {
      console.log(value)
     switch(value) { 
       case "Person": { 
-         this.ObjectElements = Object.keys(new Person());
+         this.entity = new Person();
+         this.ObjectElements = Object.keys(this.entity);
+         this.metadata = this.sPerson;
          break; 
       } 
       case 'Teaching Class': { 
-         this.ObjectElements = Object.keys(new TeachingClass());
+         this.entity = new TeachingClass();
+         this.ObjectElements = Object.keys(this.entity);
+         this.metadata = this.sTeachingClass;
          break; 
       } 
       case 'Resource': { 
-         this.ObjectElements = Object.keys(new Resource());
+         this.entity = new Resource();
+         this.ObjectElements = Object.keys(this.entity);
+         this.metadata = this.sResource;
          break; 
       } 
       case 'People Role': { 
@@ -97,7 +117,9 @@ export class CreateEditDomainModelComponent implements OnInit {
          break; 
       } 
       case 'Pathways': { 
-         this.ObjectElements = Object.keys(new Pathway());
+         this.entity = new Pathway();
+         this.ObjectElements = Object.keys(this.entity);
+         this.metadata = this.sPathway;
          break; 
       } 
       case 'Group': { 
@@ -107,7 +129,9 @@ export class CreateEditDomainModelComponent implements OnInit {
          break; 
       } 
       case 'Pathway Module': { 
-         this.ObjectElements = Object.keys(new PathwayModule());
+         this.entity = new PathwayModule();
+         this.ObjectElements = Object.keys(this.entity);
+         this.metadata = this.sPathwayModule;
          break; 
       }
       case 'Module': { 
@@ -123,7 +147,9 @@ export class CreateEditDomainModelComponent implements OnInit {
          break; 
       } 
       case 'Task': { 
-         this.ObjectElements = Object.keys(new Task());
+         this.entity = new Task();
+         this.ObjectElements = Object.keys(this.entity);
+         this.metadata = this.sTask;
          break; 
       } 
       case 'Batch': { 
@@ -133,11 +159,12 @@ export class CreateEditDomainModelComponent implements OnInit {
          break; 
       } 
       case 'Progression': { 
-         this.ObjectElements = Object.keys(new Progression());
+         this.entity = new Progression();
+         this.ObjectElements = Object.keys(this.entity);
+         this.metadata = this.sProgression;
          break; 
       } 
       default: { 
-         this.ObjectElements = Object.keys(new Person());
          break; 
       }     
    } 

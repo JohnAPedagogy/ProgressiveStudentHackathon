@@ -8,16 +8,18 @@ export class PeopleRole {
   static metadata:any={
     'PersonId':{
       "required":true,
-      "max":10,
-      "min":3
+      "type":"select",
+      "selectmetadata":"",
     },
     'LoginRoleId':{
       "required":true,
-      "max":5
+      "type":"select",
+      "selectmetadata":"",
     },
     'ID':{
+      "disabled":"disabled",
+      "type":"text",
       "required":true,
-      "min":7
     }
   };
   ID: number = id;

@@ -58,11 +58,13 @@ export class DataTableComponent implements OnInit {
       } 
       case 'Resource': { 
          this.repository.ResourceContext.getAll().then((data:Resource[])=>this.dataSource = data);
+         console.log(this.dataSource)
          this.displayedColumns = Object.keys(new Resource());
          break; 
       } 
       case 'People Role': { 
         this.repository.PeopleRoleContext.getAll().then((data:PeopleRole[])=>this.dataSource = data);
+        console.log(this.dataSource)
         this.displayedColumns = Object.keys(new PeopleRole());
         break; 
       } 
@@ -93,6 +95,7 @@ export class DataTableComponent implements OnInit {
       } 
       case 'Task': { 
          this.repository.TaskContext.getAll().then((data:Task[])=>this.dataSource = data);
+         console.log(this.dataSource)
          this.displayedColumns = Object.keys(new Task());
          break; 
       } 
