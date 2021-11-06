@@ -74,7 +74,9 @@ export class DataTableComponent implements OnInit {
          break; 
       } 
       case 'Group': { 
-         this.repository.GroupContext.getAll().then((data:Group[])=>this.dataSource = data);
+         this.repository.GroupContext.getAll().then((data:Group[])=>{this.dataSource = data
+            console.log("Hello World")
+         });
          this.displayedColumns = Object.keys(new Group());
          break; 
       } 

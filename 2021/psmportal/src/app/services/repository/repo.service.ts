@@ -53,6 +53,7 @@ export class RepoService {
   public BatchContext:BatchRepository = new BatchRepository(new StitchContext<Batch>("Batch"));
 
   public ProgressionContext:ProgressionRepository = new ProgressionRepository(new StitchContext<Progression>("Progression"));
+  Group: any;
   
 
 

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Person } from 'src/app/models/domain/Person';
 import { RepoService } from '../repository/repo.service';
+import { Group } from './../../models/domain/Group';
 
 @Injectable({
   providedIn: 'root'
@@ -10,19 +11,16 @@ export class DomainAdminService {
   constructor(private repository:RepoService) { }
 
   getP2pCoaches(){
-    // let p2pCoaches
+    let p2pCoaches : any;
 
-    // p2pCoaches = this.repository.PersonContext.find({
-    //   id: {
-    //     $gte: 70000
-    //   }});
+    const query = { "id": { "$gte": 70000 } };
+    const projection = { "_id": 0 };
 
-    return [
-      {'text': 'Fran','value':1},
-      {'text': 'John','value':2},
-      {'text': 'Ale','value':3},
-    ]
-
+    this.repository.PersonContext.find(query).then((data: Person[])=>{
+      p2pCoaches = data;
+      console.log(p2pCoaches)
+      return p2pCoaches;
+    });
   }
 
   getNumbers(){

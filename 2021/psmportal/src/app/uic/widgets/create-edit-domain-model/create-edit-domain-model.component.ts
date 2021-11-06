@@ -12,6 +12,7 @@ import { Resource } from 'src/app/models/domain/Resource';
 import { Task } from 'src/app/models/domain/Task';
 import { TeachingClass } from 'src/app/models/domain/TeachingClass';
 import { Module } from 'src/app/models/domain/Module';
+import { RepoService } from 'src/app/services/repository/repo.service';
 @Component({
   selector: 'app-create-edit-domain-model',
   templateUrl: './create-edit-domain-model.component.html',
@@ -19,7 +20,7 @@ import { Module } from 'src/app/models/domain/Module';
 })
 export class CreateEditDomainModelComponent implements OnInit {
 
-  constructor(private domainAdminService:DomainAdminService) {  }
+  constructor(private domainAdminService:DomainAdminService, private repository:RepoService) {  }
 
   ngOnInit(): void {
      console.log(this.sGroup['ID'].required)
@@ -31,7 +32,7 @@ export class CreateEditDomainModelComponent implements OnInit {
 
   @Output() form = new EventEmitter<boolean>();
 
-  get sGroup() {
+get sGroup() {
    const mtd=Group.metadata;
    mtd.TaughtTerm.selectmetadata = this.domainAdminService.getNumbers()
    mtd.P2PCoach.selectmetadata = this.domainAdminService.getP2pCoaches()
