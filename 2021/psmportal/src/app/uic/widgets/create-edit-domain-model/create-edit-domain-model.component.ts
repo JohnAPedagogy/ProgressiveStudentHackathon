@@ -35,7 +35,11 @@ export class CreateEditDomainModelComponent implements OnInit {
 get sGroup() {
    const mtd=Group.metadata;
    mtd.TaughtTerm.selectmetadata = this.domainAdminService.getNumbers()
-   mtd.P2PCoach.selectmetadata = this.domainAdminService.getP2pCoaches()
+   
+   this.domainAdminService.getP2pCoaches().then(data => {
+      mtd.P2PCoach.selectmetadata = data;
+      console.log(mtd.P2PCoach.selectmetadata);
+   })
    return mtd;
  }
  get sBatch() {
