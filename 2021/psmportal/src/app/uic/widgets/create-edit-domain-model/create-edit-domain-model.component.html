@@ -4,7 +4,8 @@
 
 <form>
     <div *ngFor="let property of ObjectElements; let i = index;" class="form-group">
-        <label for="{{property}}">{{property}}</label>
+        <label for="{{property}}">
+            {{domainAdminService.getName(property, metadata)}}</label>
         
         <div *ngIf= " metadata[property].type == 'select'">
             <select name="{{property}}" id="{{property}}" form="form-group">

@@ -6,6 +6,7 @@ const id = faker.datatype.number(99999);
 export class Group {
   static metadata:any={
     'P2PCoach':{
+      "displayName" : "P2P Coach",
       "required":true,
       "max":10,
       "min":3,
@@ -13,11 +14,13 @@ export class Group {
       "type":"select"
     },
     'GroupCode':{
+      "displayName" : "Group Code",
       "required":true,
       "max":5,
       "type":"text",
     },
     'TaughtTerm':{
+      "displayName" : "Taught Term",
       "type":"select",
       "required":true,
       "selectmetadata":""
