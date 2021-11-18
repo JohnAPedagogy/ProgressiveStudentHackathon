@@ -7,11 +7,13 @@ export class PeopleRole {
 
   static metadata:any={
     'PersonId':{
+      "displayName" : "Person ID ",
       "required":true,
       "type":"select",
       "selectmetadata":"",
     },
     'LoginRoleId':{
+      "displayName" : "Login Role ID",
       "required":true,
       "type":"select",
       "selectmetadata":"",

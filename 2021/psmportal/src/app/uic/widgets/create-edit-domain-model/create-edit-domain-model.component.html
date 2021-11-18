@@ -48,13 +48,14 @@
             <div class="warning" *ngIf="!ngModelVar.valid && ngModelVar.touched && 
             metadata[property].pattern">
                 {{property}} is needs to follow the given pattern.
-            </div>
-                
+            </div>        
         </div>
-
         <br>
     </div>
-    <button mat-raised-button color="primary">Create</button>
+    <button (click)="addEntity()" 
+            mat-raised-button [disabled]="false" 
+            color="primary">Create
+    </button>
 </form>
 
 

@@ -30,15 +30,18 @@ export class DomainAdminService {
   getNumbers(min : number, max : number){
     let list : any= [];
     for (let i = min; i <= max; i++) {
-      // let object = {'text': i, 'value':i};
-      // list.push.object
+      let object = {'text': i, 'value':i};
+      list.push(object);
     }
-    console.log(list)
     return list
   }
 
   getName(property : string, metadata : any){
     let name = metadata[property].displayName ? metadata[property].displayName : property
     return name;
+  }
+
+  calculateID(){
+    return 5;
   }
 }

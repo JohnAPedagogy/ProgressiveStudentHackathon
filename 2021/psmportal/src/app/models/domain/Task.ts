@@ -5,29 +5,35 @@ const id = faker.datatype.number(99999);
 export class Task {
   static metadata:any={
     'RPAGType':{
+      "displayName" : "RPAG Type",
       "required":true,
       "selectmetadata":"",
       "type":"select"
     },
     'TaskName':{
+      "displayName" : "Task Name",
       "required":true,
       "max":30,
       "type":"text",
     },
     'DueWeek':{
+      "displayName" : "Due Week",
       "required":true,
       "type":"number",
     },
     'DueLesson':{
+      "displayName" : "Due Lesson",
       "required":true,
       "type":"number",
     },
     'TaskType':{
+      "displayName" : "Task Type",
       "type":"select",
       "required":true,
       "selectmetadata":""
     },
     'ModuleId':{
+      "displayName" : "Module ID",
       "required":true,
       "type":"select",
       "selectmetadata":"",

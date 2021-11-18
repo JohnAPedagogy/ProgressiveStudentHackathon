@@ -6,6 +6,7 @@ export class TeachingClass {
 
   static metadata:any={
     'TutorPersonID':{
+      "displayName" : "Tutor Person ID",
       "required":true,
       "type":"select",
       "selectmetadata":[
@@ -15,6 +16,7 @@ export class TeachingClass {
       ],
     },
     'PathwayModuleID':{
+      "displayName" : "Pathway Module ID ",
       "required":true,
       "type":"select",
       "selectmetadata":[

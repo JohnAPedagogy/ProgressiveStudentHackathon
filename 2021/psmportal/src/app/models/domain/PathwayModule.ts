@@ -5,11 +5,13 @@ const id = faker.datatype.number(99999);
 export class PathwayModule {
   static metadata:any={
     'ModuleID':{
+      "displayName" : "Module ID",
       "required":true,
       "type":"select",
       "selectmetadata":"",
     },
     'PathwayID':{
+      "displayName" : "Pathway ID",
       "required":true,
       "type":"select",
       "selectmetadata":"",

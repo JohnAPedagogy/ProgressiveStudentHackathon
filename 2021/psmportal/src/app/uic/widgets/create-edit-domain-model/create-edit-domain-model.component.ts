@@ -179,5 +179,12 @@ get sGroup() {
   public ObjectInstance : any = 0;
   public ObjectElements = Object.keys(this.ObjectInstance)
 
+   addEntity() {
+      let id = this.domainAdminService.calculateID();
+      console.log("ID: ")
+      console.log(id);
+      return 1;
+   }
+
 
 }

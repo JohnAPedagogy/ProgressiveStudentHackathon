@@ -5,6 +5,7 @@ const id = faker.datatype.number(9);
 export class LoginRole {
   static metadata:any={
     'LoginRoleName':{
+      "displayName" : "Login Role Name",
       "type":"text",
       "required":true,
       "max":10,
