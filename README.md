@@ -106,6 +106,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [GraphQL](https://www.youtube.com/watch?v=8D9XnnjFGMs)
 - [GraphQL with apollo](https://www.youtube.com/watch?v=SEMTj8w04Z8)
 - [Goto PSM Hackathon -> Round 1 ](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/round_1/Readme.md)
+- [Javascript security libraries](https://gist.github.com/jo/8619441)
 
 # PSM Phase 2 - Hackathon
 The phase 2 of the Progressive Student Manager (PSM) will consist of 2 sprints
