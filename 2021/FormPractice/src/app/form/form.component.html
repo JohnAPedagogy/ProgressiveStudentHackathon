@@ -1,0 +1,24 @@
+<html>
+
+<h1>Create</h1>
+<h2>{{FormObject}}</h2>
+
+<form>
+    <br>
+    <label
+      *ngFor="let element of ObjectElements; let i = index;">{{element}}
+      <br>
+       
+      <input 
+        type= {{checkType(element)}}
+        id={{element}} 
+        name={{element}}>
+        
+      <br>
+      <br>
+    </label>
+    <br>
+    <input type="submit" id="Submit" class="button" value="Create">
+</form>
+
+</html>

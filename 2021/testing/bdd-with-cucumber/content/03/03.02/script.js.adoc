@@ -1,0 +1,30 @@
+include::./title.adoc[]
+
+shot::[1]
+Let's look at the Shouty scenario from the last chapter.
+
+.hear_shout.feature
+[source,gherkin]
+----
+include::../code/js/02-matching-with-a-plain-old-string/features/hear_shout.feature[]
+----
+
+As Cucumber starts to execute this feature, it will come to the first step of the scenario `Given Lucy is located 15 metres from Sean` shot::[2] and say to itself "now - do I have any step definitions that match the phrase `Lucy is located 15 metres from Sean`?”"
+
+shot::[3]
+The most simple cucumber expression that would match that step is this one:
+
+----
+Lucy is located 15 metres from Sean
+----
+
+That’s pretty simple isn't it? Cucumber expressions are just string patterns, and the most simple pattern you can use is a perfect match.
+
+In Javscript, we can use this pattern to make a step definition like this: shot::[4]
+
+[source,js]
+----
+include::../code/js/02-matching-with-a-plain-old-string/features/step_definitions/steps.js[lines=3..8]
+----
+
+We use a normal Javascript string to pass the cucumber expression to Cucumber.

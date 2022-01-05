@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { AuthService } from './auth.service';
+import { Session } from './services/sauth/login.service';
+import { Observable } from 'rxjs';
+import { AuthService } from './services/sauth/auth.service';
+import { SessionState } from './store/session.state';
+import { Store, Select } from '@ngxs/store';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +14,8 @@ export class AppComponent {
   title = 'psmportal';
 
    isUserLoggedIn = false;
+   @Select(SessionState.getSession) 
+   session!: Observable<Session>;
 
    constructor(private authService: AuthService) {}
 

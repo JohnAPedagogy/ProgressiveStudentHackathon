@@ -1,0 +1,76 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" [(opened)] = "sideBarOpened">
+          <mat-accordion multi>
+                        
+            <!-- Admin -->
+            <mat-expansion-panel id="adminbtn">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon>view_list</mat-icon>
+                    Admin
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                 <mat-list *ngFor="let entity of entities">
+                    <mat-list-item> 
+                      <button (click)="onEntityClick(entity)" 
+                        id = {{entity}}
+                        class = {{entity}}>
+                        <mat-icon>trip_origin</mat-icon> 
+                        {{entity}}
+                      </button>
+                    </mat-list-item>
+                  </mat-list>
+            </mat-expansion-panel>
+ 
+            <!-- Mail -->
+            <mat-expansion-panel disabled>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon>mail</mat-icon>
+                    Mail
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+
+            <!-- Calendar -->
+            <mat-expansion-panel id="calendarbtn">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon>event</mat-icon>
+                  Teaching Classes
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+               <mat-list id="Calendar" *ngFor="let teachingClass of teachingClasses">
+                  <mat-list-item> 
+                    <button id = {{teachingClass}}>
+                      <mat-icon>trip_origin</mat-icon> 
+                      {{teachingClass}}
+                    </button>
+                  </mat-list-item>
+                </mat-list>
+          </mat-expansion-panel>
+
+            <!-- Settings -->
+            <mat-expansion-panel disabled>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon>settings</mat-icon>
+                    Settings
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+            </mat-expansion-panel>
+
+          </mat-accordion>
+    </mat-sidenav>
+    <mat-sidenav-content > 
+        <app-header (sideBarOpened)="openSidebar($event)"></app-header>
+        <h1 *ngIf="contentType == 1">Dashboard</h1>
+        <app-data-table 
+          *ngIf="contentType == 2" 
+          [currentEntity] = "tableTitle"
+          (form)="onCreateNewPressed()"
+        ></app-data-table>
+        <app-create-edit-domain-model *ngIf="contentType == 3" [currentEntity] = "tableTitle"></app-create-edit-domain-model>
+        
+      </mat-sidenav-content>
+</mat-sidenav-container>

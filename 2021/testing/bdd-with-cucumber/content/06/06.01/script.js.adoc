@@ -1,0 +1,107 @@
+include::./title.adoc[]
+
+shot::[1, "Animation"]
+Hello, and welcome back to Cucumber School.
+
+Last time we learned about two very different kinds of loops. First, we used DataTables to loop over data in your scenarios.
+
+Then we learned about TDD cycles. We saw how the outer loop of TDD helps you to build the right thing while the inner loop helps you build the thing right.
+
+In this lesson, we’re going to teach you all about how to configure Cucumber.
+
+To start with, let's change the output that Cucumber produces to make it easier to see which scenarios have run. Open up package.json and add the pretty-formatter to the dev dependencies. shot::[2, "add pretty-formatter"]
+
+.package.json
+[source,json]
+----
+include::../code/js/01-install-pretty-formatter/package.json[lines=12..17]
+----
+
+Then, let's change the Cucumber script, to tell Cucumber to use the pretty-formatter. shot::[3, "modify test script"]
+
+.package.json
+[source,json]
+----
+include::../code/js/01-install-pretty-formatter/package.json[lines=7]
+----
+
+Finally, let's install the pretty-formatter shot::[4] and run Cucumber.shot::[5]
+
+[source]
+----
+npm install
+
+npm test
+----
+
+shot::[6, "Scroll slowly through the output to show all scenarios"]
+Now every line from the feature file is included in the output, showing which scenarios have been run and the status of every step.
+
+When we start working on a new scenario we often take a dive down to the inner TDD loop where we use a unit testing tool to drive out new classes or modify the behaviour of existing ones. When our unit tests are green and the new code is implemented we return to the Cucumber scenarios to verify whether we have made overall progress or not.
+
+If we have lots of Cucumber scenarios, it can be distracting to run all of them each time we do this. We often want to focus on a single scenario - or perhaps just a couple - to get feedback on what we’re currently working on.
+
+There are several ways to do this in Cucumber - and your IDE may offer other options. We'll start by showing some basic filtering on the command line, before showing you an alternative.
+
+Probably the easiest way to filter is to tell Cucumber to run only a scenario with a particular name.
+
+shot::[7, "type npm test command in console, show output and highlight that it has only run the one scenario 'Message too long'"]
+We can pass arguments to Cucumber using the `--name` option, which tells Cucumber to only run scenarios with a name that matches the string provided, in this case "Message is too long".
+
+
+[source]
+----
+npm test -- --name "Message is too long"
+----
+
+The value of the `--name` option is actually a regular expression, so you can use your imagination here to run more than one scenario.
+Let's use it to run the two scenarios with the text "range" in their name. shot::[8, "type npm test in console, show output and highlight that it has run two scenarios"]shot::[9]
+
+[source]
+----
+npm test -- --name "range"
+----
+
+Another way to tell Cucumber to run a specific scenario is to specify the line number of the scenario within a feature file. The 'Message too long' scenario starts on line 44 in the feature file. shot::[10, "in feature file show that 'Message too long' starts on line 44."]
+
+We can use that line number when we run Cucumber. shot::[11, "add line number to npm test line"]
+
+[source]
+----
+npm test -- features/hear_shout.feature:44
+----
+
+shot::[12, "show output and highlight that it has only run the scenario called 'Message too long'"]
+Now Cucumber only runs the "Message is too long" scenario.
+
+You can also specify multiple line numbers for each file. Let's run 'Two shouts' as well. shot::[13, "in feature file, show 'Two shouts' starts on line 33"]
+
+Let's add that line number to the npm test command. shot::[14, "type npm test in console, show output and highlight that it has run two scenarios"]shot::[15]
+
+[source]
+----
+npm test -- features/hear_shout.feature:33:44
+----
+
+You can list several files and lines together like this if you have a specific set of scenarios you want to run.
+
+The examples that you've just seen pass arguments from the command line to the test script defined in package.json. If you're working in an IDE this is less than ideal, but fortunately there are other ways to achieve exactly the same outcome.
+
+Let's look at using cucumber.js to pass arguments to Cucumber. Open `cucumber.js` shot::[16] and add `default: --name range` shot::[17]
+
+.cucumber.js
+[source,js]
+----
+include::../code/js/02-filter-by-name-using-properties-file/cucumber.js[lines=1]
+----
+
+When we run the tests, it picks up the settings from cucumber.js and only runs the "range" scenarios. shot::[18, "type `npm test` in console, show output and highlight that it has run the two scenarios"]shot::[19]
+
+[source]
+----
+npm test
+----
+
+Any argument that can be supplied on the command line can also be provided in cucumber.js. The benefit of setting arguments in cucumber.js is that it gets checked in with your code, which means that they are shared with all team members.
+
+In this lesson you've learnt how to filter the set of scenarios to run using scenario names and line numbers from the command line and using cucumber.js
