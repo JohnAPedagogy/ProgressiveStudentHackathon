@@ -56,6 +56,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 
 ## Additional hackathon resources and useful links
 - [HTML Layout](https://www.geeksforgeeks.org/html-layout/)
+- [Semantic HTML](https://internetingishard.netlify.app/html-and-css/semantic-html/index.html)
 - [Semantic html cheat sheet](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/)
 - [Semantic HTML cheatsheet](https://www.w3schools.com/html/html5_semantic_elements.asp)
 - [HTML Crash course](https://www.youtube.com/watch?v=UB1O30fR-EE)
