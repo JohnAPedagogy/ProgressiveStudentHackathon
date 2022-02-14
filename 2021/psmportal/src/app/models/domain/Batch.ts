@@ -7,31 +7,38 @@ export class Batch {
   static metadata:any={
 
     'BatchCode':{
+      "displayName" : "Batch Code",
       'required':true,
       'type': 'text'
     },
     'IsActive':{
+      "displayName" : "Is Active?",
       'required':true,
       'type': 'boolean'
     },
     'EndBatchDate':{
+      "displayName" : "End Batch Date",
       'required':true,
       'type': 'date'
     },
     'EndTermDate':{
+      "displayName" : "End Term Date",
       'required':true,
       'type': 'date'
     },
     'MidTermDate':{
+      "displayName" : "Mid Term Date",
       'required':true,
       'type': 'date'
     },
     'Term2StartDate':{
+      "displayName" : "Term 2 Start Date",
       'required':true,
       'type': 'date'
     },
 
     'Term1StartDate':{
+      "displayName" : "Term 1 Start Date",
       'required':true,
       'type': 'date',
 

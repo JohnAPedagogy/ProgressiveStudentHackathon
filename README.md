@@ -56,6 +56,7 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 
 ## Additional hackathon resources and useful links
 - [HTML Layout](https://www.geeksforgeeks.org/html-layout/)
+- [Semantic HTML](https://internetingishard.netlify.app/html-and-css/semantic-html/index.html)
 - [Semantic html cheat sheet](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/)
 - [Semantic HTML cheatsheet](https://www.w3schools.com/html/html5_semantic_elements.asp)
 - [HTML Crash course](https://www.youtube.com/watch?v=UB1O30fR-EE)
@@ -101,11 +102,15 @@ If you completed the above three steps; Congratulations!  You are all setup and 
 - [Karate Video](https://www.youtube.com/watch?v=yu3uupBZyxc)
 - [Another Karate Video](https://www.youtube.com/watch?v=YWK4J3lhFw4)
 - [Karate with mongo](https://medium.com/clarityai-engineering/your-path-to-black-belt-begins-here-java-mongodb-and-karate-dsl-a455b5a5eef6)
+- [Poge object pattern](https://www.pluralsight.com/guides/getting-started-with-page-object-pattern-for-your-selenium-tests)
+- [Login Form](https://www.codingnepalweb.com/login-form-with-floating-label-animation/)
+- [More Page object pattern](https://www.toptal.com/selenium/test-automation-in-selenium-using-page-object-model-and-page-factory)
 - [NextJS](https://www.youtube.com/watch?v=Sklc_fQBmcs)
 - [Faker API](https://www.npmjs.com/package/faker)
 - [GraphQL](https://www.youtube.com/watch?v=8D9XnnjFGMs)
 - [GraphQL with apollo](https://www.youtube.com/watch?v=SEMTj8w04Z8)
 - [Goto PSM Hackathon -> Round 1 ](https://github.com/JohnAPedagogy/ProgressiveStudentHackathon/blob/main/2021/round_1/Readme.md)
+- [Javascript security libraries](https://gist.github.com/jo/8619441)
 
 # PSM Phase 2 - Hackathon
 The phase 2 of the Progressive Student Manager (PSM) will consist of 2 sprints

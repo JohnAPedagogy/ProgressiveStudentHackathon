@@ -20,7 +20,7 @@ import { RepoService } from 'src/app/services/repository/repo.service';
 })
 export class CreateEditDomainModelComponent implements OnInit {
 
-  constructor(private domainAdminService:DomainAdminService, private repository:RepoService) {  }
+  constructor(public domainAdminService:DomainAdminService, private repository:RepoService) {  }
 
   ngOnInit(): void {
      console.log(this.sGroup['ID'].required)
@@ -34,7 +34,7 @@ export class CreateEditDomainModelComponent implements OnInit {
 
 get sGroup() {
    const mtd=Group.metadata;
-   mtd.TaughtTerm.selectmetadata = this.domainAdminService.getNumbers()
+   mtd.TaughtTerm.selectmetadata = this.domainAdminService.getNumbers(1,3)
    
    this.domainAdminService.getP2pCoaches().then(data => {
       mtd.P2PCoach.selectmetadata = data;
@@ -178,6 +178,13 @@ get sGroup() {
 
   public ObjectInstance : any = 0;
   public ObjectElements = Object.keys(this.ObjectInstance)
+
+   addEntity() {
+      let id = this.domainAdminService.calculateID();
+      console.log("ID: ")
+      console.log(id);
+      return 1;
+   }
 
 
 }

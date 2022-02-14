@@ -27,12 +27,21 @@ export class DomainAdminService {
     }); 
   }
 
-  getNumbers(){
-    return [
-      {'text': 1,'value':1},
-      {'text': 2,'value':2},
-      {'text': 3,'value':3},
-    ]
+  getNumbers(min : number, max : number){
+    let list : any= [];
+    for (let i = min; i <= max; i++) {
+      let object = {'text': i, 'value':i};
+      list.push(object);
+    }
+    return list
   }
 
+  getName(property : string, metadata : any){
+    let name = metadata[property].displayName ? metadata[property].displayName : property
+    return name;
+  }
+
+  calculateID(){
+    return 5;
+  }
 }
