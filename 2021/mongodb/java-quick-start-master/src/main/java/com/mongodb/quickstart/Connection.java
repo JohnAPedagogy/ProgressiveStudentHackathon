@@ -14,7 +14,7 @@ public class Connection {
 
     public static void main(String[] args) {
 
-        String connString = System.getProperty("mongodb.uri");
+        String connString = "mongodb://_:@realm.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=sdb-0-fvshj:mongodb-atlas:api-key";//System.getProperty("mongodb.uri");
         ConnectionString connectionString = new ConnectionString(connString);
         System.out.println(String.format("connecting. to %s ************",connString));
         MongoClientSettings settings = MongoClientSettings.builder()
@@ -27,9 +27,9 @@ public class Connection {
         System.out.println("done. ************");
         try {
             System.out.println("listing the database. ************");
-            List<Document> databases = mongoClient.listDatabases().into(new ArrayList<>());
-            System.out.println("list complete. ************");
-            databases.forEach(db -> System.out.println(db.toJson()));
+//            List<Document> databases = mongoClient.listDatabases().into(new ArrayList<>());
+//            System.out.println("list complete. ************");
+//            databases.forEach(db -> System.out.println(db.toJson()));
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
@@ -42,7 +42,7 @@ public class Connection {
             List<Document> databases = mongoClient.listDatabases().into(new ArrayList<>());
             databases.forEach(db -> System.out.println(db.toJson()));
         }
-
+ck - mongodb://_:@realm.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=sdb-0-fvshj:mongodb-atlas:api-key
 ConnectionString connectionString = new ConnectionString("mongodb+srv://admin:<password>@cluster0.phtaz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 MongoClientSettings settings = MongoClientSettings.builder()
         .applyConnectionString(connectionString)

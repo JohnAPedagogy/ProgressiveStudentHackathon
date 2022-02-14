@@ -37,6 +37,7 @@ build/
 .vscode/
 
 **/.metals/*
+**/application.properties
 
 **/target/*
 .vscode/*
