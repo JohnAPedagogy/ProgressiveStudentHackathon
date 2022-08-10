@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)file:///C:/Users/johna/AppData/Local/Temp/mume2022710-20724-153byzp.5wjh.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>tutorial_notes</title>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="./tutorial_notes_files/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h2 class="mume-header" id="hackathon-notes">Hackathon notes</h2>
+
+<h3 class="mume-header" id="java-graphics">Java Graphics</h3>
+
+<ol>
+<li>The paint component</li>
+<li>The Graphics object</li>
+<li>Coordinates</li>
+<li>Colours</li>
+<li>Fonts</li>
+<li>Shapes</li>
+</ol>
+<h3 class="mume-header" id="qt">QT</h3>
+
+<ul>
+<li><a href="http://101.lv/learn/C++/htm/ch08.htm">Pointers</a>&amp; <a href="http://101.lv/learn/C++/htm/ch08.htm">References</a> New keyword</li>
+<li>Multifile</li>
+<li>Basic Window</li>
+<li>Signals and slots</li>
+<li>Qtimer</li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QGraphicsView_animation.php">Graphics</a></li>
+</ul>
+<h3 class="mume-header" id="java-topics">Java topics</h3>
+
+<h4 class="mume-header" id="the-paint-component">The paint component</h4>
+
+<ul>
+<li>The ability to draw in a window is provided by the polymorphic paintComponent method provided by the JPanel class.</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">paintComponent</span><span class="token punctuation">(</span><span class="token class-name">Graphics</span> g<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</pre><ul>
+<li>To draw on the screen you will need to subclass the JPanel class and override the paintComponent method.</li>
+</ul>
+<h4 class="mume-header" id="the-graphics-object">The Graphics object</h4>
+
+<ul>
+<li>To do any drawing at all in Java, you need a&nbsp;graphics context.</li>
+<li>A graphics context is a class in the class&nbsp;java.awt.Graphics package.</li>
+<li>The class has methods for drawing such as shapes, images, and text.</li>
+<li>The&nbsp;Graphics&nbsp;class is  abstract , therefore it cannot be directly created using new.</li>
+<li>Instead we get it from a context when the&nbsp;paintComponent()&nbsp;method of a component is overriden when we inherit from a drawable component</li>
+<li>Another way to get a graphics handle is to call &nbsp;getGraphics() method of a component.</li>
+<li>This method returns a graphics context that can be used for drawing on the component outside its&nbsp;paintComponent()&nbsp;method.</li>
+<li>The recommendation is to use the first method</li>
+<li>If&nbsp;one uses the getGraphics() method, you should also call&nbsp;g.dispose()&nbsp;when finished using it.</li>
+<li>This releases any operating system resources that might be held by&nbsp;the graphics context.</li>
+</ul>
+<h4 class="mume-header" id="coordinates">Coordinates</h4>
+
+<ul>
+<li>The screen of a computer is a grid of little squares called&nbsp;pixels.</li>
+<li>The color of each pixel can be set individually, and drawing on the screen just means setting the colors of individual pixels.<br>
+!<a href="file:///C:/Users/johna/src/obsidian/personal/work/isc/softwaredesign/hackathon2022/Pasted_image_20220810044440.png.md">Pasted image 20220810044440.png</a></li>
+<li>A graphics context draws in a rectangle made up of pixels.</li>
+<li>A position in the rectangle is specified by a pair of integer coordinates,&nbsp;(x,y).</li>
+<li>The upper left corner has coordinates&nbsp;(0,0). The&nbsp;x&nbsp;coordinate increases from left to right, and the&nbsp;y&nbsp;coordinate increases from top to bottom.</li>
+<li>The illustration shows a 20-pixel by 12-pixel component (with very large pixels).</li>
+<li>A small line, rectangle, and oval are shown as they would be drawn by coloring individual pixels.</li>
+<li>For any component, you can find out the size of the rectangle that it occupies by calling the instance methods&nbsp;getWidth()&nbsp;and&nbsp;getHeight(), which return the number of pixels in the horizontal and vertical directions, respectively.</li>
+<li>In general, it's not a good idea to assume that you know the size of a component, since the size is often set by a layout manager and can even change if the component is in a window and that window is resized by the user. This means that it's good form to check the size of a component before doing any drawing on that component. For example, you can use a&nbsp;paintComponent()&nbsp;method that looks like:</li>
+</ul>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token keyword keyword-public">public</span> <span class="token keyword keyword-void">void</span> <span class="token function">paintComponent</span><span class="token punctuation">(</span><span class="token class-name">Graphics</span> g<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword keyword-super">super</span><span class="token punctuation">.</span><span class="token function">paintComponent</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword keyword-int">int</span> width <span class="token operator">=</span>  <span class="token function">getWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// Find out the width of this component.</span>
+   <span class="token keyword keyword-int">int</span> height <span class="token operator">=</span> <span class="token function">getHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Find out its height.</span>
+   <span class="token punctuation">.</span> <span class="token punctuation">.</span> <span class="token punctuation">.</span>   <span class="token comment">// Draw the content of the component.</span>
+<span class="token punctuation">}</span>
+</pre><h4 class="mume-header" id="colours">Colours</h4>
+
+<p>You will probably want to use some color when you draw. Java is designed to work with the&nbsp;RGB color system. An RGB color is specified by three numbers that give the level of red, green, and blue, respectively, in the color. A color in Java is an object of the class,&nbsp;java.awt.Color. You can construct a new color by specifying its red, blue, and green components. For example,</p>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token class-name">Color</span> myColor <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Color</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span>g<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p>There are two constructors that you can call in this way. In the one that I almost always use,&nbsp;r,&nbsp;g, and&nbsp;b&nbsp;are integers in the range 0 to 255. In the other, they are numbers of type&nbsp;float&nbsp;in the range 0.0F to 1.0F. (Recall that a literal of type&nbsp;float&nbsp;is written with an "F" to distinguish it from a&nbsp;double&nbsp;number.) Often, you can avoid constructing new colors altogether, since the&nbsp;Color&nbsp;class defines several named constants representing common colors:&nbsp;Color.WHITE,&nbsp;Color.BLACK,&nbsp;Color.RED,&nbsp;Color.GREEN,&nbsp;Color.BLUE,&nbsp;Color.CYAN,&nbsp;Color.MAGENTA,&nbsp;Color.YELLOW,&nbsp;Color.PINK,&nbsp;Color.ORANGE,&nbsp;Color.LIGHT_GRAY,&nbsp;Color.GRAY, and&nbsp;Color.DARK_GRAY. (There are older, alternative names for these constants that use lower case rather than upper case constants, such as&nbsp;Color.red&nbsp;instead of&nbsp;Color.RED, but the upper case versions are preferred because they follow the convention that constant names should be upper case.)</p>
+<p>An alternative to RGB is the&nbsp;HSB color system. In the HSB system, a color is specified by three numbers called the&nbsp;hue, the&nbsp;saturation, and the&nbsp;brightness. The hue is the basic color, ranging from red through orange through all the other colors of the rainbow. The brightness is pretty much what it sounds like. A fully saturated color is a pure color tone. Decreasing the saturation is like mixing white or gray paint into the pure color. In Java, the hue, saturation and brightness are always specified by values of type&nbsp;float&nbsp;in the range from 0.0F to 1.0F. The&nbsp;Color&nbsp;class has a&nbsp;static&nbsp;member function named&nbsp;getHSBColor&nbsp;for creating HSB colors. To create the color with HSB values given by&nbsp;h,&nbsp;s, and&nbsp;b, you can say:</p>
+<pre data-role="codeBlock" data-info="java" class="language-java"><span class="token class-name">Color</span> myColor <span class="token operator">=</span> <span class="token class-name">Color</span><span class="token punctuation">.</span><span class="token function">getHSBColor</span><span class="token punctuation">(</span>h<span class="token punctuation">,</span>s<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p>For example, to make a color with a random hue that is as bright and as saturated as possible, you could use:</p>
+<p>Color randomColor = Color.getHSBColor( (float)Math.random(), 1.0F, 1.0F );</p>
+<p>The type cast is necessary because the value returned by&nbsp;Math.random()&nbsp;is of type&nbsp;double, and&nbsp;Color.getHSBColor()&nbsp;requires values of type&nbsp;float. (By the way, you might ask why RGB colors are created using a constructor while HSB colors are created using a static member function. The problem is that we would need two different constructors, both of them with three parameters of type&nbsp;float. Unfortunately, this is impossible. You can have two constructors only if the number of parameters or the parameter types differ.)</p>
+<p>The RGB system and the HSB system are just different ways of describing the same set of colors. It is possible to translate between one system and the other. The best way to understand the color systems is to experiment with them. (The sample program&nbsp;<a href="https://math.hws.edu/eck/cs124/javanotes7/source/chapter6/SimpleColorChooser.java">SimpleColorChooser.java</a>&nbsp;lets you do that. You won't understand the source code at this time, but you can run it to play with color selection or to find the RGB or HSB values for the color that want.)</p>
+<p>One of the properties of a&nbsp;Graphics&nbsp;object is the current drawing color, which is used for all drawing of shapes and text. If&nbsp;g&nbsp;is a graphics context, you can change the current drawing color for&nbsp;g&nbsp;using the method&nbsp;g.setColor(c), where&nbsp;c&nbsp;is a&nbsp;Color. For example, if you want to draw in green, you would just say&nbsp;g.setColor(Color.GREEN)&nbsp;before doing the drawing. The graphics context continues to use the color until you explicitly change it with another&nbsp;setColor()&nbsp;command. If you want to know what the current drawing color is, you can call the function&nbsp;g.getColor(), which returns an object of type&nbsp;Color. This can be useful if you want to change to another drawing color temporarily and then restore the previous drawing color.</p>
+<p>Every component has an associated&nbsp;foreground color&nbsp;and&nbsp;background color. Generally, the component is filled with the background color before anything else is drawn (although some components are "transparent," meaning that the background color is ignored). When a new graphics context is created for a component, the current drawing color is set to the foreground color. Note that the foreground color and background color are properties of the component, not of a graphics context.</p>
+<p>The foreground and background colors of a component can be set by calling instance methods&nbsp;component.setForeground(color)&nbsp;and&nbsp;component.setBackground(color), which are defined in the&nbsp;Component&nbsp;class and therefore are available for use with any component. This can be useful even for standard components, if you want them to use colors that are different from the defaults.</p>
+<h4 class="mume-header" id="fonts">Fonts</h4>
+
+<p>A&nbsp;font&nbsp;represents a particular size and style of text. The same character will appear different in different fonts. In Java, a font is characterized by a font name, a style, and a size. The available font names are system dependent, but you can always use the following four strings as font names: "Serif", "SansSerif", "Monospaced", and "Dialog". (A "serif" is a little decoration on a character, such as a short horizontal line at the bottom of the letter&nbsp;i. "SansSerif" means "without serifs." "Monospaced" means that all the characters in the font have the same width. The "Dialog" font is the one that is typically used in dialog boxes.)</p>
+<p>The style of a font is specified using named constants that are defined in the&nbsp;Font&nbsp;class. You can specify the style as one of the four values:</p>
+<ul>
+<li>Font.PLAIN,</li>
+<li>Font.ITALIC,</li>
+<li>Font.BOLD, or</li>
+<li>Font.BOLD + Font.ITALIC.</li>
+</ul>
+<p>The size of a font is an integer. Size typically ranges from about 9 to 36, although larger sizes can also be used. The size of a font is usually about equal to the height of the largest characters in the font, in pixels, but this is not an exact rule. The size of the default font is 12.</p>
+<p>Java uses the class named&nbsp;java.awt.Font&nbsp;for representing fonts. You can construct a new font by specifying its font name, style, and size in a constructor:</p>
+<p>Font plainFont = new Font("Serif", Font.PLAIN, 12);<br>
+Font bigBoldFont = new Font("SansSerif", Font.BOLD, 24);</p>
+<p>Every graphics context has a current font, which is used for drawing text. You can change the current font with the&nbsp;setFont()&nbsp;method. For example, if&nbsp;g&nbsp;is a graphics context and&nbsp;bigBoldFont&nbsp;is a font, then the command&nbsp;g.setFont(bigBoldFont)&nbsp;will set the current font of&nbsp;g&nbsp;to&nbsp;bigBoldFont. The new font will be used for any text that is drawn&nbsp;<em>after</em>&nbsp;the&nbsp;setFont()&nbsp;command is given. You can find out the current font of&nbsp;g&nbsp;by calling the method&nbsp;g.getFont(), which returns an object of type&nbsp;Font.</p>
+<p>Every component also has an associated font. It can be set with the instance method&nbsp;component.setFont(font), which is defined in the&nbsp;Component&nbsp;class. When a graphics context is created for drawing on a component, the graphic context's current font is set equal to the font of the component.</p>
+<h4 class="mume-header" id="shapes">Shapes</h4>
+
+<p>The&nbsp;Graphics&nbsp;class includes a large number of instance methods for drawing various shapes, such as lines, rectangles, and ovals. The shapes are specified using the&nbsp;(x,y)&nbsp;coordinate system described above. They are drawn in the current drawing color of the graphics context. The current drawing color is set to the foreground color of the component when the graphics context is created, but it can be changed at any time using the&nbsp;setColor()&nbsp;method.</p>
+<p>Some drawing methods were already listed in&nbsp;<a href="https://math.hws.edu/eck/cs124/javanotes7/c3/s9.html#control.8.1">Subsection&nbsp;3.9.1</a>. Here, I describe those methods in more detail and add a few more. With all these commands, any drawing that is done outside the boundaries of the component is ignored. Note that all these methods are in the&nbsp;Graphics&nbsp;class, so they all must be called through an object of type&nbsp;Graphics. It is shown here as&nbsp;g, but of course the name of the graphics context is up to the programmer.</p>
+<ul>
+<li>g.drawString(String str, int x, int y)&nbsp;-- Draws the text given by the string&nbsp;str. The string is drawn using the current color and font of the graphics context.&nbsp;x&nbsp;specifies the x-coordinate of the left end of the string.&nbsp;y&nbsp;is the y-coordinate of the baseline of the string. The baseline is a horizontal line on which the characters rest. Some parts of the characters, such as the tail on a y or g, extend below the baseline.</li>
+<li>g.drawLine(int x1, int y1, int x2, int y2)&nbsp;-- Draws a line from the point&nbsp;(x1,y1)&nbsp;to the point&nbsp;(x2,y2). The line is drawn as if with a pen that extends one pixel to the right and one pixel down from the&nbsp;(x,y)&nbsp;point where the pen is located. For example, if&nbsp;g&nbsp;refers to an object of type&nbsp;Graphics, then the command&nbsp;g.drawLine(x,y,x,y), which corresponds to putting the pen down at a point, colors the single pixel with upper left corner at the point&nbsp;(x,y). Remember that coordinates really refer to the lines between the pixels.</li>
+<li>g.drawRect(int x, int y, int width, int height)&nbsp;-- Draws the outline of a rectangle. The upper left corner is at&nbsp;(x,y), and the width and height of the rectangle are as specified. If&nbsp;width&nbsp;equals&nbsp;height, then the rectangle is a square. If the&nbsp;width&nbsp;or the&nbsp;height&nbsp;is negative, then nothing is drawn. The rectangle is drawn with the same pen that is used for&nbsp;drawLine(). This means that the actual width of the rectangle as drawn is&nbsp;width+1, and similarly for the height. There is an extra pixel along the right edge and the bottom edge. For example, if you want to draw a rectangle around the edges of the component, you can say "g.drawRect(0, 0, getWidth()-1, getHeight()-1);". If you use "g.drawRect(0, 0, getWidth(), getHeight());", then the right and bottom edges of the rectangle will be drawn&nbsp;<em>outside</em>&nbsp;the component and will not appear on the screen.</li>
+<li>g.drawOval(int x, int y, int width, int height)&nbsp;-- Draws the outline of an oval. The oval is one that just fits inside the rectangle specified by&nbsp;x,&nbsp;y,&nbsp;width, and&nbsp;height. If&nbsp;width&nbsp;equals&nbsp;height, the oval is a circle.</li>
+<li>g.drawRoundRect(int x, int y, int width, int height, int xdiam, int ydiam)&nbsp;-- Draws the outline of a rectangle with rounded corners. The basic rectangle is specified by&nbsp;x,&nbsp;y,&nbsp;width, and&nbsp;height, but the corners are rounded. The degree of rounding is given by&nbsp;xdiam&nbsp;and&nbsp;ydiam. The corners are arcs of an ellipse with horizontal diameter&nbsp;xdiam&nbsp;and vertical diameter&nbsp;ydiam. A typical value for&nbsp;xdiam&nbsp;and&nbsp;ydiam&nbsp;is 16, but the value used should really depend on how big the rectangle is.</li>
+<li>g.draw3DRect(int x, int y, int width, int height, boolean raised)&nbsp;-- Draws the outline of a rectangle that is supposed to have a three-dimensional effect, as if it is raised from the screen or pushed into the screen. The basic rectangle is specified by&nbsp;x,&nbsp;y,&nbsp;width, and&nbsp;height. The&nbsp;raised&nbsp;parameter tells whether the rectangle seems to be raised from the screen or pushed into it. The 3D effect is achieved by using brighter and darker versions of the drawing color for different edges of the rectangle. The documentation recommends setting the drawing color equal to the background color before using this method. The effect won't work well for some colors.</li>
+<li>g.drawArc(int x, int y, int width, int height, int startAngle, int arcAngle)&nbsp;-- Draws part of the oval that just fits inside the rectangle specified by&nbsp;x,&nbsp;y,&nbsp;width, and&nbsp;height. The part drawn is an arc that extends&nbsp;arcAngle&nbsp;degrees from a starting angle at&nbsp;startAngle&nbsp;degrees. Angles are measured with 0 degrees at the 3 o'clock position (the positive direction of the horizontal axis). Positive angles are measured counterclockwise from zero, and negative angles are measured clockwise. To get an arc of a circle, make sure that&nbsp;width&nbsp;is equal to&nbsp;height.</li>
+<li>g.fillRect(int x, int y, int width, int height)&nbsp;-- Draws a filled-in rectangle. This fills in the interior of the rectangle that would be drawn by&nbsp;drawRect(x,y,width,height). The extra pixel along the bottom and right edges is not included. The&nbsp;width&nbsp;and&nbsp;height&nbsp;parameters give the exact width and height of the rectangle. For example, if you wanted to fill in the entire component, you could say "g.fillRect(0, 0, getWidth(), getHeight());"</li>
+<li>g.fillOval(int x, int y, int width, int height)&nbsp;-- Draws a filled-in oval.</li>
+<li>g.fillRoundRect(int x, int y, int width, int height, int xdiam, int ydiam)&nbsp;-- Draws a filled-in rounded rectangle.</li>
+<li>g.fill3DRect(int x, int y, int width, int height, boolean raised)&nbsp;-- Draws a filled-in three-dimensional rectangle.</li>
+<li>g.fillArc(int x, int y, int width, int height, int startAngle, int arcAngle)&nbsp;-- Draw a filled-in arc. This looks like a wedge of pie, whose crust is the arc that would be drawn by the&nbsp;drawArc&nbsp;method.</li>
+</ul>
+<h3 class="mume-header" id="qt-topics">QT topics</h3>
+
+<h4 class="mume-header" id="pointershttp101lvlearnchtmch08htm-referenceshttp101lvlearnchtmch08htm-new-keyword"><a href="http://101.lv/learn/C++/htm/ch08.htm">Pointers</a>&amp; <a href="http://101.lv/learn/C++/htm/ch08.htm">References</a> New keyword</h4>
+
+<ul>
+<li>Variable types
+<ul>
+<li>Value types</li>
+<li>Reference types</li>
+</ul>
+</li>
+<li>Memory types
+<ul>
+<li>Code space</li>
+<li>Stack</li>
+<li>Heap</li>
+<li>Register</li>
+</ul>
+</li>
+<li>Uses of Pointers
+<ul>
+<li>Pass-by-reference</li>
+</ul>
+</li>
+<li>Uses of References</li>
+</ul>
+<h4 class="mume-header" id="multifile">Multifile</h4>
+
+<ul>
+<li>What include does</li>
+<li>Back to function definition</li>
+<li>Using a header file</li>
+</ul>
+<h4 class="mume-header" id="basic-window">Basic Window</h4>
+
+<p>File-&gt;New File or Project...</p>
+<p><img src="./tutorial_notes_files/NewProject.png" alt="NewProject.png"></p>
+<p>Applications-&gt;Qt Console Application-&gt;Choose...</p>
+<p><img src="./tutorial_notes_files/ConsoleLocation.png" alt="ConsoleLocation.png"></p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QCoreApplication&gt;</span></span>
+
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> argc<span class="token punctuation">,</span> <span class="token keyword keyword-char">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    QCoreApplication <span class="token function">a</span><span class="token punctuation">(</span>argc<span class="token punctuation">,</span> argv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword keyword-return">return</span> a<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>The&nbsp;<strong>QCoreApplication</strong>&nbsp;class provides an event loop for console Qt applications. This class is used by non-GUI applications to provide their event loop. For non-GUI application that uses Qt, there should be exactly one&nbsp;<strong>QCoreApplication</strong>&nbsp;object. For GUI applications, we will use&nbsp;<strong>QApplication</strong>.</p>
+<p>When calling&nbsp;<strong>a.exec()</strong>&nbsp;the event loop is launched.</p>
+<p>Let's compile this application. By clicking on the green arrow on the bottom left, Qt Creator will compile and execute it. And what happened ? The application seems to be launched and not responding. It is actually normal. The event loop is running and waiting for events such as mouse click, but we did not provide any event to be processed, so it will run indefinitely.</p>
+<p>When we compile the project, behind the scene, our Qt app is compiled in the following steps:</p>
+<ol>
+<li><strong>qmake</strong>&nbsp;parses the&nbsp;<strong>.pro</strong>&nbsp;file, and generates&nbsp;<strong>makefile</strong>.</li>
+<li>The program is build using&nbsp;<strong>make</strong>&nbsp;(<strong>jom</strong>&nbsp;on windows).</li>
+</ol>
+<p>Let's print out "Hello World" by modifying the source:</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QCoreApplication&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QDebug&gt;</span></span>
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> argc<span class="token punctuation">,</span> <span class="token keyword keyword-char">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    QCoreApplication <span class="token function">a</span><span class="token punctuation">(</span>argc<span class="token punctuation">,</span> argv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token function">qDebug</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"Hello World"</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-return">return</span> a<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h4 class="mume-header" id="signals-and-slots">Signals and slots</h4>
+
+<p>File-&gt;New File or Project...</p>
+<p>Applications-&gt;Qt Gui Application-&gt;Choose...</p>
+<p>We keep the class as&nbsp;<strong>MainWindow</strong>&nbsp;as given by default.</p>
+<p><img src="./tutorial_notes_files/QtGuiApplication.png" alt="QtGuiApplication.png"></p>
+<p>Next-&gt;Finish</p>
+<p>Let's open up&nbsp;<strong>Forms</strong>&nbsp;by double-clicking the&nbsp;<strong>mainwindow.ui</strong>&nbsp;to put gui components:</p>
+<p><img src="./tutorial_notes_files/CreatorDesign.png" alt="CreatorDesign.png"></p>
+<p>From the Widgets, drag Horizontal Slider and Progress Bar, and place them into the main window. Then,</p>
+<p><img src="./tutorial_notes_files/Slider_ProgressBar.png" alt="Slider_ProgressBar.png"></p>
+<p><img src="./tutorial_notes_files/GuiSlot.png" alt="GuiSlot.png"></p>
+<p><img src="./tutorial_notes_files/ConfigureConnection.png" alt="ConfigureConnection.png"></p>
+<p>Run the code. Now, if we move the slider, the progress will reflect the changes in the slider:</p>
+<p><img src="./tutorial_notes_files/RunA.png" alt="RunA.png"></p>
+<p>We did it via gui, but we can do it via direct programming.</p>
+<p>Let's delete the signal and slot, and write the code for the signal and slot mechanism in the constructor of the&nbsp;<strong>MainWindow</strong>&nbsp;class as shown below:</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"mainwindow.h"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"ui_mainwindow.h"</span></span>
+
+<span class="token class-name">MainWindow</span><span class="token double-colon punctuation">::</span><span class="token function">MainWindow</span><span class="token punctuation">(</span>QWidget <span class="token operator">*</span>parent<span class="token punctuation">)</span> <span class="token operator">:</span>
+    <span class="token function">QMainWindow</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">ui</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> Ui<span class="token double-colon punctuation">::</span>MainWindow<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ui<span class="token operator">-&gt;</span><span class="token function">setupUi</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">connect</span><span class="token punctuation">(</span>ui<span class="token operator">-&gt;</span>horizontalSlider<span class="token punctuation">,</span>
+            <span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">valueChanged</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            ui<span class="token operator">-&gt;</span>progressBar<span class="token punctuation">,</span>
+            <span class="token function">SLOT</span><span class="token punctuation">(</span><span class="token function">setValue</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">MainWindow</span><span class="token double-colon punctuation">::</span><span class="token operator">~</span><span class="token function">MainWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-delete">delete</span> ui<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p><img src="./tutorial_notes_files/RunB.png" alt="RunB.png"></p>
+<h5 class="mume-header" id="signal-and-slot">Signal and Slot</h5>
+
+<p>Signals and slots are used for communication between objects. The signals and slots mechanism is a central feature of Qt and probably the part that differs most from the features provided by other frameworks.</p>
+<p>In GUI programming, when we change one widget, we often want another widget to be notified. More generally, we want objects of any kind to be able to communicate with one another. For example, if a user clicks a Close button, we probably want the window's close() function to be called. Older toolkits achieve this kind of communication using callbacks. A callback is a pointer to a function, so if you want a processing function to notify you about some event you pass a pointer to another function (the callback) to the processing function. The processing function then calls the callback when appropriate. Callbacks have two fundamental flaws: Firstly, they are not type-safe. We can never be certain that the processing function will call the callback with the correct arguments. Secondly, the callback is strongly coupled to the processing function since the processing function must know which callback to call.</p>
+<p>In Qt, we have an alternative to the callback technique: We use signals and slots. A signal is emitted when a particular event occurs. Qt's widgets have many predefined signals, but we can always subclass widgets to add our own signals to them. A slot is a function that is called in response to a particular signal. Qt's widgets have many pre-defined slots, but it is common practice to subclass widgets and add your own slots so that you can handle the signals that you are interested in.</p>
+<p>The signals and slots mechanism is type safe: The signature of a signal must match the signature of the receiving slot. (In fact a slot may have a shorter signature than the signal it receives because it can ignore extra arguments.) Since the signatures are compatible, the compiler can help us detect type mismatches. Signals and slots are loosely coupled: A class which emits a signal neither knows nor cares which slots receive the signal. Qt's signals and slots mechanism ensures that if you connect a signal to a slot, the slot will be called with the signal's parameters at the right time. Signals and slots can take any number of arguments of any type. They are completely type safe.</p>
+<p>All classes that inherit from QObject or one of its subclasses (e.g., QWidget) can contain signals and slots. Signals are emitted by objects when they change their state in a way that may be interesting to other objects. This is all the object does to communicate. It does not know or care whether anything is receiving the signals it emits. This is true information encapsulation, and ensures that the object can be used as a software component.</p>
+<p>Slots can be used for receiving signals, but they are also normal member functions. Just as an object does not know if anything receives its signals, a slot does not know if it has any signals connected to it. This ensures that truly independent components can be created with Qt. You can connect as many signals as you want to a single slot, and a signal can be connected to as many slots as you need. It is even possible to connect a signal directly to another signal. (This will emit the second signal immediately whenever the first is emitted.)</p>
+<h4 class="mume-header" id="qpainter">QPainter</h4>
+
+<p>In this tutorial, we will learn&nbsp;<strong>QPainter</strong>.</p>
+<p>The common use of QPainter is inside a widget's paint event: Construct and customize (e.g. set the pen or the brush) the painter. QPainter provides highly optimized functions to do most of the drawing GUI programs require. It can draw everything from simple lines to complex shapes like pies and chords. It can also draw aligned text and pixmaps.</p>
+<p>Qt-&gt;Qt Gui Application:</p>
+<p><img src="./tutorial_notes_files/PainterDialog.png" alt="PainterDialog.png"></p>
+<p>By reimplementing&nbsp;<strong>QWidget::paintEvent()</strong>, we can create customized widgets and have complete control over their appearance.</p>
+<p>Here is the modified&nbsp;<strong>painterdialog.h</strong>:</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token comment">// painterdialog.h</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">PAINTERDIALOG_H</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">PAINTERDIALOG_H</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QDialog&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QPainter&gt;</span></span>
+
+<span class="token keyword keyword-namespace">namespace</span> Ui <span class="token punctuation">{</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">PainterDialog</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">PainterDialog</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword keyword-public">public</span> <span class="token class-name">QDialog</span></span>
+<span class="token punctuation">{</span>
+    Q_OBJECT
+    
+<span class="token keyword keyword-public">public</span><span class="token operator">:</span>
+    <span class="token keyword keyword-explicit">explicit</span> <span class="token function">PainterDialog</span><span class="token punctuation">(</span>QWidget <span class="token operator">*</span>parent <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">~</span><span class="token function">PainterDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+<span class="token keyword keyword-private">private</span><span class="token operator">:</span>
+    Ui<span class="token double-colon punctuation">::</span>PainterDialog <span class="token operator">*</span>ui<span class="token punctuation">;</span>
+
+<span class="token keyword keyword-protected">protected</span><span class="token operator">:</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">paintEvent</span><span class="token punctuation">(</span>QPaintEvent <span class="token operator">*</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span> <span class="token comment">// PAINTERDIALOG_H</span></span>
+
+Here<span class="token punctuation">,</span> we<span class="token number">'</span>re going to reimplement <span class="token operator">*</span><span class="token operator">*</span><span class="token function">paintEvent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">.</span>
+
+Here is the implementation file<span class="token punctuation">,</span> <span class="token operator">*</span><span class="token operator">*</span>painterdialog<span class="token punctuation">.</span>cpp<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">:</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"painterdialog.h"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"ui_painterdialog.h"</span></span>
+
+<span class="token class-name">PainterDialog</span><span class="token double-colon punctuation">::</span><span class="token function">PainterDialog</span><span class="token punctuation">(</span>QWidget <span class="token operator">*</span>parent<span class="token punctuation">)</span> <span class="token operator">:</span>
+    <span class="token function">QDialog</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">ui</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> Ui<span class="token double-colon punctuation">::</span>PainterDialog<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ui<span class="token operator">-&gt;</span><span class="token function">setupUi</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">PainterDialog</span><span class="token double-colon punctuation">::</span><span class="token operator">~</span><span class="token function">PainterDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-delete">delete</span> ui<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token class-name">PainterDialog</span><span class="token double-colon punctuation">::</span> <span class="token function">paintEvent</span><span class="token punctuation">(</span>QPaintEvent <span class="token operator">*</span>e<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    QPainter <span class="token function">painter</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    painter<span class="token punctuation">.</span><span class="token function">setPen</span><span class="token punctuation">(</span>Qt<span class="token double-colon punctuation">::</span>blue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    painter<span class="token punctuation">.</span><span class="token function">setFont</span><span class="token punctuation">(</span><span class="token function">QFont</span><span class="token punctuation">(</span><span class="token string">"Arial"</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    painter<span class="token punctuation">.</span><span class="token function">drawText</span><span class="token punctuation">(</span><span class="token function">rect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Qt<span class="token double-colon punctuation">::</span>AlignCenter<span class="token punctuation">,</span> <span class="token string">"Qt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+In the <span class="token operator">*</span><span class="token operator">*</span><span class="token function">paintEvent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">,</span> we created QPainter object<span class="token punctuation">.</span> Then<span class="token punctuation">,</span> we the pen color<span class="token punctuation">,</span> font type<span class="token punctuation">,</span> font size<span class="token punctuation">,</span> <span class="token operator">and</span> the text itself with alignment<span class="token punctuation">.</span>
+
+If we run the code<span class="token punctuation">,</span> we get<span class="token operator">:</span>
+
+<span class="token operator">!</span><span class="token punctuation">[</span>QtText<span class="token punctuation">.</span>png<span class="token punctuation">]</span><span class="token punctuation">(</span>https<span class="token operator">:</span><span class="token comment">//www.bogotobogo.com/Qt/images/Painter/QtText.png)  </span>
+  
+</pre><h4 class="mume-header" id="qpainter-line-drawing">QPainter - Line Drawing</h4>
+
+<p>We can draws a line as well as points. Here we reimplemented the&nbsp;<strong>paintEvent()</strong>&nbsp;again:</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token keyword keyword-void">void</span> <span class="token class-name">PainterDialog</span><span class="token double-colon punctuation">::</span> <span class="token function">paintEvent</span><span class="token punctuation">(</span>QPaintEvent <span class="token operator">*</span>e<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    QPainter <span class="token function">MyPainter</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    QPen <span class="token function">PointPen</span><span class="token punctuation">(</span>Qt<span class="token double-colon punctuation">::</span>red<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    PointPen<span class="token punctuation">.</span><span class="token function">setWidth</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    QPen <span class="token function">LinePen</span><span class="token punctuation">(</span>Qt<span class="token double-colon punctuation">::</span>green<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    LinePen<span class="token punctuation">.</span><span class="token function">setWidth</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    QPoint p1<span class="token punctuation">;</span>
+    p1<span class="token punctuation">.</span><span class="token function">setX</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    p1<span class="token punctuation">.</span><span class="token function">setY</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    QPoint p2<span class="token punctuation">;</span>
+    p2<span class="token punctuation">.</span><span class="token function">setX</span><span class="token punctuation">(</span><span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    p2<span class="token punctuation">.</span><span class="token function">setY</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    MyPainter<span class="token punctuation">.</span><span class="token function">setPen</span><span class="token punctuation">(</span>PointPen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    MyPainter<span class="token punctuation">.</span><span class="token function">drawPoint</span><span class="token punctuation">(</span>p1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    MyPainter<span class="token punctuation">.</span><span class="token function">drawPoint</span><span class="token punctuation">(</span>p2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    MyPainter<span class="token punctuation">.</span><span class="token function">setPen</span><span class="token punctuation">(</span>LinePen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    MyPainter<span class="token punctuation">.</span><span class="token function">drawLine</span><span class="token punctuation">(</span>p1<span class="token punctuation">,</span> p2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    QPen <span class="token function">LinePen2</span><span class="token punctuation">(</span>Qt<span class="token double-colon punctuation">::</span>black<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    LinePen2<span class="token punctuation">.</span><span class="token function">setStyle</span><span class="token punctuation">(</span> Qt<span class="token double-colon punctuation">::</span>DashDotLine <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    LinePen2<span class="token punctuation">.</span><span class="token function">setWidth</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    MyPainter<span class="token punctuation">.</span><span class="token function">setPen</span><span class="token punctuation">(</span>LinePen2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    MyPainter<span class="token punctuation">.</span><span class="token function">drawLine</span><span class="token punctuation">(</span><span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">300</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>Run the code, then we will have:</p>
+<p><img src="./tutorial_notes_files/LineDrawing.png" alt="LineDrawing.png"></p>
+<h4 class="mume-header" id="qtimer">QTimer</h4>
+
+<p>In this tutorial, we will learn about&nbsp;<strong>QTimer</strong>.</p>
+<p>The QTimer class provides repetitive and single-shot timers.</p>
+<p>The QTimer class provides a high-level programming interface for timers. To use it, create a QTimer, connect its&nbsp;<strong>timeout()</strong>&nbsp;signal to the appropriate slots, and call start(). From then on, it will emit the&nbsp;<strong>timeout()</strong>&nbsp;signal at constant intervals.</p>
+<p>In this example, we'll use Qt Console application.</p>
+<p>We need to create a&nbsp;<strong>MyTimer</strong>&nbsp;class:</p>
+<p><img src="./tutorial_notes_files/MyTimerClass.png" alt="MyTimerClass.png"></p>
+<p><img src="./tutorial_notes_files/MyTimerCreator.png" alt="MyTimerCreator.png"></p>
+<p>Here are the codes:</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token operator">*</span><span class="token operator">*</span>mytimer<span class="token punctuation">.</span>h<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">:</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">MYTIMER_H</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MYTIMER_H</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QTimer&gt;</span></span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">MyTimer</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword keyword-public">public</span> <span class="token class-name">QObject</span></span>
+<span class="token punctuation">{</span>
+    Q_OBJECT
+<span class="token keyword keyword-public">public</span><span class="token operator">:</span>
+    <span class="token function">MyTimer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    QTimer <span class="token operator">*</span>timer<span class="token punctuation">;</span>
+
+<span class="token keyword keyword-public">public</span> slots<span class="token operator">:</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">MyTimerSlot</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span> <span class="token comment">// MYTIMER_H</span></span>
+</pre><p>Note that MyTimer class is inherited from QObject. By inheriting from QObject, out class can use signal and slot mechanism Qt provides. Also, the macro Q_OBJECT set to make the MOC to function properly.</p>
+<p>The MyTimerSlot() slot will be invoked when the timer signals&nbsp;<strong>timeout()</strong>.</p>
+<p><strong>mytimer.cpp</strong>:</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"mytimer.h"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QDebug&gt;</span></span>
+
+<span class="token class-name">MyTimer</span><span class="token double-colon punctuation">::</span><span class="token function">MyTimer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// create a timer</span>
+    timer <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token function">QTimer</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// setup signal and slot</span>
+    <span class="token function">connect</span><span class="token punctuation">(</span>timer<span class="token punctuation">,</span> <span class="token function">SIGNAL</span><span class="token punctuation">(</span><span class="token function">timeout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token keyword keyword-this">this</span><span class="token punctuation">,</span> <span class="token function">SLOT</span><span class="token punctuation">(</span><span class="token function">MyTimerSlot</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// msec</span>
+    timer<span class="token operator">-&gt;</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token class-name">MyTimer</span><span class="token double-colon punctuation">::</span><span class="token function">MyTimerSlot</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">qDebug</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"Timer..."</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>In the code, we creates QTimer object, and setup the signal and slot so that as soon as it the signal timeout() is emitted, our slot MyTimerSlot() prints out "Timer..." every seconds (1000ms).</p>
+<p><strong>void QTimer::start(int msec)</strong>&nbsp;starts or restarts the timer with a timeout interval of msec milliseconds. If the timer is already running, it will be stopped and restarted.</p>
+<p>Finally, we need to make an instance of MyTimer class:</p>
+<p><strong>main.cpp</strong>:</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QCoreApplication&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"mytimer.h"</span></span>
+
+<span class="token keyword keyword-int">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> argc<span class="token punctuation">,</span> <span class="token keyword keyword-char">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    QCoreApplication <span class="token function">a</span><span class="token punctuation">(</span>argc<span class="token punctuation">,</span> argv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// Create MyTimer instance</span>
+    <span class="token comment">// QTimer object will be created in the MyTimer constructor</span>
+    MyTimer timer<span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-return">return</span> a<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h4 class="mume-header" id="qbrush-and-qrect">QBrush and QRect</h4>
+
+<p>In this tutorial, we will learn&nbsp;<a href="http://qt-project.org/doc/qt-5.0/qtgui/qbrush.html">QBrush</a>&nbsp;and&nbsp;<a href="http://qt-project.org/doc/qt-5.0/qtcore/qrect.html">QRect</a>.</p>
+<p>The QBrush class defines the fill pattern of shapes drawn by QPainter. A brush has a style, a color, a gradient and a texture.</p>
+<p><img src="./tutorial_notes_files/QBrushPatternA.png" alt="QBrushPatternA.png"></p>
+<p><img src="./tutorial_notes_files/QBrushPatternB.png" alt="QBrushPatternB.png"></p>
+<p>A&nbsp;<strong>QRect</strong>&nbsp;can be constructed with a set of left, top, width and height integers:</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token class-name">QRect</span><span class="token double-colon punctuation">::</span><span class="token function">QRect</span><span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> x<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> y<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> width<span class="token punctuation">,</span> <span class="token keyword keyword-int">int</span> height<span class="token punctuation">)</span>
+</pre><p>or from a QPoint and a QSize:</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token class-name">QRect</span><span class="token double-colon punctuation">::</span><span class="token function">QRect</span><span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> QPoint <span class="token operator">&amp;</span> topLeft<span class="token punctuation">,</span> <span class="token keyword keyword-const">const</span> QSize <span class="token operator">&amp;</span> size<span class="token punctuation">)</span>
+</pre><p>The following code creates two identical rectangles.</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp">QRect <span class="token function">r1</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+QRect <span class="token function">r2</span><span class="token punctuation">(</span><span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">QSize</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p>Qt-&gt;Qt Gui Application:</p>
+<p><img src="./tutorial_notes_files/BrushDialog.png" alt="BrushDialog.png"></p>
+<p>We will override&nbsp;<strong>QWidget::paintEvent()</strong>&nbsp;so that we can create customized widgets and have complete control over their appearance.</p>
+<h5 class="mume-header" id="qrect">QRect</h5>
+
+<p>Here is the modified&nbsp;<strong>dialog.h</strong>:</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token comment">// dialog.h</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">DIALOG_H</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">DIALOG_H</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QDialog&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QPainter&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QRect&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QBrush&gt;</span></span>
+
+<span class="token keyword keyword-namespace">namespace</span> Ui <span class="token punctuation">{</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Dialog</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Dialog</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword keyword-public">public</span> <span class="token class-name">QDialog</span></span>
+<span class="token punctuation">{</span>
+    Q_OBJECT
+    
+<span class="token keyword keyword-public">public</span><span class="token operator">:</span>
+    <span class="token keyword keyword-explicit">explicit</span> <span class="token function">Dialog</span><span class="token punctuation">(</span>QWidget <span class="token operator">*</span>parent <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">~</span><span class="token function">Dialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+<span class="token keyword keyword-private">private</span><span class="token operator">:</span>
+    Ui<span class="token double-colon punctuation">::</span>Dialog <span class="token operator">*</span>ui<span class="token punctuation">;</span>
+
+<span class="token keyword keyword-protected">protected</span><span class="token operator">:</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">paintEvent</span><span class="token punctuation">(</span>QPaintEvent <span class="token operator">*</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span> <span class="token comment">// DIALOG_H</span></span>
+
+Here<span class="token punctuation">,</span> we<span class="token number">'</span>re going to reimplement <span class="token operator">*</span><span class="token operator">*</span><span class="token function">paintEvent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">.</span>
+
+Here is the implementation file<span class="token punctuation">,</span> <span class="token operator">*</span><span class="token operator">*</span>dialog<span class="token punctuation">.</span>cpp<span class="token operator">*</span><span class="token operator">*</span><span class="token operator">:</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"dialog.h"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"ui_dialog.h"</span></span>
+
+<span class="token class-name">Dialog</span><span class="token double-colon punctuation">::</span><span class="token function">Dialog</span><span class="token punctuation">(</span>QWidget <span class="token operator">*</span>parent<span class="token punctuation">)</span> <span class="token operator">:</span>
+    <span class="token function">QDialog</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">ui</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> Ui<span class="token double-colon punctuation">::</span>Dialog<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ui<span class="token operator">-&gt;</span><span class="token function">setupUi</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Dialog</span><span class="token double-colon punctuation">::</span><span class="token operator">~</span><span class="token function">Dialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-delete">delete</span> ui<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token class-name">Dialog</span><span class="token double-colon punctuation">::</span> <span class="token function">paintEvent</span><span class="token punctuation">(</span>QPaintEvent <span class="token operator">*</span>e<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    QPainter <span class="token function">painter</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-int">int</span> left <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span> top <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span> width <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span> height <span class="token operator">=</span> <span class="token number">150</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// r1 and r2 are same</span>
+    QRect <span class="token function">r1</span><span class="token punctuation">(</span>left<span class="token punctuation">,</span> top<span class="token punctuation">,</span> width<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    QRect <span class="token function">r2</span><span class="token punctuation">(</span><span class="token function">QPoint</span><span class="token punctuation">(</span>left<span class="token punctuation">,</span> top<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">QSize</span><span class="token punctuation">(</span>width<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    painter<span class="token punctuation">.</span><span class="token function">setPen</span><span class="token punctuation">(</span>Qt<span class="token double-colon punctuation">::</span>blue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    painter<span class="token punctuation">.</span><span class="token function">drawRect</span><span class="token punctuation">(</span>r1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// r1 as a bounding box</span>
+    painter<span class="token punctuation">.</span><span class="token function">drawEllipse</span><span class="token punctuation">(</span>r1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>In the&nbsp;<strong>paintEvent()</strong>, we created QPainter object. Then, we constructed a rectangle in two ways, and draw the rectangle and an ellipse with the rectangle as a bounding box.</p>
+<p>If we run the code, we get:</p>
+<p><img src="./tutorial_notes_files/RectEllipse.png" alt="RectEllipse.png"></p>
+<h5 class="mume-header" id="qbrush">QBrush</h5>
+
+<p>We can use a QBrush.<br>
+Brushes do fill and Pens do outline.</p>
+<p>Here we reimplemented the&nbsp;<strong>paintEvent()</strong>&nbsp;again:</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token keyword keyword-void">void</span> <span class="token class-name">Dialog</span><span class="token double-colon punctuation">::</span> <span class="token function">paintEvent</span><span class="token punctuation">(</span>QPaintEvent <span class="token operator">*</span>e<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    QPainter <span class="token function">painter</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-int">int</span> left <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span> top <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span> width <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span> height <span class="token operator">=</span> <span class="token number">150</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// r1 and r2 are same</span>
+    QRect <span class="token function">r1</span><span class="token punctuation">(</span>left<span class="token punctuation">,</span> top<span class="token punctuation">,</span> width<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    QRect <span class="token function">r2</span><span class="token punctuation">(</span><span class="token function">QPoint</span><span class="token punctuation">(</span>left<span class="token punctuation">,</span> top<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">QSize</span><span class="token punctuation">(</span>width<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    painter<span class="token punctuation">.</span><span class="token function">setPen</span><span class="token punctuation">(</span>Qt<span class="token double-colon punctuation">::</span>blue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    QBrush <span class="token function">brush</span><span class="token punctuation">(</span>Qt<span class="token double-colon punctuation">::</span>red<span class="token punctuation">,</span> Qt<span class="token double-colon punctuation">::</span>CrossPattern<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    painter<span class="token punctuation">.</span><span class="token function">drawRect</span><span class="token punctuation">(</span>r1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    painter<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span>r1<span class="token punctuation">,</span> brush<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// r1 as a bounding box</span>
+    painter<span class="token punctuation">.</span><span class="token function">drawEllipse</span><span class="token punctuation">(</span>r1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token punctuation">}</span>
+</pre><p>Run the code, then we will have:</p>
+<p><img src="./tutorial_notes_files/crosspattern.png" alt="crosspattern.png"></p>
+<h4 class="mume-header" id="qpainterpath-and-qpolygon">QPainterPath and QPolygon</h4>
+
+<p>In this tutorial, we will learn&nbsp;<a href="http://qt-project.org/doc/qt-5.0/qtgui/qpainterpath.html">QPainterPath</a>&nbsp;and&nbsp;<a href="http://qt-project.org/doc/qt-5.0/qtgui/qpolygon.html">QPolygon</a>.</p>
+<p>The&nbsp;<strong>QPainterPath</strong>&nbsp;class provides a container for painting operations, enabling graphical shapes to be constructed and reused.</p>
+<p>A painter path is an object composed of a number of graphical building blocks, such as rectangles, ellipses, lines, and curves. Building blocks can be joined in closed subpaths, for example as a rectangle or an ellipse. A closed path has coinciding start and end points. Or they can exist independently as unclosed subpaths, such as lines and curves.</p>
+<p>Here is an example of&nbsp;<strong>PainterPath</strong>&nbsp;from&nbsp;<a href="http://qt-project.org/doc/qt-5.0/qtwidgets/painting-painterpaths.html">Qt Doc Painter Paths Example</a>&nbsp;.</p>
+<p><img src="./tutorial_notes_files/PainterPathFromQtExample.png" alt="PainterPathFromQtExample.png"></p>
+<p>OK. Let's make our own example.</p>
+<p>Qt-&gt;Qt Gui Application:</p>
+<p><img src="./tutorial_notes_files/QDialog.png" alt="QDialog.png"></p>
+<p>We will override&nbsp;<strong>QWidget::paintEvent()</strong>&nbsp;so that we can create customized widgets and have complete control over their appearance.</p>
+<h5 class="mume-header" id="qpolygon">QPolygon</h5>
+
+<p>Here is the modified&nbsp;<strong>dialog.h</strong>:</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token comment">// dialog.h</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">DIALOG_H</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">DIALOG_H</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QDialog&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QPainter&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QPolygon&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;QPainterPath&gt;</span></span>
+
+<span class="token keyword keyword-namespace">namespace</span> Ui <span class="token punctuation">{</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Dialog</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-class">class</span> <span class="token class-name">Dialog</span> <span class="token operator">:</span> <span class="token base-clause"><span class="token keyword keyword-public">public</span> <span class="token class-name">QDialog</span></span>
+<span class="token punctuation">{</span>
+    Q_OBJECT
+    
+<span class="token keyword keyword-public">public</span><span class="token operator">:</span>
+    <span class="token keyword keyword-explicit">explicit</span> <span class="token function">Dialog</span><span class="token punctuation">(</span>QWidget <span class="token operator">*</span>parent <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">~</span><span class="token function">Dialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+<span class="token keyword keyword-private">private</span><span class="token operator">:</span>
+    Ui<span class="token double-colon punctuation">::</span>Dialog <span class="token operator">*</span>ui<span class="token punctuation">;</span>
+
+<span class="token keyword keyword-protected">protected</span><span class="token operator">:</span>
+    <span class="token keyword keyword-void">void</span> <span class="token function">paintEvent</span><span class="token punctuation">(</span>QPaintEvent <span class="token operator">*</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span> <span class="token comment">// DIALOG_H</span></span>
+</pre><p>Here, we're going to reimplement&nbsp;<strong>paintEvent()</strong>.</p>
+<p>Here is the implementation file,&nbsp;<strong>dialog.cpp</strong>:</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"dialog.h"</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"ui_dialog.h"</span></span>
+
+<span class="token class-name">Dialog</span><span class="token double-colon punctuation">::</span><span class="token function">Dialog</span><span class="token punctuation">(</span>QWidget <span class="token operator">*</span>parent<span class="token punctuation">)</span> <span class="token operator">:</span>
+    <span class="token function">QDialog</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">ui</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> Ui<span class="token double-colon punctuation">::</span>Dialog<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ui<span class="token operator">-&gt;</span><span class="token function">setupUi</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Dialog</span><span class="token double-colon punctuation">::</span><span class="token operator">~</span><span class="token function">Dialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword keyword-delete">delete</span> ui<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-void">void</span> <span class="token class-name">Dialog</span><span class="token double-colon punctuation">::</span> <span class="token function">paintEvent</span><span class="token punctuation">(</span>QPaintEvent <span class="token operator">*</span>e<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    QPainter <span class="token function">painter</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    QPolygon poly<span class="token punctuation">;</span>
+
+    poly <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">75</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">)</span>
+         <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">125</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">)</span>
+         <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">125</span><span class="token punctuation">)</span>
+         <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">160</span><span class="token punctuation">,</span> <span class="token number">190</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">)</span>
+         <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">190</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">125</span><span class="token punctuation">)</span>\
+         <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">85</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// QPen: style(), width(), brush(), capStyle() and joinStyle().</span>
+    QPen <span class="token function">pen</span><span class="token punctuation">(</span>Qt<span class="token double-colon punctuation">::</span>red<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> Qt<span class="token double-colon punctuation">::</span>DashDotLine<span class="token punctuation">,</span> Qt<span class="token double-colon punctuation">::</span>RoundCap<span class="token punctuation">,</span> Qt<span class="token double-colon punctuation">::</span>RoundJoin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    painter<span class="token punctuation">.</span><span class="token function">setPen</span><span class="token punctuation">(</span>pen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    painter<span class="token punctuation">.</span><span class="token function">drawPolygon</span><span class="token punctuation">(</span>poly<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>In the&nbsp;<strong>paintEvent()</strong>, we created QPolygon object, fill the points, and draw it using&nbsp;<strong>drawPolygon()</strong>.</p>
+<p>If we run the code, we get:</p>
+<p><img src="./tutorial_notes_files/PolygonDraw.png" alt="PolygonDraw.png"></p>
+<h5 class="mume-header" id="qpainterpath">QPainterPath</h5>
+
+<p>We want the polygon filled.</p>
+<p>Then, we may want to use a&nbsp;<strong>QBrush</strong>&nbsp;for filling and&nbsp;<strong>QPainterPath</strong>&nbsp;for polygon.</p>
+<p>Here we reimplemented the&nbsp;<strong>paintEvent()</strong>&nbsp;again:</p>
+<pre data-role="codeBlock" data-info="c++" class="language-cpp"><span class="token keyword keyword-void">void</span> <span class="token class-name">Dialog</span><span class="token double-colon punctuation">::</span> <span class="token function">paintEvent</span><span class="token punctuation">(</span>QPaintEvent <span class="token operator">*</span>e<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    QPainter <span class="token function">painter</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    QPolygon poly<span class="token punctuation">;</span>
+
+    poly <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">75</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">)</span>
+         <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">125</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">)</span>
+         <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">85</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">,</span> <span class="token number">125</span><span class="token punctuation">)</span>
+         <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">160</span><span class="token punctuation">,</span> <span class="token number">190</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">)</span>
+         <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">190</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">125</span><span class="token punctuation">)</span>\
+         <span class="token operator">&lt;&lt;</span> <span class="token function">QPoint</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">85</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// style(), width(), brush(), capStyle() and joinStyle().</span>
+    QPen <span class="token function">pen</span><span class="token punctuation">(</span>Qt<span class="token double-colon punctuation">::</span>red<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> Qt<span class="token double-colon punctuation">::</span>DashDotLine<span class="token punctuation">,</span> Qt<span class="token double-colon punctuation">::</span>RoundCap<span class="token punctuation">,</span> Qt<span class="token double-colon punctuation">::</span>RoundJoin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    painter<span class="token punctuation">.</span><span class="token function">setPen</span><span class="token punctuation">(</span>pen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Brush</span>
+    QBrush brush<span class="token punctuation">;</span>
+    brush<span class="token punctuation">.</span><span class="token function">setColor</span><span class="token punctuation">(</span>Qt<span class="token double-colon punctuation">::</span>green<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    brush<span class="token punctuation">.</span><span class="token function">setStyle</span><span class="token punctuation">(</span>Qt<span class="token double-colon punctuation">::</span>SolidPattern<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Fill polygon</span>
+    QPainterPath path<span class="token punctuation">;</span>
+    path<span class="token punctuation">.</span><span class="token function">addPolygon</span><span class="token punctuation">(</span>poly<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Draw polygon</span>
+    painter<span class="token punctuation">.</span><span class="token function">drawPolygon</span><span class="token punctuation">(</span>poly<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    painter<span class="token punctuation">.</span><span class="token function">fillPath</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> brush<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>Run the code, then we will have a filled polygon!</p>
+<p><img src="./tutorial_notes_files/FilledPolygon.png" alt="FilledPolygon.png"></p>
+<h3 class="mume-header" id="links">Links</h3>
+
+<h4 class="mume-header" id="threadshttpswwwbogotobogocomqtqt5_qthreads_introductionphp"><a href="https://www.bogotobogo.com/Qt/Qt5_QThreads_Introduction.php">Threads</a></h4>
+
+<ol>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QThreads_Introduction.php">QThreads - Introduction</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QThreads_Creating_Threads.php">QThreads - Creating Threads</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QtConcurrent_RunFunction_QThread.php">Creating QThreads using QtConcurrent</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QThreads_Priority.php">QThreads - Priority</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QThreads_QMutex.php">QThreads - QMutex</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QThreads_GuiThread.php">QThreads - GuiThread</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QtConcurrent_QFutureWatcher_QProgressDialog_map.php">QtConcurrent QProgressDialog with QFutureWatcher</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QThreads_QSemaphore_Producer_Consumer_GuiThread.php">QSemaphores - Producer and Consumer</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QThreads_wait.php">QThreads - wait()</a></li>
+</ol>
+<h4 class="mume-header" id="graphicshttpswwwbogotobogocomqtqt5_qgraphicsview_animationphp"><a href="https://www.bogotobogo.com/Qt/Qt5_QGraphicsView_animation.php">Graphics</a></h4>
+
+<ol>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QPainter.php">QPainter</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QBrush_QRect.php">QBrush and QRect</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QPainterPath_QPolygon.php">QPainterPath and QPolygon</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QPen_Cap_Style.php">QPen and Cap Style</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QLinear_QRadial_QConical_QGradient.php">QBrush and QGradient</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QPainter_Transformation.php">QPainter and Transformations</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QGraphicsView_QGraphicsScene.php">QGraphicsView and QGraphicsScene</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QGraphicsView_QGraphicsScene_QGraphicsItems.php">Customizing Items by inheriting QGraphicsItem</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QGraphicsView_animation.php">QGraphicsView Animation</a></li>
+</ol>
+<h4 class="mume-header" id="networkinghttpswwwbogotobogocomqtqt5_qhttp_downloading_files_network_programmingphp"><a href="https://www.bogotobogo.com/Qt/Qt5_QHttp_Downloading_Files_Network_Programming.php">Networking</a></h4>
+
+<ol>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QHttp_Downloading_Files_Network_Programming.php">QHttp - Downloading Files</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_Downloading_Files_QNetworkAccessManager_QNetworkRequest.php">QNetworkAccessManager and QNetworkRequest - Downloading Files</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_Network_Http_Files_Download_Example.php">Qt's Network Download Example - Reconstructed</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QNetworkRequest_Http_File_Download.php">QNetworkAccessManager - Downloading Files with UI and QProgressDialog</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QUdpSocket.php">QUdpSocket</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QTcpSocket.php">QTcpSocket</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QTcpSocket_Signals_Slots.php">QTcpSocket with Signals and Slots</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QTcpServer_Client_Server.php">QTcpServer - Client and Server</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QTcpServer_Client_Server_Loopback_Example.php">QTcpServer - Loopback Dialog</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QTcpServer_Multithreaded_Client_Server.php">QTcpServer - Client and Server using MultiThreading</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QTcpServer_QThreadPool_Multithreaded_Client_Server.php">QTcpServer - Client and Server using QThreadPool</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_Asynchronous_QTcpServer_QThreadPool.php">Asynchronous QTcpServer - Client and Server using QThreadPool</a></li>
+</ol>
+<p>Additional - OpenGL</p>
+<ol>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_Creating_QtQuick2_QML_Application_Animation_A.php">Qt Quick2 QML Animation - A</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_Creating_QtQuick2_QML_Application_Animation_B.php">Qt Quick2 QML Animation - B</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_Ubuntu_Install_GL_Creator_qmake.php">Short note on Ubuntu Install</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_OpenGL_QGLWidget.php">OpenGL with QT5</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_WebKit_WebView_WebBrowser_QtCreator.php">Qt5 Webkit : Web Browser with QtCreator using QWebView Part A</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_WebKit_WebView_WebBrowser_QtCreator_B.php">Qt5 Webkit : Web Browser with QtCreator using QWebView Part B</a></li>
+<li><a href="https://www.bogotobogo.com/Qt/Qt5_QWebView_FFmpeg_Converter_Media_Player.php">Video Player with HTML5 QWebView and FFmpeg Converter</a></li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  </body></html>
