@@ -43,14 +43,12 @@ public class Binary {
     }
     public String convert(int num){
         int rem;
-        String s;
-        if (num<=1)
-        {
-            return num==1?"1":"0";
-        }
-        rem = num % 2;
-        s=convert(num /2);
-        s+=rem==1?"1":"0";
+        String s="";
+        do{
+            rem = num % 2;
+            s = (rem == 1 ? "1" : "0") + s;
+            num = (num / 2);
+        }while (num>=1);
         return s;
     }
 

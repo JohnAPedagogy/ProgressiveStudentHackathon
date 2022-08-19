@@ -1,5 +1,6 @@
 package week2;
 
+
 public class Octal extends Binary{
 
     public String convert(int num){
@@ -31,7 +32,7 @@ public class Octal extends Binary{
         int rem=st.length()%3;
         System.out.println("rem="+rem);
         // pad if remainder doesn't equal 0
-        if(rem!=0)oct=rem==1?"00"+oct:"0"+oct;
+        if(rem!=0)st=rem==1?"00"+st:"0"+st;
 
         // split the string into groups of threes
         int stl=st.length()/3;
@@ -40,6 +41,7 @@ public class Octal extends Binary{
         for(int i=0;i<stl;i++)
             oct=oct+super.lookup(st.substring(i*3,i*3+3));
         
+            
         return oct;
     }
 }
