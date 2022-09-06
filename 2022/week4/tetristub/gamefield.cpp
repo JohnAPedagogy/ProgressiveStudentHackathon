@@ -9,7 +9,7 @@ GameField::GameField()
         gameFieldArray[i] = new Square[height];
     bitFieldArray = new int[height];
     for(int i=0; i<width; i++)bitFieldArray[i]=0;
-    color = QColor(Qt::red);
+    color = QColor(200,200,200);
     connect(this, &GameField::boardChanged, this, &GameField::mapLogical);
 
 }
@@ -40,7 +40,6 @@ void GameField::remove(Square* s){
     QPair<int,int> loc = b2l(s->loc);
     nullify(s);
     gameFieldArray[loc.first][loc.second] = *s;
-    emit boardChanged(s->loc,1);
 }
 void GameField::removeRange(QVector<Square*> range){
     for(auto i:range)remove(i);
@@ -49,6 +48,7 @@ void GameField::nullify(Square * s)
 {
     s->back = color;
     s->fore = color;
+    emit boardChanged(s->loc, 0);
 }
 
 int GameField::boardWidth(){

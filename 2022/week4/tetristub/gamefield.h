@@ -14,8 +14,8 @@ class GameField: public QObject
 public:
     GameField();
     ~GameField();
-    int width = 20;
-    int height= 20;
+    int width = 15;
+    int height= 18;
     QPair<int,int> sqSz;
     QColor color;
     Square** gameFieldArray;// stores physical structure

@@ -43,9 +43,10 @@ Tetris::Tetris(Ui::Dialog* ui, QGraphicsScene *scene)
 
     for(int i = 0; i < w*h; i++)
     {
-        Square *s = new Square(i%w,i/h);
+        int x = i%w; int y = i/w;
+        Square *s = &Game.gameFieldArray[x][y];
+        s->setLoc(QPair<int,int>(x,y));
         Game.nullify(s);
-        Game.add(s);
         scene->addItem(s);
     }
 }

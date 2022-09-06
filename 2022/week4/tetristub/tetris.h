@@ -8,6 +8,7 @@
 #include <QVector>
 #include <QBrush>
 #include "gamefield.h"
+#include <QDebug>
 //forward declare
 class GameField;
 
