@@ -12,11 +12,16 @@ Square::Square(int x, int y)
     loc.first = x;
     loc.second = y;
 }
+<<<<<<< HEAD
 void Square::setLoc(QPair<int,int>loc)
 {
     setPos(mapToParent(loc.first*size.first, loc.second*size.second));
     emit Tetris::Game.boardChanged(loc,1);
 }
+=======
+
+
+>>>>>>> 33fe5af0f750ad0c777a09fe580243b9157c95ab
 QRectF Square::boundingRect() const
 {
     return QRect(0,0,size.first,size.second);
@@ -32,7 +37,11 @@ void Square::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
     {
         // no collision
         QPen pen(back, 5);
+<<<<<<< HEAD
         painter->setPen(back);
+=======
+        painter->setPen(pen);
+>>>>>>> 33fe5af0f750ad0c777a09fe580243b9157c95ab
     }
     else
     {
@@ -42,8 +51,13 @@ void Square::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
 
     }
     QBrush brush(fore);
+<<<<<<< HEAD
     painter->fillRect(rect, brush);
     //painter->drawRect(rect);
+=======
+    painter->setBackground(brush);
+    painter->drawRect(rect);
+>>>>>>> 33fe5af0f750ad0c777a09fe580243b9157c95ab
 }
 
 void Square::advance(int phase)

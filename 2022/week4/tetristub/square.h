@@ -23,7 +23,6 @@ public:
     void paint(QPainter *painter,
                const QStyleOptionGraphicsItem *option,
                QWidget *widget);
-    void setLoc(QPair<int,int>);
 
 protected:
     void advance(int phase);
