@@ -113,6 +113,8 @@ public class Tetris extends JPanel {
         frame.getContentPane().add(panel,BorderLayout.NORTH);
     }
 }*/
+import org.w3c.dom.css.Rect;
+
 import javax.swing.*;
 import java.awt.*;
 public class Tetris extends JPanel {
@@ -122,7 +124,7 @@ public class Tetris extends JPanel {
     public static int sqSz = 10;
     public static Color backColor;
     static int bitEmpty = 0;
-    public static Square TestSqaure= new Square();
+    public static Square TestSqaure;
 
     int bitFull = 1 << width;
     private static final Square[][] arrGameField = new Square[width][height];
@@ -138,26 +140,36 @@ public class Tetris extends JPanel {
             return false;
         return true;
     }
+
+    public void Tetris(){
+    }
     public void paintComponent(Graphics g){
         Graphics2D g2= (Graphics2D)g;
+        TestSqaure = new Square(this);
 
         drawGame(g);
         TestSqaure.show(g);
-
-
-
-
     }
-    public void drawGame(Graphics g){
+    public int top(){
+        return getBounds().y;
+    }
+    public int centerAxis(){
+        Rectangle b = getBounds();
+        return b.x + (b.width)/2;
+    }
+    public Rectangle getBounds(){
         int w = getWidth(); // Find out the width of this
-        // component.
         int h = getHeight();
         int tw=(Tetris.width*Tetris.sqSz);
         int th=Tetris.height*Tetris.sqSz;
         int gw= (w-tw)/2;
         int gh= (h-th)/2;
+        return new Rectangle(gw,gh,tw,th);
+    }
+    public void drawGame(Graphics g){
+        Rectangle b = getBounds();
         g.setColor(Color.RED);
-        g.fillRect(gw,gh,tw,th);
+        g.fillRect(b.x,b.y,b.width,b.height);
 
     }
 

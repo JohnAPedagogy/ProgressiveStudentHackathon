@@ -6,13 +6,17 @@ public class Square  {
     public int size=Tetris.sqSz;
     Color foreColor=Color.green;
     Color backColor;
-    public Square(){
 
+    Tetris board;
+    public Square(Tetris b){
+        board = b;
     }
     public void show(Graphics g){
         //System.out.println("drawing square.."+Tetris.sqSz);
         g.setColor(foreColor);
-        g.fillRect(100,0,size,size);
+        int top = board.top();
+        int ca = board.centerAxis();
+        g.fillRect(ca,top,size,size);
 
 
     }

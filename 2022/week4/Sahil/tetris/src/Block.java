@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Block extends Square {
+public class Block  {
     public IntPair location;
     public IntPair sqrSz;
     //public int SquareSize;
