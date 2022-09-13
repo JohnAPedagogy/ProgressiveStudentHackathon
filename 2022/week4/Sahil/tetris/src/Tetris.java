@@ -117,12 +117,12 @@ import javax.swing.*;
 import java.awt.*;
 public class Tetris extends JPanel {
     public static int width = 16;
-    public static Square TestSqaure= new Square();
     // public IntPair location;
     public static int height = 32;
     public static int sqSz = 10;
     public static Color backColor;
     static int bitEmpty = 0;
+    public static Square TestSqaure= new Square();
 
     int bitFull = 1 << width;
     private static final Square[][] arrGameField = new Square[width][height];
@@ -140,7 +140,7 @@ public class Tetris extends JPanel {
     }
     public void paintComponent(Graphics g){
         Graphics2D g2= (Graphics2D)g;
-        //super.paintComponent(g);
+
         drawGame(g);
         TestSqaure.show(g);
 

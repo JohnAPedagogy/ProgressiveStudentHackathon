@@ -10,8 +10,9 @@ public class Square  {
 
     }
     public void show(Graphics g){
+        //System.out.println("drawing square.."+Tetris.sqSz);
         g.setColor(foreColor);
-        g.fillRect(100,100,size,size);
+        g.fillRect(100,0,size,size);
 
 
     }
