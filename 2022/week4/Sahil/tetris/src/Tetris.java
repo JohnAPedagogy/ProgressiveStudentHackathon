@@ -118,9 +118,11 @@ import org.w3c.dom.css.Rect;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.FocusEvent;
 import java.awt.event.KeyListener;
 
-public class Tetris extends JPanel implements KeyListener  {
+public class Tetris extends JPanel implements KeyListener, FocusListener  {
     public static int width = 16;
     // public IntPair location;
     public static int height = 32;
@@ -144,9 +146,9 @@ public class Tetris extends JPanel implements KeyListener  {
         return true;
     }
 
-    public void Tetris() {
-       addKeyListener(this);
-        requestFocusInWindow();
+    public Tetris() {
+        addKeyListener(this);
+        System.out.println("constructor run");
     }
 
     public void paintComponent(Graphics g) {
@@ -245,7 +247,7 @@ public class Tetris extends JPanel implements KeyListener  {
     }
     @Override
     public void keyTyped(KeyEvent e) {
-        System.out.println("Key typed");
+        System.out.println("not working");
 //when a key is typed (KeyChar, Char output)
         switch (e.getKeyChar()) {
             case 'a' ->
@@ -263,10 +265,38 @@ public class Tetris extends JPanel implements KeyListener  {
         }
     }
 
+    public void focusGained(FocusEvent evt) {
+        System.out.println("got focus");  // redraw with cyan border
+    }
+
+    /**
+     * This will be called when the panel loses the input focus.  It just
+     * calls repaint().  The panel will be redrawn with a gray-colored border
+     * and with the message "Click to activate."
+     */
+    public void focusLost(FocusEvent evt) {
+        System.out.println("lost focus");  // redraw without cyan border
+    }
 
     @Override
     public void keyPressed(KeyEvent e) {
 //when a physical key pressed down KeyCode, int output
+System.out.println("key pressed");
+//when a key is typed (KeyChar, Char output)
+        switch (e.getKeyChar()) {
+            case 'a' ->
+                // board.setLocation(board.getX()-1,board.getY());
+                    System.out.println("pressed a");
+            case 'w' ->
+                // board.setLocation(board.getX(),board.getY()-1);
+                    System.out.println("pressed w");
+            case 's' ->
+                // board.setLocation(board.getX(),board.getY()+1);
+                    System.out.println("pressed s");
+            case 'd' ->
+                //board.setLocation(board.getX()+1,board.getY());
+                    System.out.println("pressed d");
+        }
     }
 
     @Override
@@ -275,6 +305,7 @@ public class Tetris extends JPanel implements KeyListener  {
     }
     public static void main(String[] args) {
         //
+        System.out.println("tetris");
         Tetris game = new Tetris();
         JFrame frame = new JFrame("Game Field");
         frame.setSize(400, 500);
@@ -293,5 +324,7 @@ public class Tetris extends JPanel implements KeyListener  {
         frame.setVisible(true);
         frame.getContentPane().add(panel, BorderLayout.NORTH);
         frame.getContentPane().add(game, BorderLayout.CENTER);
+        game.requestFocusInWindow();
+        System.out.println("requesting..");
     }
 }
