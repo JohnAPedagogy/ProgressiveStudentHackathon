@@ -324,7 +324,7 @@ System.out.println("key pressed");
         frame.setVisible(true);
         frame.getContentPane().add(panel, BorderLayout.NORTH);
         frame.getContentPane().add(game, BorderLayout.CENTER);
-        game.requestFocusInWindow();
         System.out.println("requesting..");
+        game.requestFocusInWindow();
     }
 }
