@@ -1,11 +1,13 @@
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public class Square  {
-
     public Point location;
     public int size=Tetris.sqSz;
     Color foreColor=Color.green;
     Color backColor;
+
 
     Tetris board;
     public Square(Tetris b){
@@ -19,7 +21,11 @@ public class Square  {
         g.fillRect(ca,top,size,size);
 
 
+
+
     }
+
+}
    /* private boolean down()
     {
         if(Tetris.IsEmpty(this, Nav.SOUTH)) {
@@ -45,5 +51,5 @@ public class Square  {
             return false;
         }
     }*/
-}
+
 

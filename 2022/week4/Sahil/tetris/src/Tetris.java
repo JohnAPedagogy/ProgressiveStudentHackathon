@@ -117,7 +117,10 @@ import org.w3c.dom.css.Rect;
 
 import javax.swing.*;
 import java.awt.*;
-public class Tetris extends JPanel {
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public class Tetris extends JPanel implements KeyListener  {
     public static int width = 16;
     // public IntPair location;
     public static int height = 32;
@@ -136,43 +139,50 @@ public class Tetris extends JPanel {
             return false;
         }
 // test x bit of yth line of game field
-        if((arrBitGameField[y] & (x << 1)) != 0)
+        if ((arrBitGameField[y] & (x << 1)) != 0)
             return false;
         return true;
     }
 
-    public void Tetris(){
+    public void Tetris() {
+       addKeyListener(this);
+        requestFocusInWindow();
     }
-    public void paintComponent(Graphics g){
-        Graphics2D g2= (Graphics2D)g;
+
+    public void paintComponent(Graphics g) {
+        Graphics2D g2 = (Graphics2D) g;
         TestSqaure = new Square(this);
 
         drawGame(g);
         TestSqaure.show(g);
+
     }
-    public int top(){
+
+    public int top() {
         return getBounds().y;
     }
-    public int centerAxis(){
+
+    public int centerAxis() {
         Rectangle b = getBounds();
-        return b.x + (b.width)/2;
+        return b.x + (b.width) / 2;
     }
-    public Rectangle getBounds(){
+
+    public Rectangle getBounds() {
         int w = getWidth(); // Find out the width of this
         int h = getHeight();
-        int tw=(Tetris.width*Tetris.sqSz);
-        int th=Tetris.height*Tetris.sqSz;
-        int gw= (w-tw)/2;
-        int gh= (h-th)/2;
-        return new Rectangle(gw,gh,tw,th);
+        int tw = (Tetris.width * Tetris.sqSz);
+        int th = Tetris.height * Tetris.sqSz;
+        int gw = (w - tw) / 2;
+        int gh = (h - th) / 2;
+        return new Rectangle(gw, gh, tw, th);
     }
-    public void drawGame(Graphics g){
+
+    public void drawGame(Graphics g) {
         Rectangle b = getBounds();
         g.setColor(Color.RED);
-        g.fillRect(b.x,b.y,b.width,b.height);
+        g.fillRect(b.x, b.y, b.width, b.height);
 
     }
-
 
 
     public int checkLines() {
@@ -231,27 +241,57 @@ public class Tetris extends JPanel {
     public static boolean IsEmpty(Square s, Nav pos) {
 
         return arrGameField[s.location.x][s.location.y] != null;
+
+    }
+    @Override
+    public void keyTyped(KeyEvent e) {
+        System.out.println("Key typed");
+//when a key is typed (KeyChar, Char output)
+        switch (e.getKeyChar()) {
+            case 'a' ->
+                // board.setLocation(board.getX()-1,board.getY());
+                    System.out.println("pressed a");
+            case 'w' ->
+                // board.setLocation(board.getX(),board.getY()-1);
+                    System.out.println("pressed w");
+            case 's' ->
+                // board.setLocation(board.getX(),board.getY()+1);
+                    System.out.println("pressed s");
+            case 'd' ->
+                //board.setLocation(board.getX()+1,board.getY());
+                    System.out.println("pressed d");
+        }
     }
 
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+//when a physical key pressed down KeyCode, int output
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+///when a key is released
+    }
     public static void main(String[] args) {
         //
-        Tetris game= new Tetris();
-        JFrame frame= new JFrame("Game Field");
-        frame.setSize(400,500);
+        Tetris game = new Tetris();
+        JFrame frame = new JFrame("Game Field");
+        frame.setSize(400, 500);
         frame.setResizable(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JPanel panel= new JPanel();
-        panel.setSize(100,200);
+        JPanel panel = new JPanel();
+        panel.setSize(100, 200);
         panel.setBackground(Color.yellow);
         // panel.setSize(50,100);
-        JButton b1= new JButton("Start");
+        JButton b1 = new JButton("Start");
         //b1.setVisible(true);
-        JLabel scoreLabel= new JLabel("Score Label");
+        JLabel scoreLabel = new JLabel("Score Label");
         // scoreLabel.setVisible(true);
         panel.add(b1);
         panel.add(scoreLabel);
         frame.setVisible(true);
-        frame.getContentPane().add(panel,BorderLayout.NORTH);
-        frame.getContentPane().add(game,BorderLayout.CENTER);
+        frame.getContentPane().add(panel, BorderLayout.NORTH);
+        frame.getContentPane().add(game, BorderLayout.CENTER);
     }
 }
