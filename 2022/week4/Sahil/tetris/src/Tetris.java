@@ -127,6 +127,8 @@ public class Tetris extends JPanel implements KeyListener, FocusListener  {
     public static Color backColor;
     static int bitEmpty = 0;
     public static Square TestSqaure;
+    
+
 
     int bitFull = 1 << width;
     private static final Square[][] arrGameField = new Square[width][height];
@@ -273,6 +275,55 @@ public class Tetris extends JPanel implements KeyListener, FocusListener  {
      */
     public void focusLost(FocusEvent evt) {
         System.out.println("lost focus");  // redraw without cyan border
+    }
+    public void boardEvent( Nav direction){
+
+        mapLogical(TestSqaure.location,false);
+        switch (direction) {
+            case EAST:
+                //testSquare->moveRight();
+                TestSqaure.locFromLogical(1,0);
+                break;
+            case WEST:
+                //testSquare->moveLeft();
+                TestSqaure.locFromLogical(-1,0);
+                break;
+            case SOUTH:
+                // testSquare->moveDown();
+                TestSqaure.locFromLogical(0,1);
+                break;
+            case NORTH:
+                //testSquare->rotate();
+                TestSqaure.locFromLogical(0,-1);
+                break;
+//    case BoardEvent::North:
+//        //testSquare->force();
+//        break;
+            default:
+               System.out.println("Invalid Board event ");
+        }
+        mapLogical(TestSqaure.location,true);
+
+    }
+
+   public void  mapLogical(IntPair p, boolean result){
+       IntPair c = b2l(p);
+        if(c.x >= width || c.x < 0 || c.y >= height || c.y < 0) return;
+        int t = arrBitGameField[c.y];
+       arrBitGameField[c.y] =result? t|(1 << c.x): t & (1 << c.x);
+    }
+    public void  mapLogical(Point p, boolean result){
+        IntPair c = b2l(p);
+        if(c.x >= width || c.x < 0 || c.y >= height || c.y < 0) return;
+        int t = arrBitGameField[c.y];
+        arrBitGameField[c.y] =result? t|(1 << c.x): t & (1 << c.x);
+    }
+
+    public IntPair b2l(IntPair l){
+        return new IntPair(l.x/sqSz, l.y/sqSz);
+    }
+    public IntPair b2l(Point l){
+        return new IntPair(l.x/sqSz, l.y/sqSz);
     }
 
     @Override
