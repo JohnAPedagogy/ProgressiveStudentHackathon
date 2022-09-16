@@ -117,10 +117,7 @@ import org.w3c.dom.css.Rect;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.FocusEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 
 public class Tetris extends JPanel implements KeyListener, FocusListener  {
     public static int width = 16;
@@ -251,7 +248,7 @@ public class Tetris extends JPanel implements KeyListener, FocusListener  {
 //when a key is typed (KeyChar, Char output)
         switch (e.getKeyChar()) {
             case 'a' ->
-                // board.setLocation(board.getX()-1,board.getY());
+                //board.setLocation(board.getX()-1,board.getY());
                     System.out.println("pressed a");
             case 'w' ->
                 // board.setLocation(board.getX(),board.getY()-1);
@@ -287,6 +284,7 @@ System.out.println("key pressed");
             case 'a' ->
                 // board.setLocation(board.getX()-1,board.getY());
                     System.out.println("pressed a");
+            //repaint();
             case 'w' ->
                 // board.setLocation(board.getX(),board.getY()-1);
                     System.out.println("pressed w");
@@ -303,6 +301,11 @@ System.out.println("key pressed");
     public void keyReleased(KeyEvent e) {
 ///when a key is released
     }
+    Timer timer = new Timer(4000, new ActionListener() {
+        public void actionPerformed(ActionEvent evt) {
+            repaint();
+        }
+    });
     public static void main(String[] args) {
         //
         System.out.println("tetris");
