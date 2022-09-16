@@ -113,7 +113,7 @@ public class Tetris extends JPanel {
         frame.getContentPane().add(panel,BorderLayout.NORTH);
     }
 }*/
-import org.w3c.dom.css.Rect;
+//import org.w3c.dom.css.Rect;
 
 import javax.swing.*;
 import java.awt.*;
@@ -301,11 +301,6 @@ System.out.println("key pressed");
     public void keyReleased(KeyEvent e) {
 ///when a key is released
     }
-    Timer timer = new Timer(4000, new ActionListener() {
-        public void actionPerformed(ActionEvent evt) {
-            repaint();
-        }
-    });
     public static void main(String[] args) {
         //
         System.out.println("tetris");
@@ -328,6 +323,13 @@ System.out.println("key pressed");
         frame.getContentPane().add(panel, BorderLayout.NORTH);
         frame.getContentPane().add(game, BorderLayout.CENTER);
         System.out.println("requesting..");
+        Timer timer = new Timer(1000, new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                //repaint();
+                System.out.println("timer");
+            }
+        });
+        timer.start();
         game.requestFocusInWindow();
     }
 }
