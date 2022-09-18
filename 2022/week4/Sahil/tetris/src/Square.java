@@ -33,7 +33,12 @@ public class Square {
     public void startPos(){
         location.y = board.top();
         location.x = board.centerAxis();
-
+    }
+    public boolean atTheBottom(){
+        return location.y >= board.bottom();
+    }
+    public void moveDown(){
+        if(!atTheBottom()) locFromLogical(0,1);
     }
 }
 
