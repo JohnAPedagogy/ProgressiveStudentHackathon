@@ -127,7 +127,7 @@ public class Tetris extends JPanel implements KeyListener, FocusListener  {
     public static Color backColor;
     static int bitEmpty = 0;
     public static Square TestSqaure;
-    
+    private boolean init=false;
 
 
     int bitFull = 1 << width;
@@ -146,13 +146,14 @@ public class Tetris extends JPanel implements KeyListener, FocusListener  {
     }
 
     public Tetris() {
+        TestSqaure = new Square(this);
         addKeyListener(this);
         System.out.println("constructor run");
     }
 
     public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
-        TestSqaure = new Square(this);
+        //System.out.println("painting");
 
         drawGame(g);
         TestSqaure.show(g);
@@ -161,6 +162,15 @@ public class Tetris extends JPanel implements KeyListener, FocusListener  {
 
     public int top() {
         return getBounds().y;
+    }
+    public int left() {
+        return getBounds().x;
+    }
+    public int right() {
+        return getBounds().x+getBounds().width;
+    }
+    public int bottom() {
+        return getBounds().y+getBounds().height;
     }
 
     public int centerAxis() {
@@ -279,6 +289,11 @@ public class Tetris extends JPanel implements KeyListener, FocusListener  {
     public void boardEvent( Nav direction){
 
         mapLogical(TestSqaure.location,false);
+        if(!init){
+            init=true;
+            TestSqaure.startPos();
+            return;
+        }
         switch (direction) {
             case EAST:
                 //testSquare->moveRight();
@@ -289,8 +304,7 @@ public class Tetris extends JPanel implements KeyListener, FocusListener  {
                 TestSqaure.locFromLogical(-1,0);
                 break;
             case SOUTH:
-                // testSquare->moveDown();
-                TestSqaure.locFromLogical(0,1);
+                TestSqaure.moveDown();
                 break;
             case NORTH:
                 //testSquare->rotate();
@@ -376,8 +390,8 @@ System.out.println("key pressed");
         System.out.println("requesting..");
         Timer timer = new Timer(1000, new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                //repaint();
-                System.out.println("timer");
+                game.boardEvent(Nav.SOUTH);
+                game.repaint();
             }
         });
         timer.start();
