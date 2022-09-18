@@ -121,10 +121,9 @@ import java.awt.event.*;
 
 public class Tetris extends JPanel implements KeyListener, FocusListener  {
     public static int width = 16;
-    // public IntPair location;
     public static int height = 32;
     public static int sqSz = 10;
-    public static Color backColor;
+    public static Color backColor=Color.RED;
     static int bitEmpty = 0;
     public static Square TestSqaure;
     private boolean init=false;
@@ -190,7 +189,7 @@ public class Tetris extends JPanel implements KeyListener, FocusListener  {
 
     public void drawGame(Graphics g) {
         Rectangle b = getBounds();
-        g.setColor(Color.RED);
+        g.setColor(backColor);
         g.fillRect(b.x, b.y, b.width, b.height);
 
     }
