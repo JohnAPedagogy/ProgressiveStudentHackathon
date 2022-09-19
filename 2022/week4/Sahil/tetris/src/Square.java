@@ -37,8 +37,14 @@ public class Square {
     public boolean atTheBottom(){
         return location.y >= board.bottom();
     }
+    public boolean atTheLeftMost(){
+        return location.x >= board.left();
+    }
     public void moveDown(){
         if(!atTheBottom()) locFromLogical(0,1);
+    }
+    public void moveLeft(){
+        if(!atTheLeftMost()) locFromLogical(-1,0);
     }
 }
 

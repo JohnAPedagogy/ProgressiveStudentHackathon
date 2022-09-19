@@ -153,7 +153,6 @@ public class Tetris extends JPanel implements KeyListener, FocusListener  {
     public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
         //System.out.println("painting");
-
         drawGame(g);
         TestSqaure.show(g);
 
@@ -299,8 +298,7 @@ public class Tetris extends JPanel implements KeyListener, FocusListener  {
                 TestSqaure.locFromLogical(1,0);
                 break;
             case WEST:
-                //testSquare->moveLeft();
-                TestSqaure.locFromLogical(-1,0);
+                TestSqaure.moveLeft();
                 break;
             case SOUTH:
                 TestSqaure.moveDown();
@@ -346,18 +344,18 @@ System.out.println("key pressed");
 //when a key is typed (KeyChar, Char output)
         switch (e.getKeyChar()) {
             case 'a' ->
-                // board.setLocation(board.getX()-1,board.getY());
-                    System.out.println("pressed a");
+                //game.boardEvent(Nav.WEST);
+                System.out.println("pressed a");
             //repaint();
             case 'w' ->
-                // board.setLocation(board.getX(),board.getY()-1);
-                    System.out.println("pressed w");
+                //board.setLocation(board.getX(),board.getY()-1);
+                System.out.println("pressed w");
             case 's' ->
                 // board.setLocation(board.getX(),board.getY()+1);
-                    System.out.println("pressed s");
+                System.out.println("pressed s");
             case 'd' ->
                 //board.setLocation(board.getX()+1,board.getY());
-                    System.out.println("pressed d");
+                System.out.println("pressed d");
         }
     }
 
