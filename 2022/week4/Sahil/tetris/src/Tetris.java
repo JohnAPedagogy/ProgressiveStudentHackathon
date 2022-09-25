@@ -344,7 +344,9 @@ System.out.println("key pressed");
 //when a key is typed (KeyChar, Char output)
         switch (e.getKeyChar()) {
             case 'a' ->
-                //game.boardEvent(Nav.WEST);
+                   // game.boardEvent(Nav.WEST);
+                    Tetris.boardEvent(Nav.WEST);
+            System.out.println("pressed a");
                 System.out.println("pressed a");
             //repaint();
             case 'w' ->
