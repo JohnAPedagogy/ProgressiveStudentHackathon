@@ -6,5 +6,5 @@ The global data that the application needs will be protected from unintended acc
 
 ## Redux Example
 Here are screenshots an example:
-![Redux](redux00.png)
-![Redux](redux01.png)
+![Redux](redux00.PNG)
+![Redux](redux01.PNG)
