@@ -11,4 +11,4 @@ The class diagram below illustrates the repository pattern.
 ![image](https://user-images.githubusercontent.com/54987004/130733280-18900f6f-c996-4f4d-b4e8-b9203712b276.png)
 ![image](https://user-images.githubusercontent.com/54987004/130733311-e0f2c2bb-99f9-49a2-aa99-6d9ab90f7a3a.png)
 
-*Courtesy of Mosh Hadeni's YouTube Repository Pattern Tutorial [Video](https://www.youtube.com/watch?v=rtXpYpZdOzM&t=1417s)https://www.youtube.com/watch?v=rtXpYpZdOzM&t=1417s)*
+*Courtesy of Mosh Hadeni's YouTube Repository Pattern Tutorial [Video](https://www.youtube.com/watch?v=rtXpYpZdOzM&t=1417s) *
